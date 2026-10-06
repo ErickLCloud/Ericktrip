@@ -241,6 +241,74 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
   .optbn .obsub .obhi{margin:6px 0 0;display:block;width:fit-content}
   .optbn .obr{width:100%;justify-content:space-between}
 }
+.reel{margin:6px 0 20px}
+.rstage{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#0f1922;
+  box-shadow:0 2px 6px rgba(26,40,54,.1),0 20px 44px rgba(26,40,54,.22);cursor:none;outline:none}
+.rstage:focus-visible{box-shadow:0 0 0 3px var(--orange)}
+.rtrack{position:absolute;inset:0}
+.rslide{position:absolute;inset:0;opacity:0;transition:opacity 1.5s var(--ease);will-change:opacity}
+.rslide.on{opacity:1}
+.rslide img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.06)}
+.rslide.on img{animation:kb 9s linear forwards}
+.rslide.rev.on img{animation-name:kb2}
+@keyframes kb{from{transform:scale(1.04) translate(0,0)}to{transform:scale(1.19) translate(-1.6%,-1.2%)}}
+@keyframes kb2{from{transform:scale(1.19) translate(1.6%,1%)}to{transform:scale(1.04) translate(0,0)}}
+.rfb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:0 24px;color:#9fb0bf;font-size:1.05rem;letter-spacing:.06em;
+  background:repeating-linear-gradient(135deg,#16222d 0 12px,#132029 12px 24px)}
+.rveil{position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to top,rgba(10,17,23,.86) 0%,rgba(10,17,23,.28) 38%,rgba(10,17,23,0) 62%)}
+.rcap{position:absolute;left:0;right:0;bottom:0;padding:22px 26px 26px;pointer-events:none;z-index:3}
+.rbadge{display:inline-block;padding:3px 11px;border-radius:999px;background:var(--orange);color:#fff;
+  font-size:.72rem;font-weight:700;letter-spacing:.08em;margin-bottom:9px}
+.rcap b{display:block;color:#fff;font-size:1.3rem;font-weight:700;line-height:1.3;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.rcap em{display:block;margin-top:4px;font-style:normal;font-size:.88rem;color:#ccd7e0;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+.rattr{position:absolute;right:14px;top:12px;z-index:3;font-size:.66rem;color:rgba(255,255,255,.72);
+  background:rgba(10,17,23,.42);padding:3px 9px;border-radius:999px;pointer-events:none;max-width:62%;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rplay{position:absolute;left:14px;top:12px;z-index:4;width:34px;height:34px;border-radius:50%;cursor:pointer;
+  border:1px solid rgba(255,255,255,.3);background:rgba(10,17,23,.42);display:flex;align-items:center;justify-content:center}
+.rplay span{display:block;width:8px;height:11px;border-left:3px solid #fff;border-right:3px solid #fff}
+.rplay.paused span{width:0;height:0;border:6px solid transparent;border-left:11px solid #fff;margin-left:4px}
+.rbar{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.16);z-index:4}
+.rbar i{display:block;height:100%;width:0;background:var(--orange)}
+.rcursor{position:absolute;left:0;top:0;z-index:5;pointer-events:none;opacity:0;transition:opacity .3s var(--ease);
+  transform:translate3d(-999px,-999px,0)}
+.rstage.hov .rcursor{opacity:1}
+.rghost{display:none;align-items:center;gap:10px;padding:9px 16px 9px 11px;border-radius:999px;
+  background:rgba(251,116,89,.94);color:#fff;box-shadow:0 10px 26px rgba(0,0,0,.34);transform:translate(-50%,-140%)}
+.rghost.on{display:flex}
+.rgicon{width:26px;height:26px;flex:0 0 auto}
+.rghost b{font-size:.84rem;font-weight:700;letter-spacing:.03em;white-space:nowrap}
+.rghost em{font-style:normal;font-size:.8rem;opacity:.92;white-space:nowrap}
+.rdays{display:grid;grid-template-columns:repeat(9,1fr);gap:8px;margin-top:14px}
+.rday{display:flex;flex-direction:column;align-items:center;gap:5px;padding:13px 6px 11px;border-radius:14px;
+  border:1px solid var(--line);background:#fff;cursor:pointer;font:inherit;color:var(--ink2);
+  transition:border-color .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease),color .3s}
+.rday:hover,.rday.on{border-color:var(--orange);color:var(--orange-t);transform:translateY(-3px);
+  box-shadow:0 10px 22px rgba(26,40,54,.12)}
+.rday.on{background:var(--sun-l)}
+.ricon{width:24px;height:24px;color:var(--navy);transition:color .3s}
+.rday:hover .ricon,.rday.on .ricon{color:var(--orange)}
+.rday b{font-size:.78rem;font-weight:700;color:var(--ink)}
+.rday.on b{color:var(--orange-t)}
+.rday i{font-style:normal;font-size:.68rem;line-height:1.3;text-align:center;color:var(--muted)}
+.rday u{text-decoration:none;font-size:.62rem;color:var(--gray)}
+@media(max-width:900px){
+  .rdays{grid-template-columns:repeat(5,1fr)}
+  .rday i{display:none}
+}
+@media(max-width:620px){
+  .rstage{aspect-ratio:4/5;cursor:default}
+  .rcap{padding:18px 18px 22px}
+  .rcap b{font-size:1.08rem}
+  .rdays{grid-template-columns:repeat(3,1fr);gap:7px}
+  .rday{padding:11px 4px 9px}
+}
+@media(prefers-reduced-motion:reduce){
+  .rslide.on img{animation:none}
+  .rslide{transition:none}
+}
 </style>
 
 <header>
@@ -259,6 +327,7 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
 <nav><div class="inner" role="tablist" aria-label="行程分頁">
 <button class="tab" role="tab" data-tab="overview" id="tab-overview" aria-controls="p-overview"><b>總覽</b><i>1/8–1/16</i></button>
 <button class="tab hot" role="tab" data-tab="opt" id="tab-opt" aria-controls="p-opt"><b>待辦清單</b><i id="tabopti">27 項待處理</i></button>
+<button class="tab" role="tab" data-tab="reel" id="tab-reel" aria-controls="p-reel"><b>行程影像</b><i>9天・28個畫面</i></button>
 <button class="tab" role="tab" data-tab="day1" id="tab-day1" aria-controls="p-day1"><b>Day 1</b><i>1/8 五 新宿・抵達</i></button>
 <button class="tab" role="tab" data-tab="day2" id="tab-day2" aria-controls="p-day2"><b>Day 2</b><i>1/9 六 河口湖</i></button>
 <button class="tab" role="tab" data-tab="day3" id="tab-day3" aria-controls="p-day3"><b>Day 3</b><i>1/10 日 河口湖</i></button>
@@ -380,6 +449,52 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
 <li>交通票券:JR Pass 對本行程效益低(9 天只有富士回遊往返與鎌倉 2 段 JR 長途,且富士回遊指定席另計)。較值得試算的是東京地鐵 24/48/72 小時券用於 Day7/Day9,但這兩天多為 JR 山手線與都營淺草線,實際能省多少需逐段算過才知道。</li>
 <li>Google Maps/Places API 金鑰:上線版照片與地圖每次開頁都即時計費,請確認 Cloud Console 已設 HTTP 參照網址限制(<code>https://ErickLCloud.github.io/*</code>)、API 限制與預算警示。</li>
 </ul>
+
+</section>
+
+<section class="panel" id="p-reel" role="tabpanel" aria-labelledby="tab-reel">
+
+<h2 id="reelh">行程影像 <small>THE REEL</small></h2>
+<p>9 天 28 個畫面依行程順序自動播放。畫面是 Google 地圖上該地點的真實照片即時讀取,不是示意圖。<b>把游標移到畫面上</b>會跟著出現當天的特色圖示;點下方任一天可直接跳到那天,再點一次回到自動播放。</p>
+
+<div class="reel" id="reelbox">
+  <div class="rstage" id="rstage" tabindex="0" aria-label="行程影像播放區">
+    <div class="rtrack" id="rtrack"></div>
+    <div class="rveil"></div>
+    <div class="rcursor" id="rcursor" aria-hidden="true">
+<span class="rghost" data-day="1"><svg class="rgicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13.2 21 5l-7.1 15.5-2.6-6.3-6.3-2.6Z"/><path d="M11.3 14.2 21 5"/></svg><b>Day 1</b><em>抵達・新宿</em></span>
+<span class="rghost" data-day="2"><svg class="rgicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5 21 9"/><path d="M12 7.2v2.6"/><rect x="7.6" y="9.8" width="8.8" height="6.4" rx="1.6"/><path d="M7.6 12.6h8.8"/><path d="M5.5 19.4h13"/></svg><b>Day 2</b><em>富士初見・纜車</em></span>
+<span class="rghost" data-day="3"><svg class="rgicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 6.3h17.6"/><path d="M4.6 9.3h14.8"/><path d="M7.2 9.3V20"/><path d="M16.8 9.3V20"/><path d="M3.2 6.3C7 4.9 17 4.9 20.8 6.3"/></svg><b>Day 3</b><em>日出・天空鳥居</em></span>
+<span class="rghost" data-day="4"><svg class="rgicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.6" width="14" height="13.2" rx="3.4"/><path d="M5 11h14"/><path d="M9.2 14.2h.01M14.8 14.2h.01"/><path d="M7.6 16.8 5.6 20.4M16.4 16.8l2 3.6"/></svg><b>Day 4</b><em>富士回遊返東京</em></span>
+<span class="rghost" data-day="5"><svg class="rgicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="10.4" r="7.2"/><circle cx="12" cy="10.4" r="2"/><path d="M12 3.2v5.2M12 12.4v5.2M4.8 10.4h5.2M14 10.4h5.2M6.9 5.3l3.7 3.7M13.4 11.8l3.7 3.7M17.1 5.3l-3.7 3.7M10.6 11.8l-3.7 3.7"/><path d="M8.6 20.4h6.8"/><path d="M12 17.6v2.8"/></svg><b>Day 5</b><em>迪士尼樂園</em></span>
+<span class="rghost" data-day="6"><svg class="rgicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.6 9.2 3 20.4h18L15.4 9.2"/><path d="M8.6 9.2h6.8"/><path d="M10.4 6.6c.8-.9.4-2 .4-2M13.6 6.2c1-.7.8-2.1.8-2.1"/></svg><b>Day 6</b><em>迪士尼海洋</em></span>
+<span class="rghost" data-day="7"><svg class="rgicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.8 7.6h14.4l-1.1 12.2a1.4 1.4 0 0 1-1.4 1.3H7.3a1.4 1.4 0 0 1-1.4-1.3Z"/><path d="M8.8 10V6.6a3.2 3.2 0 0 1 6.4 0V10"/></svg><b>Day 7</b><em>原宿・表參道</em></span>
+<span class="rghost" data-day="8"><svg class="rgicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.6" y="5.4" width="12.8" height="11.6" rx="2.6"/><path d="M5.6 11.4h12.8"/><path d="M12 5.4V2.6"/><path d="M12 2.6h5"/><path d="M9 14.2h.01M15 14.2h.01"/><path d="M8 17v3.4M16 17v3.4"/></svg><b>Day 8</b><em>鎌倉一日遊</em></span>
+<span class="rghost" data-day="9"><svg class="rgicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 12c3-4 6.6-6 10-6 3.6 0 6.2 2.6 7.6 6-1.4 3.4-4 6-7.6 6-3.4 0-7-2-10-6Z"/><path d="M3.2 12 .9 8.4M3.2 12 .9 15.6"/><circle cx="16.4" cy="10.6" r=".9"/></svg><b>Day 9</b><em>築地・銀座・離境</em></span>
+    </div>
+    <div class="rcap">
+      <span class="rbadge" id="rcapday">Day 1</span>
+      <b id="rcapname">讀取中…</b>
+      <em id="rcaptext">正在向 Google 地圖取得照片</em>
+    </div>
+    <div class="rattr" id="rattr"></div>
+    <button class="rplay" id="rplay" type="button" aria-label="暫停或播放"><span></span></button>
+    <div class="rbar"><i id="rbarfill"></i></div>
+  </div>
+  <div class="rdays" id="rdays">
+<button class="rday" type="button" data-day="1"><svg class="ricon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13.2 21 5l-7.1 15.5-2.6-6.3-6.3-2.6Z"/><path d="M11.3 14.2 21 5"/></svg><b>Day 1</b><i>抵達・新宿</i><u>1/8 五</u></button>
+<button class="rday" type="button" data-day="2"><svg class="ricon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5 21 9"/><path d="M12 7.2v2.6"/><rect x="7.6" y="9.8" width="8.8" height="6.4" rx="1.6"/><path d="M7.6 12.6h8.8"/><path d="M5.5 19.4h13"/></svg><b>Day 2</b><i>富士初見・纜車</i><u>1/9 六</u></button>
+<button class="rday" type="button" data-day="3"><svg class="ricon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 6.3h17.6"/><path d="M4.6 9.3h14.8"/><path d="M7.2 9.3V20"/><path d="M16.8 9.3V20"/><path d="M3.2 6.3C7 4.9 17 4.9 20.8 6.3"/></svg><b>Day 3</b><i>日出・天空鳥居</i><u>1/10 日</u></button>
+<button class="rday" type="button" data-day="4"><svg class="ricon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.6" width="14" height="13.2" rx="3.4"/><path d="M5 11h14"/><path d="M9.2 14.2h.01M14.8 14.2h.01"/><path d="M7.6 16.8 5.6 20.4M16.4 16.8l2 3.6"/></svg><b>Day 4</b><i>富士回遊返東京</i><u>1/11 一</u></button>
+<button class="rday" type="button" data-day="5"><svg class="ricon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="10.4" r="7.2"/><circle cx="12" cy="10.4" r="2"/><path d="M12 3.2v5.2M12 12.4v5.2M4.8 10.4h5.2M14 10.4h5.2M6.9 5.3l3.7 3.7M13.4 11.8l3.7 3.7M17.1 5.3l-3.7 3.7M10.6 11.8l-3.7 3.7"/><path d="M8.6 20.4h6.8"/><path d="M12 17.6v2.8"/></svg><b>Day 5</b><i>迪士尼樂園</i><u>1/12 二</u></button>
+<button class="rday" type="button" data-day="6"><svg class="ricon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.6 9.2 3 20.4h18L15.4 9.2"/><path d="M8.6 9.2h6.8"/><path d="M10.4 6.6c.8-.9.4-2 .4-2M13.6 6.2c1-.7.8-2.1.8-2.1"/></svg><b>Day 6</b><i>迪士尼海洋</i><u>1/13 三</u></button>
+<button class="rday" type="button" data-day="7"><svg class="ricon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.8 7.6h14.4l-1.1 12.2a1.4 1.4 0 0 1-1.4 1.3H7.3a1.4 1.4 0 0 1-1.4-1.3Z"/><path d="M8.8 10V6.6a3.2 3.2 0 0 1 6.4 0V10"/></svg><b>Day 7</b><i>原宿・表參道</i><u>1/14 四</u></button>
+<button class="rday" type="button" data-day="8"><svg class="ricon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.6" y="5.4" width="12.8" height="11.6" rx="2.6"/><path d="M5.6 11.4h12.8"/><path d="M12 5.4V2.6"/><path d="M12 2.6h5"/><path d="M9 14.2h.01M15 14.2h.01"/><path d="M8 17v3.4M16 17v3.4"/></svg><b>Day 8</b><i>鎌倉一日遊</i><u>1/15 五</u></button>
+<button class="rday" type="button" data-day="9"><svg class="ricon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 12c3-4 6.6-6 10-6 3.6 0 6.2 2.6 7.6 6-1.4 3.4-4 6-7.6 6-3.4 0-7-2-10-6Z"/><path d="M3.2 12 .9 8.4M3.2 12 .9 15.6"/><circle cx="16.4" cy="10.6" r=".9"/></svg><b>Day 9</b><i>築地・銀座・離境</i><u>1/16 六</u></button>
+  </div>
+</div>
+
+<div class="note"><b>看不到照片時是正常的</b>照片由 Google Places API 即時讀取,需要網路與有效金鑰;若平台擋掉或金鑰未授權此網域,畫面會退回成地點名稱色塊,其餘功能照常。這一頁與各日景點小卡共用同一批照片請求,不會額外計費。</div>
 
 </section>
 
@@ -665,7 +780,7 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
 
 <div class="pagenav"><button id="pv"><span>&larr; 上一頁</span><u style="text-decoration:none;font-weight:700"></u></button><button id="nx" class="nx"><span>下一頁 &rarr;</span><u style="text-decoration:none;font-weight:700"></u></button></div>
 <footer>
-東京・河口湖・迪士尼 9日行程｜製作日 2026-08-25，2026-08-31更新Day2-4河口湖段落(星のや富士住宿・租車・富士回遊車次)，2026-09-03更新Day7-9(原宿表參道・鎌倉一日遊・築地銀座)，2026-09-05更新Day7澀谷SKY改晚餐後夜景場，2026-09-21取消Day7澀谷SKY(改晚餐後19:30直接check-in)，2026-10-01依Day1–9交通/營業時間查證更新，2026-10-02第三輪全日查核(Day2看日落、Day3みうらうどん、Toyota租車、Day9改16:10 Access特快、迪士尼休止設施等)，2026-10-06新增「優化待辦清單」獨立分頁(27項:路線10／餐食9／預約8／參考2,8項優先)並在總覽頁置頂入口｜行程日期 2027年1月8–16日<br>
+東京・河口湖・迪士尼 9日行程｜製作日 2026-08-25，2026-08-31更新Day2-4河口湖段落(星のや富士住宿・租車・富士回遊車次)，2026-09-03更新Day7-9(原宿表參道・鎌倉一日遊・築地銀座)，2026-09-05更新Day7澀谷SKY改晚餐後夜景場，2026-09-21取消Day7澀谷SKY(改晚餐後19:30直接check-in)，2026-10-01依Day1–9交通/營業時間查證更新，2026-10-02第三輪全日查核(Day2看日落、Day3みうらうどん、Toyota租車、Day9改16:10 Access特快、迪士尼休止設施等)，2026-10-06新增「行程影像」分頁(28個畫面Ken Burns輪播,游標移上顯示當日特色圖示)與「優化待辦清單」獨立分頁(27項:路線10／餐食9／預約8／參考2,8項優先)並在總覽頁置頂入口｜行程日期 2027年1月8–16日<br>
 部分資訊(航班時刻、飯店評比、快速通關規則、市區轉乘時間)為查詢彙整，出發前請再次核對官方資訊。
 </footer>
 </div>
@@ -887,6 +1002,7 @@ function __fetchPlacePhoto(placesLib, query, photoIndex){
 }
 
 window.__initTripPhotos = async function(){
+  if (window.__initReelPhotos) { window.__initReelPhotos(); }
   try{
     var placesLib = await google.maps.importLibrary('places');
   }catch(e){ return; }
@@ -951,6 +1067,114 @@ window.addEventListener('hashchange', function(){ setTimeout(__resizeVisibleTrip
     save({}); count();
   });
   count();
+})();
+</script>
+<script>
+/* 行程影像(THE REEL):Ken Burns 式輪播。照片沿用與各日景點小卡「完全相同」的 Places 查詢字串,
+   共用 window.__PLACE_PHOTO_CACHE 的 promise,因此不會產生額外的 API 請求/費用。 */
+(function(){
+  var S = [{"d": 1, "q": "成田国際空港", "i": 0, "n": "成田機場", "c": "12:55 落地,入境領行李"}, {"d": 1, "q": "JR九州ホテルブロッソム新宿", "i": 0, "n": "JR九州飯店 Blossom 新宿", "c": "新宿駅南口徒步 3 分"}, {"d": 1, "q": "AFURI 新宿ルミネ", "i": 1, "n": "AFURI 新宿ルミネ店", "c": "柚子鹽拉麵,第一晚的那碗"}, {"d": 2, "q": "河口湖駅", "i": 0, "n": "河口湖駅", "c": "12:24 抵達,步行 6–7 分取車"}, {"d": 2, "q": "ほうとう不動 東恋路店", "i": 0, "n": "餺飥不動 東戀路店", "c": "南瓜味噌餺飥,300 席翻桌快"}, {"d": 2, "q": "河口湖 天上山公園 カチカチ山ロープウェイ", "i": 0, "n": "天上山公園纜車", "c": "俯瞰河口湖與富士山"}, {"d": 2, "q": "大石公園 河口湖", "i": 0, "n": "大石公園", "c": "16:50 日落,富士山借景"}, {"d": 2, "q": "星のや富士", "i": 0, "n": "星のや富士", "c": "湖北岸大石地區,連住兩晚"}, {"d": 3, "q": "産屋ヶ崎 河口湖", "i": 0, "n": "産屋ヶ崎", "c": "06:56 日出,拍逆さ富士"}, {"d": 3, "q": "河口浅間神社 天空の鳥居", "i": 0, "n": "天空鳥居", "c": "車位僅 5–6 台,08:15 前要到"}, {"d": 3, "q": "新倉山浅間公園", "i": 0, "n": "新倉山淺間公園・忠靈塔", "c": "398 階,五重塔＋富士山"}, {"d": 3, "q": "西裏通り 富士吉田", "i": 0, "n": "西裏通り", "c": "昭和懷舊街景"}, {"d": 3, "q": "忍野八海", "i": 0, "n": "忍野八海", "c": "富士湧泉群"}, {"d": 4, "q": "ローソン 河口湖船津登山道店", "i": 0, "n": "羅森 船津登山道店", "c": "富士山打卡,還車前順路"}, {"d": 4, "q": "ふじ天ぷら いだてん 河口湖", "i": 1, "n": "Fuji Tempura IDATEN", "c": "富士山天丼,假日要排隊"}, {"d": 4, "q": "東京ディズニーランドホテル", "i": 0, "n": "迪士尼樂園大飯店", "c": "17:20 check-in,連住三晚"}, {"d": 5, "q": "東京ディズニーランド", "i": 0, "n": "東京迪士尼樂園", "c": "9:00–21:00,Happy Entry 早 15 分"}, {"d": 6, "q": "東京ディズニーシー", "i": 0, "n": "東京迪士尼海洋", "c": "無 Happy Entry,提早 60–90 分排隊"}, {"d": 7, "q": "竹下通り 原宿", "i": 0, "n": "竹下通り", "c": "原宿流行服飾/藥妝"}, {"d": 7, "q": "表参道ヒルズ", "i": 0, "n": "表參道Hills", "c": "精品購物,1/14 是否休館待查"}, {"d": 7, "q": "THE BLOSSOM HIBIYA 新橋", "i": 0, "n": "THE BLOSSOM HIBIYA", "c": "新橋駅日比谷口徒步 5 分"}, {"d": 8, "q": "鶴岡八幡宮", "i": 0, "n": "鶴岡八幡宮", "c": "鎌倉幕府守護神社"}, {"d": 8, "q": "小町通り 鎌倉", "i": 0, "n": "小町通商店街", "c": "午餐＋購物"}, {"d": 8, "q": "銭洗弁財天宇賀福神社", "i": 0, "n": "錢洗弁財天", "c": "去程搭計程車,回程走緩坡"}, {"d": 8, "q": "鎌倉高校前駅 踏切", "i": 0, "n": "鎌倉高校前平交道", "c": "海景平交道"}, {"d": 9, "q": "築地場外市場", "i": 0, "n": "築地場外市場", "c": "09:00 早餐,1/16 是開市日"}, {"d": 9, "q": "銀座", "i": 0, "n": "銀座", "c": "10:30–15:40 採買"}, {"d": 9, "q": "成田国際空港", "i": 0, "n": "成田機場", "c": "20:20 BR195 起飛"}];
+  var track=document.getElementById('rtrack'); if(!track) return;
+  var capDay=document.getElementById('rcapday'), capName=document.getElementById('rcapname'),
+      capText=document.getElementById('rcaptext'), attr=document.getElementById('rattr'),
+      bar=document.getElementById('rbarfill'), stage=document.getElementById('rstage'),
+      cursor=document.getElementById('rcursor'), playBtn=document.getElementById('rplay'),
+      daysEl=document.getElementById('rdays'), panel=document.getElementById('p-reel');
+  var HOLD=5200, cur=-1, timer=null, t0=0, raf=null, paused=false, pinned=null;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  S.forEach(function(s,k){
+    var el=document.createElement('div');
+    el.className='rslide'+(k%2?' rev':'');
+    el.dataset.day=s.d;
+    el.innerHTML='<span class="rfb"></span>';
+    el.firstChild.textContent=s.n;
+    track.appendChild(el); s.el=el;
+  });
+
+  function paint(k){
+    var s=S[k]; if(!s) return;
+    S.forEach(function(o,j){ o.el.classList.toggle('on', j===k); });
+    capDay.textContent='Day '+s.d;
+    capName.textContent=s.n;
+    capText.textContent=s.c;
+    attr.textContent=s.attr||'';
+    [].forEach.call(daysEl.children,function(b){ b.classList.toggle('on', +b.dataset.day===s.d); });
+    [].forEach.call(cursor.children,function(g){ g.classList.toggle('on', +g.dataset.day===s.d); });
+    cur=k;
+  }
+  function nextIndex(){
+    if(pinned===null) return (cur+1)%S.length;
+    var inDay=[]; S.forEach(function(o,j){ if(o.d===pinned) inDay.push(j); });
+    if(!inDay.length) return (cur+1)%S.length;
+    var at=inDay.indexOf(cur);
+    return inDay[(at+1)%inDay.length];
+  }
+  function cycle(){
+    clearTimeout(timer); t0=Date.now();
+    if(paused||reduce){ bar.style.width='0'; return; }
+    timer=setTimeout(function(){ paint(nextIndex()); cycle(); },HOLD);
+  }
+  function tick(){
+    if(!paused&&!reduce){ bar.style.width=Math.min(100,(Date.now()-t0)/HOLD*100)+'%'; }
+    raf=requestAnimationFrame(tick);
+  }
+  function setPaused(p){
+    paused=p; playBtn.classList.toggle('paused',p);
+    if(p){ clearTimeout(timer); bar.style.width='0'; } else { cycle(); }
+  }
+  playBtn.addEventListener('click',function(e){ e.stopPropagation(); setPaused(!paused); });
+
+  [].forEach.call(daysEl.children,function(b){
+    b.addEventListener('click',function(){
+      var d=+b.dataset.day;
+      if(pinned===d){ pinned=null; paint(nextIndex()); cycle(); return; }
+      pinned=d;
+      for(var j=0;j<S.length;j++){ if(S[j].d===d){ paint(j); break; } }
+      cycle();
+    });
+  });
+
+  stage.addEventListener('pointermove',function(e){
+    if(e.pointerType==='touch') return;
+    var r=stage.getBoundingClientRect();
+    cursor.style.transform='translate3d('+(e.clientX-r.left)+'px,'+(e.clientY-r.top)+'px,0)';
+    stage.classList.add('hov');
+  });
+  stage.addEventListener('pointerleave',function(){ stage.classList.remove('hov'); });
+  stage.addEventListener('click',function(e){
+    if(playBtn.contains(e.target)) return;
+    paint(nextIndex()); cycle();
+  });
+
+  /* 只在這個分頁可見時才跑,離開就停,省電池 */
+  function sync(){
+    if(panel.classList.contains('on')){
+      if(!raf){ raf=requestAnimationFrame(tick); }
+      if(cur<0){ paint(0); }
+      cycle();
+    } else {
+      clearTimeout(timer);
+      if(raf){ cancelAnimationFrame(raf); raf=null; }
+    }
+  }
+  document.addEventListener('click',function(){ setTimeout(sync,40); });
+  window.addEventListener('hashchange',function(){ setTimeout(sync,40); });
+  document.addEventListener('visibilitychange',function(){ if(document.hidden){ clearTimeout(timer); } else { sync(); } });
+
+  window.__initReelPhotos = async function(){
+    if(!window.google || !window.__fetchPlacePhoto) return;
+    var lib; try{ lib=await google.maps.importLibrary('places'); }catch(e){ return; }
+    await Promise.all(S.map(async function(s){
+      var info=await __fetchPlacePhoto(lib,s.q,s.i);
+      if(!info||!info.url) return;
+      var img=new Image(); img.alt=s.n; img.src=info.url;
+      s.el.insertBefore(img,s.el.firstChild);
+      s.attr = info.attribution ? ('照片來源:Google Maps · '+info.attribution) : '照片來源:Google Maps';
+      if(S[cur]===s){ attr.textContent=s.attr; }
+    }));
+  };
+  paint(0); sync();
 })();
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCABXtblyDlmRdLXAuNmWYfGMtfT1kdFoM&callback=__initTripMaps&loading=async" async></script>
