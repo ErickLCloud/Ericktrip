@@ -44,7 +44,24 @@ header .sub{color:#c9d3db;font-size:.98rem;max-width:44em;margin-bottom:40px}
 nav{position:sticky;top:0;z-index:50;background:rgba(240,244,247,.92);
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);margin-bottom:40px}
 nav .inner{max-width:1080px;margin:0 auto;padding:6px 20px 0;display:flex;gap:2px;
-  overflow-x:auto;scrollbar-width:none}
+  overflow-x:auto;scrollbar-width:none;scroll-behavior:smooth}
+@media(min-width:880px){
+  /* 13 個分頁一行放不下 — 寬螢幕改成自動換行兩列,不用再拖 */
+  nav .inner{flex-wrap:wrap;overflow:visible;row-gap:0;padding-bottom:0}
+  .tab{padding-left:12px;padding-right:12px}
+  .navarr{display:none}
+}
+.navarr{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:30px;height:30px;
+  border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ink2);
+  font-size:1.1rem;line-height:1;cursor:pointer;display:none;align-items:center;justify-content:center;
+  box-shadow:0 2px 10px rgba(26,40,54,.16);padding:0 0 2px}
+.navarr.l{left:6px} .navarr.r{right:6px}
+nav.can-l .navarr.l,nav.can-r .navarr.r{display:flex}
+.navarr:active{background:var(--sun-l);color:var(--orange-t)}
+nav:before,nav:after{content:'';position:absolute;top:0;bottom:1px;width:46px;z-index:2;pointer-events:none;opacity:0;transition:opacity .3s}
+nav:before{left:0;background:linear-gradient(to right,var(--bg),rgba(240,244,247,0))}
+nav:after{right:0;background:linear-gradient(to left,var(--bg),rgba(240,244,247,0))}
+nav.can-l:before,nav.can-r:after{opacity:1}
 nav .inner::-webkit-scrollbar{display:none}
 .tab{display:flex;flex-direction:column;align-items:flex-start;gap:1px;white-space:nowrap;
   border:0;border-bottom:3px solid transparent;background:none;cursor:pointer;border-radius:0;
@@ -325,7 +342,10 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
     </div>
   </div>
 </header>
-<nav><div class="inner" role="tablist" aria-label="行程分頁">
+<nav>
+<button class="navarr l" id="navL" type="button" aria-label="分頁往左捲動" tabindex="-1">‹</button>
+<button class="navarr r" id="navR" type="button" aria-label="分頁往右捲動" tabindex="-1">›</button>
+<div class="inner" role="tablist" aria-label="行程分頁">
 <button class="tab" role="tab" data-tab="overview" id="tab-overview" aria-controls="p-overview"><b>總覽</b><i>1/8–1/16</i></button>
 <button class="tab hot" role="tab" data-tab="opt" id="tab-opt" aria-controls="p-opt"><b>待辦清單</b><i id="tabopti">28 項待處理</i></button>
 <button class="tab" role="tab" data-tab="reel" id="tab-reel" aria-controls="p-reel"><b>行程影像</b><i>9天・31個畫面</i></button>
@@ -785,7 +805,7 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
 
 <div class="pagenav"><button id="pv"><span>&larr; 上一頁</span><u style="text-decoration:none;font-weight:700"></u></button><button id="nx" class="nx"><span>下一頁 &rarr;</span><u style="text-decoration:none;font-weight:700"></u></button></div>
 <footer>
-東京・河口湖・迪士尼 9日行程｜製作日 2026-08-25，2026-08-31更新Day2-4河口湖段落(星のや富士住宿・租車・富士回遊車次)，2026-09-03更新Day7-9(原宿表參道・鎌倉一日遊・築地銀座)，2026-09-05更新Day7澀谷SKY改晚餐後夜景場，2026-09-21取消Day7澀谷SKY(改晚餐後19:30直接check-in)，2026-10-01依Day1–9交通/營業時間查證更新，2026-10-02第三輪全日查核(Day2看日落、Day3みうらうどん、Toyota租車、Day9改16:10 Access特快、迪士尼休止設施等)，2026-10-06補上Day1–6餐食決定與Day9銀座兩家,新增「行程影像」分頁(31個畫面Ken Burns輪播,游標移上顯示當日特色圖示)與「優化待辦清單」獨立分頁(27項:路線10／餐食9／預約8／參考2,8項優先)並在總覽頁置頂入口｜行程日期 2027年1月8–16日<br>
+東京・河口湖・迪士尼 9日行程｜製作日 2026-08-25，2026-08-31更新Day2-4河口湖段落(星のや富士住宿・租車・富士回遊車次)，2026-09-03更新Day7-9(原宿表參道・鎌倉一日遊・築地銀座)，2026-09-05更新Day7澀谷SKY改晚餐後夜景場，2026-09-21取消Day7澀谷SKY(改晚餐後19:30直接check-in)，2026-10-01依Day1–9交通/營業時間查證更新，2026-10-02第三輪全日查核(Day2看日落、Day3みうらうどん、Toyota租車、Day9改16:10 Access特快、迪士尼休止設施等)，2026-10-06分頁列改為寬螢幕兩列、窄螢幕加左右箭頭,補上Day1–6餐食決定與Day9銀座兩家,新增「行程影像」分頁(31個畫面Ken Burns輪播,游標移上顯示當日特色圖示)與「優化待辦清單」獨立分頁(27項:路線10／餐食9／預約8／參考2,8項優先)並在總覽頁置頂入口｜行程日期 2027年1月8–16日<br>
 部分資訊(航班時刻、飯店評比、快速通關規則、市區轉乘時間)為查詢彙整，出發前請再次核對官方資訊。
 </footer>
 </div>
@@ -825,6 +845,26 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
   });
   window.addEventListener('hashchange',function(){show(location.hash.slice(1),false)});
   show((location.hash||'').slice(1)||ids[0],false);
+
+  /* 窄螢幕時分頁列仍是單列橫向捲動 — 給它左右箭頭與邊緣漸層,
+     不必用手指/游標去猜還有沒有內容。寬螢幕會換行兩列,箭頭以 CSS 隱藏。 */
+  var nv=document.querySelector('nav'), strip=document.querySelector('nav .inner'),
+      aL=document.getElementById('navL'), aR=document.getElementById('navR');
+  function arrows(){
+    if(!nv||!strip) return;
+    var over=strip.scrollWidth-strip.clientWidth>4;
+    nv.classList.toggle('can-l', over && strip.scrollLeft>2);
+    nv.classList.toggle('can-r', over && strip.scrollLeft < strip.scrollWidth-strip.clientWidth-2);
+  }
+  function nudge(dir){ strip.scrollBy({left:dir*Math.max(160,strip.clientWidth*0.7),behavior:'smooth'}); }
+  if(aL&&aR){
+    aL.addEventListener('click',function(){ nudge(-1); });
+    aR.addEventListener('click',function(){ nudge(1); });
+    strip.addEventListener('scroll',arrows,{passive:true});
+    window.addEventListener('resize',arrows);
+    tabs.forEach(function(t){ t.addEventListener('click',function(){ setTimeout(arrows,320); }); });
+    setTimeout(arrows,60);
+  }
 })();
 </script>
 
