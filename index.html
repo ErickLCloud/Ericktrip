@@ -1,0 +1,813 @@
+<!doctype html><html lang="zh-Hant"><head><meta name="robots" content="noindex,nofollow"><title>東京・河口湖・迪士尼 9日行程</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1A2836; --blue:#F0F4F7; --orange:#FB7459; --orange-t:#C24428; --gray:#BFC7CE;
+  --ink:#1A2836; --ink2:#44525f; --muted:#7b8894;
+  --bg:#F0F4F7; --card:#ffffff; --line:#dde3e8;
+  --sea:#1A2836; --sea-l:#F0F4F7;
+  --plum:#C24428; --plum-l:#FEEFEA;
+  --sun:#FB7459; --sun-l:#FFF3EE;
+  --leaf:#3f6b63; --leaf-l:#EAF2F0;
+  --shadow:0 1px 2px rgba(26,40,54,.04),0 10px 30px rgba(26,40,54,.06);
+  --ease:cubic-bezier(.2,.7,.3,1);
+  --fp:calc((100vw - 375px)/925px);
+  --t-hero:clamp(2rem,calc(2rem + 2rem*var(--fp)),4rem);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Zen Kaku Gothic New","Noto Sans TC","PingFang TC","Hiragino Sans","Microsoft JhengHei",system-ui,sans-serif;
+  line-height:1.8; font-size:16px; -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--orange);color:#fff}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px 100px}
+header{
+  background:var(--navy); color:#fff; padding:clamp(56px,8vw,110px) 20px clamp(48px,6vw,80px);
+  margin-bottom:0; position:relative; overflow:hidden;
+}
+header:before{content:"";position:absolute;right:-12vw;top:-18vw;width:46vw;height:46vw;max-width:620px;max-height:620px;
+  border-radius:50%;border:1px solid rgba(251,116,89,.55);box-shadow:0 0 0 38px rgba(251,116,89,.06),0 0 0 90px rgba(255,255,255,.03)}
+header .inner{max-width:1080px;margin:0 auto;position:relative}
+header h1{margin:0 0 18px;font-size:var(--t-hero);line-height:1.25;letter-spacing:.04em;font-weight:500;text-wrap:balance}
+header h1:after{content:"";display:block;width:56px;height:3px;background:var(--orange);margin-top:22px;border-radius:2px}
+header .sub{color:#c9d3db;font-size:.98rem;max-width:44em;margin-bottom:40px}
+.facts{display:flex;flex-wrap:wrap;gap:12px}
+.fact{background:transparent;border:1px solid rgba(255,255,255,.28);
+  border-radius:30px;padding:9px 20px;font-size:.84rem;transition:border-color .4s var(--ease),background .4s var(--ease)}
+.fact:hover{border-color:var(--orange);background:rgba(251,116,89,.08)}
+.fact b{display:block;font-size:1rem;font-weight:500;letter-spacing:.04em;font-family:"Jost","Zen Kaku Gothic New",sans-serif}
+.fact span{color:#aab7c2;font-size:.76rem}
+nav{position:sticky;top:0;z-index:50;background:rgba(240,244,247,.92);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);margin-bottom:40px}
+nav .inner{max-width:1080px;margin:0 auto;padding:6px 20px 0;display:flex;gap:2px;
+  overflow-x:auto;scrollbar-width:none}
+nav .inner::-webkit-scrollbar{display:none}
+.tab{display:flex;flex-direction:column;align-items:flex-start;gap:1px;white-space:nowrap;
+  border:0;border-bottom:3px solid transparent;background:none;cursor:pointer;border-radius:0;
+  padding:9px 14px 8px;font-family:inherit;color:var(--ink2);transition:color .4s var(--ease),border-color .4s var(--ease);line-height:1.25}
+.tab b{font-size:.92rem;font-weight:500;font-family:"Jost","Zen Kaku Gothic New",sans-serif;letter-spacing:.06em}
+.tab i{font-style:normal;font-size:.68rem;color:var(--muted);letter-spacing:.02em}
+.tab:hover{color:var(--orange-t);border-bottom-color:var(--gray)}
+.tab[aria-selected="true"]{border-bottom-color:var(--orange)}
+.tab[aria-selected="true"] b{color:var(--navy);font-weight:700}
+.tab[aria-selected="true"] i{color:var(--orange-t)}
+h2{font-size:clamp(1.4rem,calc(1.4rem + 1rem*var(--fp)),2.2rem);font-weight:500;margin:64px 0 8px;padding-bottom:14px;border-bottom:1px solid var(--navy);
+  display:flex;align-items:baseline;gap:14px;text-wrap:balance;letter-spacing:.03em;position:relative}
+h2:after{content:"";position:absolute;left:0;bottom:-1px;width:56px;height:3px;background:var(--orange)}
+h2 small{font-size:.76rem;font-weight:400;color:var(--muted);letter-spacing:.1em}
+h3{font-size:1.12rem;font-weight:700;margin:30px 0 10px}
+p{margin:.6em 0}
+a{color:var(--orange-t);text-underline-offset:3px;transition:color .3s}
+a:hover{color:var(--orange)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:24px 28px;margin:16px 0;box-shadow:var(--shadow)}
+.note,.warn,.tip{padding:15px 20px;border-radius:12px;margin:16px 0;font-size:.94rem;border:1px solid transparent}
+.note{background:#fff;border-color:var(--line);border-left:4px solid var(--navy)}
+.warn{background:var(--plum-l);border-color:#f7d3c9;border-left:4px solid var(--orange)}
+.tip{background:var(--leaf-l);border-color:#d3e4e0;border-left:4px solid var(--leaf)}
+.note b,.warn b,.tip b{display:block;margin-bottom:3px}
+.warn b{color:var(--orange-t)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem;background:#fff}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--navy);font-weight:500;font-size:.8rem;letter-spacing:.08em;color:#fff}
+tbody tr{transition:background .3s}
+tbody tr:hover{background:var(--blue)}
+.tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+.tblwrap table{margin:0}
+.day{background:var(--card);border:1px solid var(--line);border-radius:20px;
+  margin:26px 0;overflow:hidden;box-shadow:var(--shadow)}
+.day-h{display:flex;align-items:center;gap:20px;padding:22px 28px;
+  background:var(--navy);color:#fff;border-bottom:3px solid var(--orange)}
+.daynum{flex:0 0 auto;width:60px;height:60px;border-radius:50%;background:transparent;border:1px solid var(--orange);
+  color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  line-height:1.1;font-family:"Jost",sans-serif}
+.daynum i{font-style:normal;font-size:.56rem;color:var(--orange);letter-spacing:.2em}
+.daynum b{font-size:1.4rem;font-weight:500;font-variant-numeric:tabular-nums}
+.day-h .t{flex:1}
+.day-h .t h3{margin:0;font-size:1.18rem;font-weight:500;letter-spacing:.03em;text-wrap:balance}
+.day-h .t .meta{font-size:.82rem;color:#aab7c2;margin-top:2px}
+.day-b{padding:24px 28px}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
+.b{font-size:.74rem;padding:3px 11px;border-radius:20px;border:1px solid}
+.b.sea{background:var(--blue);border-color:var(--gray);color:var(--navy)}
+.b.plum{background:var(--plum-l);border-color:#f7d3c9;color:var(--orange-t)}
+.b.sun{background:var(--sun-l);border-color:#fbd4c8;color:var(--orange-t)}
+.b.leaf{background:var(--leaf-l);border-color:#cfe1dd;color:var(--leaf)}
+.status{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;padding:3px 11px 3px 9px;
+  border-radius:20px;font-weight:500;letter-spacing:.04em}
+.status.lock{background:var(--blue);color:var(--navy)}
+.status.lock:before{content:"●";color:var(--navy)}
+.status.sugg{background:var(--sun-l);color:var(--orange-t)}
+.status.sugg:before{content:"●";color:var(--orange)}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:flex;gap:16px;padding:11px 0;border-bottom:1px solid #e8edf1;transition:background .3s}
+.tl li:last-child{border-bottom:none}
+.tl .time{flex:0 0 66px;font-variant-numeric:tabular-nums;font-weight:500;
+  color:var(--orange-t);font-size:.88rem;padding-top:2px;font-family:"Jost",sans-serif;letter-spacing:.06em}
+.tl .body{flex:1;font-size:.94rem}
+.tl .body strong{font-weight:700}
+.tl .body em{font-style:normal;color:var(--muted);font-size:.84rem;display:block;margin-top:2px}
+.drive{display:inline-flex;align-items:center;gap:6px;background:var(--blue);
+  border-radius:20px;padding:2px 12px;font-size:.78rem;color:var(--ink2);margin:2px 0}
+.stay{margin-top:18px;padding:14px 18px;background:var(--blue);border:0;
+  border-radius:12px;font-size:.9rem}
+.stay b{color:var(--orange-t)}
+ul.clean{padding-left:20px;margin:.5em 0}
+ul.clean li{margin:.35em 0;font-size:.94rem}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.chk{list-style:none;padding:0;margin:10px 0}
+.chk li{padding:9px 0 9px 32px;position:relative;border-bottom:1px solid #e8edf1;font-size:.93rem}
+.chk li:before{content:"";position:absolute;left:4px;top:15px;width:14px;height:14px;
+  border:1.5px solid var(--orange);border-radius:50%}
+.chk li:last-child{border-bottom:none}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;margin:4px 0 12px}
+.pcard{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .4s}
+.pcard:hover{transform:translateY(-4px);box-shadow:0 4px 8px rgba(26,40,54,.06),0 18px 38px rgba(26,40,54,.14);border-color:var(--orange)}
+.pgmap{display:inline-block;margin-top:6px;font-size:.72rem;color:var(--orange-t);font-weight:500;text-decoration:none}
+.pgmap:hover{text-decoration:underline}
+.pimg{position:relative;aspect-ratio:16/10;background:#dfe7ec;overflow:hidden}
+.pimg .pfallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:8px;font-size:.86rem;font-weight:500;color:#7d8f99;letter-spacing:.04em}
+.pimg-link{position:absolute;inset:0;display:block}
+.ppic{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:#dfe7ec;transition:transform .8s var(--ease)}
+.pcard:hover .ppic{transform:scale(1.05)}
+.pattrib{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(20,25,30,.62));
+  color:#fff;font-size:.6rem;padding:3px 7px 4px;line-height:1.3;letter-spacing:.01em}
+.pmeta{padding:13px 15px 15px}
+.ptag{display:inline-block;font-size:.66rem;padding:2px 9px;border-radius:20px;margin-bottom:6px;border:1px solid}
+.t-spot{background:var(--blue);border-color:var(--gray);color:var(--navy)}
+.t-food{background:var(--sun-l);border-color:#fbd4c8;color:var(--orange-t)}
+.t-onsen{background:var(--plum-l);border-color:#f7d3c9;color:var(--orange-t)}
+.t-stay{background:var(--leaf-l);border-color:#cfe1dd;color:var(--leaf)}
+.t-move{background:#e9eef2;border-color:var(--gray);color:#5b6b78}
+.pmeta b{display:block;font-size:.95rem;font-weight:700;line-height:1.4;margin-bottom:3px}
+.pmeta em{font-style:normal;font-size:.8rem;color:var(--muted);line-height:1.55;display:block}
+.rmap{display:block;width:100%;height:auto}
+.gmap{width:100%;height:300px;display:block;background:#e3e9ee}
+.gmap.overview{height:420px}
+.mapwrap{margin:0 0 16px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+.mapwrap figcaption{background:var(--navy);color:#fff;padding:10px 16px;font-size:.85rem;font-weight:500;letter-spacing:.04em}
+.rmleg{display:flex;flex-wrap:wrap;gap:10px 18px;padding:10px 16px;background:var(--blue);border-top:1px solid var(--line);font-size:.78rem;color:var(--ink2)}
+.rmleg span{display:inline-flex;align-items:center;gap:6px}
+.rmleg i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--orange)}
+.panel{display:none}
+.panel.on{display:block;animation:fade .5s var(--ease)}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.panel > h2:first-child, .panel > .day:first-child{margin-top:8px}
+.pagenav{display:flex;justify-content:space-between;gap:12px;margin:40px 0 0}
+.pagenav button{flex:1;background:#fff;border:1px solid var(--navy);border-radius:30px;
+  padding:13px 24px;cursor:pointer;font-family:inherit;font-size:.9rem;color:var(--navy);
+  text-align:left;transition:background .4s var(--ease),color .4s var(--ease),border-color .4s var(--ease)}
+.pagenav button:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+.pagenav button:hover span{color:#fff}
+.pagenav button:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.pagenav button:disabled{opacity:.3;cursor:default;pointer-events:none}
+.pagenav button.nx{text-align:right}
+.pagenav span{display:block;font-size:.7rem;color:var(--muted);margin-bottom:2px;letter-spacing:.1em;transition:color .4s}
+.tab:focus-visible{outline:2px solid var(--orange);outline-offset:-2px}
+footer{text-align:center;color:var(--muted);font-size:.82rem;margin-top:70px;
+  padding-top:28px;border-top:1px solid var(--line);letter-spacing:.04em}
+html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card,.mapwrap{min-width:0}.day-h .t h3,.tl .body,.pmeta b,.pmeta em,header .sub{overflow-wrap:anywhere}
+@media(max-width:760px){
+  .grid2{grid-template-columns:1fr}
+  .day-h{padding:16px 18px;gap:14px}
+  .daynum{width:50px;height:50px}
+  .day-b{padding:18px}
+  .card{padding:20px}
+  .tl li{flex-direction:column;gap:2px}
+  .tl .time{flex:none}
+  .pgrid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+  .pmeta em{display:none}
+}
+@media print{
+  nav{display:none} header{background:#1A2836!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  header:before{display:none}
+  .day-h{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .day{break-inside:avoid} body{font-size:12px}
+  .panel{display:block!important} .pagenav{display:none}
+}
+@media (prefers-reduced-motion: reduce){
+  .panel.on{animation:none}
+  *{transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+
+<header>
+  <div class="inner">
+    <h1>東京・河口湖・迪士尼 9日行程</h1>
+    <div class="sub">桃園 → 成田 → 新宿 → 河口湖 → 東京迪士尼度假區 → 原宿表參道・鎌倉 → 成田 → 桃園｜隆冬富士山展望與迪士尼雙園深度遊</div>
+    <div class="facts">
+      <div class="fact"><b>2027/1/8 – 1/16</b><span>9 天 8 夜</span></div>
+      <div class="fact"><b>2 人</b><span>情侶／夫妻</span></div>
+      <div class="fact"><b>BR198 / BR195</b><span>桃園↔成田</span></div>
+      <div class="fact"><b>2 晚</b><span>星のや富士(HOSHINOYA Fuji)</span></div>
+      <div class="fact"><b>3 晚</b><span>迪士尼樂園大飯店(Tokyo Disneyland Hotel)</span></div>
+    </div>
+  </div>
+</header>
+<nav><div class="inner" role="tablist" aria-label="行程分頁">
+<button class="tab" role="tab" data-tab="overview" id="tab-overview" aria-controls="p-overview"><b>總覽</b><i>1/8–1/16</i></button>
+<button class="tab" role="tab" data-tab="day1" id="tab-day1" aria-controls="p-day1"><b>Day 1</b><i>1/8 五 新宿・抵達</i></button>
+<button class="tab" role="tab" data-tab="day2" id="tab-day2" aria-controls="p-day2"><b>Day 2</b><i>1/9 六 河口湖</i></button>
+<button class="tab" role="tab" data-tab="day3" id="tab-day3" aria-controls="p-day3"><b>Day 3</b><i>1/10 日 河口湖</i></button>
+<button class="tab" role="tab" data-tab="day4" id="tab-day4" aria-controls="p-day4"><b>Day 4</b><i>1/11 一 返回東京</i></button>
+<button class="tab" role="tab" data-tab="day5" id="tab-day5" aria-controls="p-day5"><b>Day 5</b><i>1/12 二 迪士尼樂園</i></button>
+<button class="tab" role="tab" data-tab="day6" id="tab-day6" aria-controls="p-day6"><b>Day 6</b><i>1/13 三 迪士尼海洋</i></button>
+<button class="tab" role="tab" data-tab="day7" id="tab-day7" aria-controls="p-day7"><b>Day 7</b><i>1/14 四 原宿表參道</i></button>
+<button class="tab" role="tab" data-tab="day8" id="tab-day8" aria-controls="p-day8"><b>Day 8</b><i>1/15 五 鎌倉一日遊</i></button>
+<button class="tab" role="tab" data-tab="day9" id="tab-day9" aria-controls="p-day9"><b>Day 9</b><i>1/16 六 離境</i></button>
+<button class="tab" role="tab" data-tab="guide" id="tab-guide" aria-controls="p-guide"><b>實用指南</b><i>航班・迪士尼・待確認</i></button>
+</div></nav>
+<div class="wrap">
+
+<section class="panel" id="p-overview" role="tabpanel" aria-labelledby="tab-overview">
+
+<h2 id="legend">怎麼讀這份行程 <small>LEGEND</small></h2>
+<p>行程分兩種狀態:<span class="status lock">已鎖定</span> 來自你自己在 V1.xlsx 排定的交通/住宿/目的地骨架;<span class="status sugg">建議・未鎖定</span> 是我依你的偏好與 input/ 資料夾裡的參考資料補上的景點安排,尚未經你確認,歡迎直接調整。</p>
+
+<div class="note"><b>本行程的骨架來自你的 input/V1.xlsx</b>我只補上其中空白的住宿與景點欄位,主結構(去哪幾天、住哪裡)都是你決定的。</div>
+
+<h2 id="route">路線總覽 <small>ROUTE</small></h2>
+<figure class="mapwrap schem">
+<div class="gmap overview" id="gmap-overview"></div>
+<div class="rmleg">
+  <span><i style="background:#1A2836;border-radius:2px;width:16px;height:4px;"></i>主要移動路線</span>
+  <span><i style="background:#9a5c1c;border-radius:2px;width:16px;height:4px;"></i>當天來回(鎌倉一日遊)</span>
+  <span><i style="background:#FB7459"></i>入住地(圈選數字＝順序)</span>
+</div>
+<figcaption>真實 Google 地圖(Retro樣式),依各點實際位置標示;僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+</figure>
+
+<h2 id="highlights">行程特色要點 <small>HIGHLIGHTS</small></h2>
+<ul class="clean">
+<li><b>隆冬富士山展望</b> — 河口湖天上山公園纜車、産屋ヶ崎逆さ富士、新倉山淺間公園忠靈塔五重塔借景,三個角度看富士山</li>
+<li><b>星のや富士頂級度假體驗</b> — 河口湖北岸連住2晚,含飯店晚餐,無外部接駁需自駕</li>
+<li><b>東京迪士尼雙園深度遊</b> — 樂園・海洋各一整天,官方飯店連住3晚</li>
+<li><b>鎌倉古都一日遊</b> — 鶴岡八幡宮・小町通・錢洗弁財天・灌籃高手平交道,江之電沿線串聯</li>
+<li><b>原宿表參道逛街</b> — 竹下通り、貓街、表參道Hills一整天自由行程</li>
+<li><b>築地早餐＋銀座採買</b> — 離境前最後一段美食與購物行程</li>
+</ul>
+
+<div class="tblwrap"><table><thead><tr><th>Day</th><th>日期</th><th>主題</th><th>住宿</th><th>狀態</th></tr></thead><tbody><tr><td><b>1</b></td><td>1/8 五</td><td>新宿・抵達</td><td>JR九州飯店Blossom新宿</td><td>已鎖定</td></tr><tr><td><b>2</b></td><td>1/9 六</td><td>天上山纜車・大石公園</td><td>星のや富士</td><td>已鎖定</td></tr><tr><td><b>3</b></td><td>1/10 日</td><td>産屋ヶ崎・忠靈塔・忍野八海</td><td>星のや富士</td><td>已鎖定</td></tr><tr><td><b>4</b></td><td>1/11 一</td><td>河口湖回東京市區</td><td>迪士尼</td><td>已鎖定</td></tr><tr><td><b>5</b></td><td>1/12 二</td><td>東京迪士尼樂園</td><td>迪士尼</td><td>已鎖定</td></tr><tr><td><b>6</b></td><td>1/13 三</td><td>東京迪士尼海洋</td><td>迪士尼</td><td>已鎖定</td></tr><tr><td><b>7</b></td><td>1/14 四</td><td>原宿・表參道逛街</td><td>THE BLOSSOM HIBIYA</td><td>已鎖定</td></tr><tr><td><b>8</b></td><td>1/15 五</td><td>鎌倉一日遊</td><td>THE BLOSSOM HIBIYA</td><td>已鎖定</td></tr><tr><td><b>9</b></td><td>1/16 六</td><td>築地早餐・銀座採買・離境(BR195 20:20)</td><td>無需訂房</td><td>已鎖定</td></tr></tbody></table></div>
+
+<h2 id="facts">基本資料 <small>KEY FACTS</small></h2>
+<div class="tblwrap"><table><tbody>
+<tr><th style="width:160px">旅遊日期</th><td>2027/1/8(五) – 1/16(六)，9 天 8 夜</td></tr>
+<tr><th>同行人數</th><td>2 人(情侶／夫妻)</td></tr>
+<tr><th>興趣偏好</th><td>美食、購物、文化／歷史、近郊小旅行</td></tr>
+<tr><th>去程航班</th><td>BR198　桃園(TPE)→成田(NRT)　參考 08:50 起飛 / 12:55 抵達(第三方航班資料為13:25,以電子機票為準)</td></tr>
+<tr><th>回程航班</th><td>BR195　成田(NRT)→桃園(TPE)　參考 20:20 起飛 / 23:25 抵達</td></tr>
+</tbody></table></div>
+
+<div class="warn"><b>航班時刻僅供排程參考</b>以上是冬季參考班表查詢結果,2027/1 實際時刻請在出發前以電子機票再次確認,班表可能調整。</div>
+
+<div class="note"><b>行程參考資料</b>河口湖段落(Day2–3)的景點取自 output/河口湖景點清單_v4.md(整合chicTrip行程筆記＋3部YouTube影片＋使用者提供的Google Gemini彙整PDF),使用者透過互動勾選工具選定8景點＋3美食,再依地理分群排出動線。住宿星のや富士、去回程富士回遊車次(去程10:30、回程富士回遊32號14:08)與租車安排皆為使用者實際確定。</div>
+
+</section>
+
+
+<section class="panel" id="p-day1" role="tabpanel" aria-labelledby="tab-day1">
+<div class="day">
+  <div class="day-h">
+    <div class="daynum"><i>DAY</i><b>1</b></div>
+    <div class="t"><h3>抵達成田・新宿逛街</h3>
+    <div class="meta">1/8(五)｜東京 &nbsp; <span class="status lock">已鎖定</span></div></div>
+  </div>
+  <div class="day-b">
+    <div class="badges"><span class="b sea">抵達</span><span class="b plum">輕鬆</span><span class="b sun">逛街</span></div>
+    <figure class="mapwrap daymap">
+<div class="gmap" id="gmap-day1"></div>
+<figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+</figure>
+    <div class="pgrid">
+<div class="pcard"><div class="pimg"><span class="pfallback">成田機場</span><a class="pimg-link" data-pq="成田国際空港" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="成田機場"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-move">抵達</span><b>成田機場</b><em>入境、領行李,購買Suica/N&#39;EX車票</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E6%88%90%E7%94%B0%E5%9B%BD%E9%9A%9B%E7%A9%BA%E6%B8%AF">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">JR九州飯店Blossom新宿</span><a class="pimg-link" data-pq="JR九州ホテルブロッソム新宿" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="JR九州飯店Blossom新宿"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-stay">住宿</span><b>JR九州飯店 Blossom 新宿</b><em>16:00 check-in</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=JR%E4%B9%9D%E5%B7%9E%E3%83%9B%E3%83%86%E3%83%AB%E3%83%96%E3%83%AD%E3%83%83%E3%82%BD%E3%83%A0%E6%96%B0%E5%AE%BF">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">AFURI 新宿ルミネ店</span><a class="pimg-link" data-pq="AFURI 新宿ルミネ" data-pidx="1" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="AFURI 新宿ルミネ店"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-food">美食</span><b>AFURI 新宿ルミネ店</b><em>19:00 柚子鹽拉麵</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=AFURI%20%E6%96%B0%E5%AE%BF%E3%83%AB%E3%83%9F%E3%83%8D">在Google Maps開啟 ↗</a></div></div>
+</div>
+    <ul class="tl"><li><div class="time">08:50</div><div class="body"><strong>BR198 桃園出發</strong><em>時刻為冬季參考班表,請以電子機票為準</em></div></li><li><div class="time">12:55</div><div class="body"><strong>抵達成田機場 第1航廈南翼</strong><em>入境、領行李(落地到出關約45〜75分),購買 Suica/Pasmo 或 N&#39;EX 車票;第三方航班資料寫13:25抵達,以電子機票為準</em></div></li><li><div class="time">14:20</div><div class="body"><strong>N&#39;EX 成田特快 → 新宿</strong><em><span class="drive">🚄 14:20發→15:41新宿,直達,¥3,330</span> 出關順利可改13:44;若13:25落地改14:45→16:11。備案:Skyliner+山手線(日暮里轉乘)約1h11、¥2,670;利木津巴士¥3,600約1h45</em></div></li><li><div class="time">約16:00</div><div class="body"><strong>JR九州飯店 Blossom 新宿 check-in</strong><em>新宿駅南口徒步3分;check-in 14:00起</em></div></li><li><div class="time">傍晚</div><div class="body"><strong>新宿周邊輕鬆走走</strong><em>思い出橫丁、西口高樓夜景、歌舞伎町一番街,依抵達後體力彈性安排;晚間先在JR新宿站指定席售票機/綠色窗口領隔天富士回遊車票</em></div></li><li><div class="time">19:00</div><div class="body"><strong>晚餐:AFURI 新宿ルミネ店</strong><em>柚子鹽拉麵・ルミネ1 B2F,飯店步行約4分;10:00〜22:00(LO 21:30)年中無休</em></div></li></ul><div class="tip"><b>Landing day,別排太滿</b>長途飛行加時差,晚上以輕鬆逛街、早點休息為主,把體力留給後面的河口湖與迪士尼。</div>
+    <div class="stay"><b>住宿</b>｜JR九州飯店 Blossom 新宿 <span class="status lock">已鎖定</span></div>
+  </div>
+</div>
+</section>
+
+<section class="panel" id="p-day2" role="tabpanel" aria-labelledby="tab-day2">
+<div class="day">
+  <div class="day-h">
+    <div class="daynum"><i>DAY</i><b>2</b></div>
+    <div class="t"><h3>天上山纜車・大石公園・星のや富士</h3>
+    <div class="meta">1/9(六)｜富士五湖 &nbsp; <span class="status lock">已鎖定</span></div></div>
+  </div>
+  <div class="day-b">
+    <div class="badges"><span class="b sea">纜車</span><span class="b plum">租車</span><span class="b sun">度假村</span></div>
+    <figure class="mapwrap daymap">
+<div class="gmap" id="gmap-day2"></div>
+<figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+</figure>
+    <div class="pgrid">
+<div class="pcard"><div class="pimg"><span class="pfallback">河口湖駅</span><a class="pimg-link" data-pq="河口湖駅" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="河口湖駅"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-move">交通</span><b>河口湖駅</b><em>步行6〜7分到Toyota租車取車</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E6%B2%B3%E5%8F%A3%E6%B9%96%E9%A7%85">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">餺飥不動 東戀路店</span><a class="pimg-link" data-pq="ほうとう不動 東恋路店" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="餺飥不動 東戀路店"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-food">美食</span><b>餺飥不動 東戀路店</b><em>招牌蔬菜餺飥(南瓜味噌烏龍麵鍋),300席大空間+專用停車場,翻桌快;備案:手打烏龍麵 麵許皆傳(Tabelog約3.65-3.70,僅營業至14:00左右)</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E3%81%BB%E3%81%86%E3%81%A8%E3%81%86%E4%B8%8D%E5%8B%95%20%E6%9D%B1%E6%81%8B%E8%B7%AF%E5%BA%97">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">天上山公園纜車</span><a class="pimg-link" data-pq="河口湖 天上山公園 カチカチ山ロープウェイ" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="天上山公園纜車"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">景點</span><b>天上山公園纜車</b><em>俯瞰河口湖與富士山,含狸貓茶屋炭烤糰子</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E6%B2%B3%E5%8F%A3%E6%B9%96%20%E5%A4%A9%E4%B8%8A%E5%B1%B1%E5%85%AC%E5%9C%92%20%E3%82%AB%E3%83%81%E3%82%AB%E3%83%81%E5%B1%B1%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">大石公園</span><a class="pimg-link" data-pq="大石公園 河口湖" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="大石公園"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">景點</span><b>大石公園</b><em>河口湖自然生活館,伴手禮＋富士山借景</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E7%9F%B3%E5%85%AC%E5%9C%92%20%E6%B2%B3%E5%8F%A3%E6%B9%96">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">星のや富士</span><a class="pimg-link" data-pq="星のや富士" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="星のや富士"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-stay">住宿</span><b>星のや富士</b><em>河口湖北岸大石地區,連住2晚</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E6%98%9F%E3%81%AE%E3%82%84%E5%AF%8C%E5%A3%AB">在Google Maps開啟 ↗</a></div></div>
+</div>
+    <ul class="tl"><li><div class="time">10:30</div><div class="body"><strong>新宿發富士回遊15號(FUJI EXCURSION)</strong><em>直達河口湖駅;大件行李可放車廂端點行李架、頭頂網架、或提前劃最後一排座位後方空隙</em></div></li><li><div class="time">12:24</div><div class="body"><strong>抵達河口湖駅 → 步行6〜7分到 Toyota Rent a Car 富士河口湖店</strong><em>取車手續約15〜20分,事先線上填好資料;需台灣駕照+日文譯本+有入境章的護照(走自動通關請另請關員蓋章);確認已配無釘雪胎(預約時指定)</em></div></li><li><div class="time">12:55</div><div class="body"><strong>開車前往餺飥不動 東戀路店</strong><em><span class="drive">🚗 車程約6〜8分</span> 此緩衝已不宜再壓縮</em></div></li><li><div class="time">13:05-14:00</div><div class="body"><strong>午餐:餺飥不動 東戀路店</strong><em>招牌蔬菜餺飥,週六營業,300席+專用停車場;備案:手打烏龍麵 麵許皆傳(僅營業至約14:00)</em></div></li><li><div class="time">14:00-14:20</div><div class="body"><strong>開車前往天上山纜車站</strong><em><span class="drive">🚗 車程約10分</span> + 停車步行,可停河口湖畔免費公有停車場</em></div></li><li><div class="time">14:20-15:30</div><div class="body"><strong>天上山公園纜車(かちかち山纜車)</strong><em>冬季9:30〜16:30,下行末班16:50;上行末班未查得(出發前電話0555-72-0363);1月排隊上山常需30〜60分</em></div></li><li><div class="time">15:30-15:50</div><div class="body"><strong>開車前往大石公園</strong><em><span class="drive">🚗 車程約15分</span> 沿北岸可見産屋ヶ崎逆さ富士名所</em></div></li><li><div class="time">15:50-17:05</div><div class="body"><strong>大石公園・河口湖自然生活館</strong><em>湖畔步道,伴手禮＋富士山借景;日落約16:50,看完富士山夕陽再走</em></div></li><li><div class="time">約17:10</div><div class="body"><strong>星のや富士 check-in</strong><em><span class="drive">🚗 車程約2〜3分</span> check-in受付至22:00</em></div></li><li><div class="time">18:30</div><div class="body"><strong>晚餐:星のや富士</strong><em>晚餐需另外向飯店預約,出發前確認預約時段</em></div></li></ul><div class="warn"><b>1月是河口湖全年最冷的月份</b>均溫約 -0.4°C、最低可到 -5.7°C。纜車天候不佳(強風)時可能停駛,出發前留意天氣預報。租車:Toyota Rent a Car 富士河口湖店(Google 4.1),山梨不是雪胎標配地區,<b>預約時一定要指定無釘雪胎(¥2,200/24h)並保留確認書</b>;台灣駕照需另申請「駕照日文譯本」(非國際駕照)。清晨/背陽路段冬季易有黑冰,自駕請留意。</div>
+    <div class="stay"><b>住宿</b>｜星のや富士(HOSHINOYA Fuji) <span class="status lock">已鎖定</span></div>
+  </div>
+</div>
+</section>
+
+<section class="panel" id="p-day3" role="tabpanel" aria-labelledby="tab-day3">
+<div class="day">
+  <div class="day-h">
+    <div class="daynum"><i>DAY</i><b>3</b></div>
+    <div class="t"><h3>産屋ヶ崎・新倉山淺間公園・忍野八海</h3>
+    <div class="meta">1/10(日)｜富士五湖 &nbsp; <span class="status lock">已鎖定</span></div></div>
+  </div>
+  <div class="day-b">
+    <div class="badges"><span class="b sea">逆さ富士</span><span class="b plum">五重塔</span><span class="b sun">湧泉</span></div>
+    <figure class="mapwrap daymap">
+<div class="gmap" id="gmap-day3"></div>
+<figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+</figure>
+    <div class="pgrid">
+<div class="pcard"><div class="pimg"><span class="pfallback">産屋ヶ崎</span><a class="pimg-link" data-pq="産屋ヶ崎 河口湖" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="産屋ヶ崎"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">景點</span><b>産屋ヶ崎</b><em>拍逆さ富士,需晴天無風</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E7%94%A3%E5%B1%8B%E3%83%B6%E5%B4%8E%20%E6%B2%B3%E5%8F%A3%E6%B9%96">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">河口淺間神社(天空鳥居)</span><a class="pimg-link" data-pq="河口浅間神社 天空の鳥居" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="河口淺間神社(天空鳥居)"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">景點</span><b>河口淺間神社遙拜所</b><em>步道往返約40〜60分</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E6%B2%B3%E5%8F%A3%E6%B5%85%E9%96%93%E7%A5%9E%E7%A4%BE%20%E5%A4%A9%E7%A9%BA%E3%81%AE%E9%B3%A5%E5%B1%85">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">新倉山淺間公園・忠靈塔</span><a class="pimg-link" data-pq="新倉山浅間公園" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="新倉山淺間公園・忠靈塔"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">景點</span><b>新倉山淺間公園・忠靈塔</b><em>398階,五重塔＋富士山經典構圖</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E5%80%89%E5%B1%B1%E6%B5%85%E9%96%93%E5%85%AC%E5%9C%92">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">西裏通り</span><a class="pimg-link" data-pq="西裏通り 富士吉田" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="西裏通り"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-food">小吃</span><b>西裏通り</b><em>昭和懷舊街景,午餐周邊</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E8%A5%BF%E8%A3%8F%E9%80%9A%E3%82%8A%20%E5%AF%8C%E5%A3%AB%E5%90%89%E7%94%B0">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">忍野八海</span><a class="pimg-link" data-pq="忍野八海" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="忍野八海"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">景點</span><b>忍野八海</b><em>富士湧泉群,行政區屬忍野村</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E5%BF%8D%E9%87%8E%E5%85%AB%E6%B5%B7">在Google Maps開啟 ↗</a></div></div>
+</div>
+    <ul class="tl"><li><div class="time">06:00-07:00</div><div class="body"><strong>産屋ヶ崎／河口湖大橋周邊</strong><em>拍逆さ富士(日出約6:56),需晴天無風,機率題;路邊停車約10台</em></div></li><li><div class="time">07:30-08:00</div><div class="body"><strong>早餐</strong></div></li><li><div class="time">08:15-09:30</div><div class="body"><strong>河口淺間神社遙拜所(天空の鳥居)</strong><em><span class="drive">🚗 08:05出發,車程約12分</span> 上方車位僅5〜6台,滿了就停山下神社步行約30分;冬天路窄可能積雪</em></div></li><li><div class="time">09:30</div><div class="body"><strong>開車前往下吉田</strong><em><span class="drive">🚗 車程約15〜20分</span></em></div></li><li><div class="time">10:00</div><div class="body"><strong>新倉山淺間公園・忠靈塔</strong><em>398階「咲くや姫階段」,24小時開放,上午順光;石階冬季可能結冰</em></div></li><li><div class="time">11:30</div><div class="body"><strong>西裏通り散策</strong><em>昭和懷舊街景;停市營西裏停車場(¥200/首60分)</em></div></li><li><div class="time">12:15</div><div class="body"><strong>午餐:みうらうどん</strong><em>吉田うどん,週日營業(10:00〜14:00,週三公休,停車25台);1/10週日桜井うどん、麺許皆伝公休</em></div></li><li><div class="time">13:15</div><div class="body"><strong>開車前往忍野八海</strong><em><span class="drive">🚗 車程約20〜25分</span></em></div></li><li><div class="time">14:00</div><div class="body"><strong>忍野八海</strong><em>24小時免費;路燈少,天黑前離開</em></div></li><li><div class="time">16:00</div><div class="body"><strong>開車回星のや富士</strong></div></li><li><div class="time">18:30</div><div class="body"><strong>晚餐:星のや富士</strong></div></li></ul><div class="note"><b>本日景點來源</b>使用者從 output/河口湖景點清單_v4.md(整合chicTrip行程筆記＋3部YouTube影片＋Google Gemini彙整資料)勾選確定,並依地理分群(河口湖北岸／下吉田／忍野村)排出動線。</div>
+    <div class="stay"><b>住宿</b>｜星のや富士(HOSHINOYA Fuji)(同 Day2) <span class="status lock">已鎖定</span></div>
+  </div>
+</div>
+</section>
+
+<section class="panel" id="p-day4" role="tabpanel" aria-labelledby="tab-day4">
+<div class="day">
+  <div class="day-h">
+    <div class="daynum"><i>DAY</i><b>4</b></div>
+    <div class="t"><h3>河口湖回東京市區</h3>
+    <div class="meta">1/11(一)｜移動日→舞浜 &nbsp; <span class="status lock">已鎖定</span></div></div>
+  </div>
+  <div class="day-b">
+    <div class="badges"><span class="b sea">移動日</span><span class="b plum">迪士尼</span></div>
+    <figure class="mapwrap daymap">
+<div class="gmap" id="gmap-day4"></div>
+<figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+</figure>
+    <div class="pgrid">
+<div class="pcard"><div class="pimg"><span class="pfallback">羅森 河口湖船津登山道店</span><a class="pimg-link" data-pq="ローソン 河口湖船津登山道店" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="羅森 河口湖船津登山道店"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-food">小吃</span><b>羅森便利商店 河口湖船津登山道店</b><em>富士山打卡,還車前順路</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E3%83%AD%E3%83%BC%E3%82%BD%E3%83%B3%20%E6%B2%B3%E5%8F%A3%E6%B9%96%E8%88%B9%E6%B4%A5%E7%99%BB%E5%B1%B1%E9%81%93%E5%BA%97">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">河口湖車站土產店</span><a class="pimg-link" data-pq="河口湖駅" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="河口湖車站土產店"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-food">購物</span><b>河口湖車站土產店</b><em>採買伴手禮</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E6%B2%B3%E5%8F%A3%E6%B9%96%E9%A7%85">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">Fuji Tempura IDATEN</span><a class="pimg-link" data-pq="ふじ天ぷら いだてん 河口湖" data-pidx="1" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="Fuji Tempura IDATEN"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-food">美食</span><b>Fuji Tempura IDATEN</b><em>招牌富士山天丼</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E3%81%B5%E3%81%98%E5%A4%A9%E3%81%B7%E3%82%89%20%E3%81%84%E3%81%A0%E3%81%A6%E3%82%93%20%E6%B2%B3%E5%8F%A3%E6%B9%96">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">迪士尼樂園大飯店</span><a class="pimg-link" data-pq="東京ディズニーランドホテル" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="迪士尼樂園大飯店(Tokyo Disneyland Hotel)"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-stay">住宿</span><b>迪士尼樂園大飯店(Tokyo Disneyland Hotel)</b><em>Standard Superior Room(Park Grand View),5-7樓,非吸菸,check-in</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Tokyo%20Disneyland%20Hotel">在Google Maps開啟 ↗</a></div></div>
+</div>
+    <ul class="tl"><li><div class="time">10:00</div><div class="body"><strong>星のや富士退房</strong><em>check-out上限12:00</em></div></li><li><div class="time">10:20</div><div class="body"><strong>羅森便利商店 河口湖船津登山道店</strong><em>富士山打卡,還車前順路</em></div></li><li><div class="time">10:45</div><div class="body"><strong>加油(Toyota隔壁 ENEOS)</strong><em>滿油還車</em></div></li><li><div class="time">10:55-11:25</div><div class="body"><strong>還車:Toyota 富士河口湖店</strong><em>還車手續很快</em></div></li><li><div class="time">約11:35</div><div class="body"><strong>午餐:Fuji Tempura IDATEN KAWAGUCHIKO</strong><em><span class="drive">🚶 還車處步行約9〜11分</span> 招牌富士山天丼;1/11為假日中午易排隊,可在官網用 TableCheck 預約(TEL 0555-73-9218)</em></div></li><li><div class="time">12:30</div><div class="body"><strong>河口湖車站土產店</strong><em>採買伴手禮</em></div></li><li><div class="time">14:08</div><div class="body"><strong>河口湖發富士回遊32號 → 新宿</strong><em>每日行駛,¥4,200;16:06抵新宿(富士急官網+Google Maps假日時刻)</em></div></li><li><div class="time">16:25</div><div class="body"><strong>新宿發埼京線/りんかい線直通 → 新木場,轉JR京葉線 → 舞浜</strong><em><span class="drive">🚃 約42分,17:07抵舞浜,¥810(IC約¥750)</span> 16:06那班趕不上;特急月台→埼京線月台帶行李預留8〜10分;新木場原地轉乘,避開東京站長走道</em></div></li><li><div class="time">約17:20</div><div class="body"><strong>抵達迪士尼樂園大飯店,check-in</strong><em>舞浜駅南口步行約8分;領 Day5 Happy Entry 通行證(每人一張)</em></div></li><li><div class="time">晚餐</div><div class="body"><strong>度假區內或Ikspiari</strong></div></li></ul>
+    <div class="stay"><b>住宿</b>｜迪士尼樂園大飯店(Tokyo Disneyland Hotel)・Standard Superior Room(Park Grand View,5-7樓,非吸菸) <span class="status lock">已鎖定</span></div>
+  </div>
+</div>
+</section>
+
+<section class="panel" id="p-day5" role="tabpanel" aria-labelledby="tab-day5">
+<div class="day">
+  <div class="day-h">
+    <div class="daynum"><i>DAY</i><b>5</b></div>
+    <div class="t"><h3>東京迪士尼樂園</h3>
+    <div class="meta">1/12(二)｜舞浜 &nbsp; <span class="status lock">已鎖定</span></div></div>
+  </div>
+  <div class="day-b">
+    <div class="badges"><span class="b sea">迪士尼樂園</span><span class="b plum">快速通關</span></div>
+    <figure class="mapwrap daymap">
+<div class="gmap" id="gmap-day5" style="height:220px"></div>
+<figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+</figure>
+    <div class="pgrid">
+<div class="pcard"><div class="pimg"><span class="pfallback">東京迪士尼樂園</span><a class="pimg-link" data-pq="東京ディズニーランド" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="東京迪士尼樂園"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">樂園</span><b>東京迪士尼樂園</b><em>全日遊園</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E3%83%87%E3%82%A3%E3%82%BA%E3%83%8B%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89">在Google Maps開啟 ↗</a></div></div>
+</div>
+    <ul class="tl"><li><div class="time">08:15-08:30</div><div class="body"><strong>抵達樂園入口安檢</strong><em>✅ 迪士尼樂園大飯店住客 Happy Entry:約8:45入園,比一般遊客(9:00)早15分</em></div></li><li><div class="time">全日</div><div class="body"><strong>東京迪士尼樂園</strong><em>1/12 9:00–21:00;門票成人¥9,900,2026/11/12 14:00(日本時間)開賣。⚠️ 1/12 休止:Splash Mountain、幽靈公館、Jungle Cruise、小飛俠等,遊樂設施DPA只剩5項;入園後用App買DPA</em></div></li><li><div class="time">晚間</div><div class="body"><strong>晚餐／夜間遊行或煙火</strong><em>餐廳 Priority Seating 2026/12/12 10:00(日本時間)開放;遊行場次12月後公布</em></div></li></ul><div class="tip"><b>快速通關(2026-10官網,出發前再確認)</b>DPA(付費¥1,000–2,500/項,入園後用App買,購買後60分或使用時刻較早者才能再買)、Standby Pass(免費,僅商店/角色見面)、Entry Request(免費抽選)。Priority Pass 已停止。詳見「實用指南」。</div>
+    <div class="stay"><b>住宿</b>｜迪士尼樂園大飯店(Tokyo Disneyland Hotel)・Standard Superior Room(Park Grand View,5-7樓,非吸菸)(同 Day4) <span class="status lock">已鎖定</span></div>
+  </div>
+</div>
+</section>
+
+<section class="panel" id="p-day6" role="tabpanel" aria-labelledby="tab-day6">
+<div class="day">
+  <div class="day-h">
+    <div class="daynum"><i>DAY</i><b>6</b></div>
+    <div class="t"><h3>東京迪士尼海洋(含夢幻泉鄉)</h3>
+    <div class="meta">1/13(三)｜舞浜 &nbsp; <span class="status lock">已鎖定</span></div></div>
+  </div>
+  <div class="day-b">
+    <div class="badges"><span class="b sea">迪士尼海洋</span><span class="b plum">夢幻泉鄉</span></div>
+    <figure class="mapwrap daymap">
+<div class="gmap" id="gmap-day6" style="height:220px"></div>
+<figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+</figure>
+    <div class="pgrid">
+<div class="pcard"><div class="pimg"><span class="pfallback">東京迪士尼海洋</span><a class="pimg-link" data-pq="東京ディズニーシー" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="東京迪士尼海洋"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">樂園</span><b>東京迪士尼海洋</b><em>含夢幻泉鄉園區</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E3%83%87%E3%82%A3%E3%82%BA%E3%83%8B%E3%83%BC%E3%82%B7%E3%83%BC">在Google Maps開啟 ↗</a></div></div>
+</div>
+    <ul class="tl"><li><div class="time">06:45-07:00</div><div class="body"><strong>飯店出發 → Disney Resort Line</strong><em>🚝 東京迪士尼樂園站→東京迪士尼海洋站約7分,¥300(IC卡),首班6:05</em></div></li><li><div class="time">開園前60〜90分</div><div class="body"><strong>東京迪士尼海洋入口排隊</strong><em>迪士尼樂園大飯店住客海洋無Happy Entry;夢幻泉鄉設施已無Standby Pass,開園後先衝熱門設施,或入園後用App買DPA</em></div></li><li><div class="time">全日</div><div class="body"><strong>東京迪士尼海洋</strong><em>1/13 9:00–21:00;門票2026/11/13 14:00開賣。⚠️ 1/13 休止:地心探險、Believe! Sea of Dreams、電動鐵路、人魚礁劇場、レストラン櫻,勿排進DPA計畫</em></div></li><li><div class="time">晚間</div><div class="body"><strong>晚餐／夜間演出</strong><em>餐廳 Priority Seating 2026/12/13 10:00(日本時間)開放</em></div></li></ul><div class="warn"><b>Day5/6 Happy Entry差異</b>迪士尼樂園大飯店住客僅Day5樂園可用Happy Entry(提早15分入園);Day6海洋因入口周邊施工(預計至2028年度)不提供樂園大飯店住客提前入園,只有MiraCosta/夢幻泉鄉大飯店住客享有,出發前建議再確認最新規則。</div>
+    <div class="stay"><b>住宿</b>｜迪士尼樂園大飯店(Tokyo Disneyland Hotel)・Standard Superior Room(Park Grand View,5-7樓,非吸菸)(同 Day4) <span class="status lock">已鎖定</span></div>
+  </div>
+</div>
+</section>
+
+<section class="panel" id="p-day7" role="tabpanel" aria-labelledby="tab-day7">
+<div class="day">
+  <div class="day-h">
+    <div class="daynum"><i>DAY</i><b>7</b></div>
+    <div class="t"><h3>舞濱→新橋・原宿表參道逛街</h3>
+    <div class="meta">1/14(四)｜新橋・原宿・表參道・澀谷 &nbsp; <span class="status lock">已鎖定</span></div></div>
+  </div>
+  <div class="day-b">
+    <div class="badges"><span class="b sea">移動日</span><span class="b plum">逛街</span><span class="b sun">原宿</span></div>
+    <figure class="mapwrap daymap">
+<div class="gmap" id="gmap-day7"></div>
+<figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+</figure>
+    <div class="pgrid">
+<div class="pcard"><div class="pimg"><span class="pfallback">THE BLOSSOM HIBIYA</span><a class="pimg-link" data-pq="THE BLOSSOM HIBIYA 新橋" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="THE BLOSSOM HIBIYA(日比谷花季飯店)"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-stay">住宿</span><b>THE BLOSSOM HIBIYA(日比谷花季飯店)</b><em>先寄放行李,19:30 check-in</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=THE%20BLOSSOM%20HIBIYA">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">竹下通り</span><a class="pimg-link" data-pq="竹下通り 原宿" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="竹下通り"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">逛街</span><b>竹下通り</b><em>原宿流行服飾/藥妝</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E7%AB%B9%E4%B8%8B%E9%80%9A%E3%82%8A%20%E5%8E%9F%E5%AE%BF">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">表參道Hills</span><a class="pimg-link" data-pq="表参道ヒルズ" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="表參道Hills"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">逛街</span><b>表參道Hills</b><em>精品購物</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E8%A1%A8%E5%8F%82%E9%81%93%E3%83%92%E3%83%AB%E3%82%BA">在Google Maps開啟 ↗</a></div></div>
+</div>
+    <ul class="tl"><li><div class="time">09:30</div><div class="body"><strong>迪士尼飯店退房 → 舞濱駅</strong><em>步行約8分,09:50前上車</em></div></li><li><div class="time">約10:25-10:30</div><div class="body"><strong>抵達新橋</strong><em><span class="drive">🚃 JR京葉線→東京駅轉東海道線(或山手線)約25〜30分</span> 東京駅京葉線月台轉乘帶行李抓15〜20分,合計35〜40分</em></div></li><li><div class="time">10:30</div><div class="body"><strong>THE BLOSSOM HIBIYA寄放行李</strong><em>不check-in;check-in前寄放官方明文未查得,建議先email確認</em></div></li><li><div class="time">11:00</div><div class="body"><strong>新橋→原宿</strong><em><span class="drive">🚃 山手線約24〜25分</span></em></div></li><li><div class="time">11:30-17:00</div><div class="body"><strong>原宿・表參道逛街</strong><em>竹下通り、貓街(Cat Street)、表參道Hills(不定休,1/14是否休館出發前1個月查官網)</em></div></li><li><div class="time">17:00</div><div class="body"><strong>表參道→澀谷</strong><em><span class="drive">🚇 地鐵銀座線/半藏門線約2分,IC¥178</span> 山手線沒有表參道站;或步行約15分</em></div></li><li><div class="time">17:30-19:00</div><div class="body"><strong>晚餐</strong><em>澀谷周邊,自由決定</em></div></li><li><div class="time">19:00</div><div class="body"><strong>澀谷→新橋</strong><em><span class="drive">🚇 銀座線約14分,¥180</span> 7號出口離飯店最近;或山手線22分</em></div></li><li><div class="time">19:30</div><div class="body"><strong>THE BLOSSOM HIBIYA check-in</strong></div></li></ul><div class="note"><b>交通已查證</b>本日各段已用 Google Maps(平日時刻)+駅探+Gemini 交叉確認(2026-10-02),票價IC卡與車票略有差異;原排的澀谷SKY夜景場已取消(2026-09-21),晚餐後空出的時段目前未另排活動。</div>
+    <div class="stay"><b>住宿</b>｜THE BLOSSOM HIBIYA(日比谷花季飯店) <span class="status lock">已鎖定</span><em style="display:block;font-size:.85rem;color:var(--muted);margin-top:4px">新橋駅日比谷口徒步約5分</em></div>
+  </div>
+</div>
+</section>
+
+<section class="panel" id="p-day8" role="tabpanel" aria-labelledby="tab-day8">
+<div class="day">
+  <div class="day-h">
+    <div class="daynum"><i>DAY</i><b>8</b></div>
+    <div class="t"><h3>鎌倉一日遊:鶴岡八幡宮・小町通・錢洗弁財天</h3>
+    <div class="meta">1/15(五)｜鎌倉 &nbsp; <span class="status lock">已鎖定</span></div></div>
+  </div>
+  <div class="day-b">
+    <div class="badges"><span class="b sea">古都</span><span class="b plum">江之電</span><span class="b sun">神社寺院</span></div>
+    <figure class="mapwrap daymap">
+<div class="gmap" id="gmap-day8"></div>
+<figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+</figure>
+    <div class="pgrid">
+<div class="pcard"><div class="pimg"><span class="pfallback">鶴岡八幡宮</span><a class="pimg-link" data-pq="鶴岡八幡宮" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="鶴岡八幡宮"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">景點</span><b>鶴岡八幡宮</b><em>鎌倉幕府守護神社</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E9%B6%B4%E5%B2%A1%E5%85%AB%E5%B9%A1%E5%AE%AE">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">小町通商店街</span><a class="pimg-link" data-pq="小町通り 鎌倉" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="小町通商店街"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-food">午餐/購物</span><b>小町通商店街</b><em>和菓子/咖啡/雜貨</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E5%B0%8F%E7%94%BA%E9%80%9A%E3%82%8A%20%E9%8E%8C%E5%80%89">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">錢洗弁財天宇賀福神社</span><a class="pimg-link" data-pq="銭洗弁財天宇賀福神社" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="錢洗弁財天宇賀福神社"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">景點</span><b>錢洗弁財天宇賀福神社</b><em>祈財運「洗錢池」</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E9%8A%AD%E6%B4%97%E5%BC%81%E8%B2%A1%E5%A4%A9%E5%AE%87%E8%B3%80%E7%A6%8F%E7%A5%9E%E7%A4%BE">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">鎌倉高校前平交道</span><a class="pimg-link" data-pq="鎌倉高校前駅 踏切" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="鎌倉高校前平交道"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">景點</span><b>鎌倉高校前平交道</b><em>《灌籃高手》經典場景</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E9%8E%8C%E5%80%89%E9%AB%98%E6%A0%A1%E5%89%8D%E9%A7%85%20%E8%B8%8F%E5%88%87">在Google Maps開啟 ↗</a></div></div>
+</div>
+    <ul class="tl"><li><div class="time">08:20</div><div class="body"><strong>出飯店 → JR新橋駅</strong></div></li><li><div class="time">08:37</div><div class="body"><strong>新橋發 JR橫須賀線(逗子行)</strong><em><span class="drive">🚃 09:28抵鎌倉,¥910</span> 勿搭大船止/品川止;備案08:16</em></div></li><li><div class="time">09:45</div><div class="body"><strong>鶴岡八幡宮</strong><em>鎌倉幕府守護神社,本殿+段葛參道,6:00〜20:00;10:30-11:00可彈性延長</em></div></li><li><div class="time">11:00</div><div class="body"><strong>小町通商店街</strong><em>午餐+購物,和菓子/咖啡/雜貨</em></div></li><li><div class="time">13:15-14:15</div><div class="body"><strong>錢洗弁財天宇賀福神社</strong><em>祈財運「洗錢池」;去程鎌倉駅西口搭計程車(約5〜8分),回程順緩坡走下山;<b>14:15離開</b>才趕得上14:42江之電</em></div></li><li><div class="time">14:42</div><div class="body"><strong>鎌倉駅搭江之電 → 鎌倉高校前</strong><em><span class="drive">🚃 約20分,15:02抵</span> 14:45無班;備案14:56→15:16</em></div></li><li><div class="time">15:05-15:30</div><div class="body"><strong>鎌倉高校前平交道</strong><em>《灌籃高手》經典場景,電車+七里之濱海景</em></div></li><li><div class="time">15:41</div><div class="body"><strong>江之電返回鎌倉駅</strong><em><span class="drive">🚃 16:01抵鎌倉</span></em></div></li><li><div class="time">16:14</div><div class="body"><strong>鎌倉駅發 JR橫須賀線(成田空港行) → 新橋</strong><em><span class="drive">🚃 約17:04〜17:05抵新橋</span> 16:06湘南新宿ライン不經新橋勿搭;錯過備案16:29</em></div></li><li><div class="time">晚餐</div><div class="body"><strong>新橋周邊</strong></div></li></ul><div class="note"><b>本日景點來源</b>使用者從 output/鎌倉景點勾選工具_v1.html 勾選確定(鶴岡八幡宮、小町通商店街、錢洗弁財天宇賀福神社、鎌倉高校前平交道,未選美食項目),依地理動線排出時間軸;JR/江之電班次已用 Google Maps(平日)+JR官方確認(2026-10-02),計程車車資仍為估計。</div>
+    <div class="stay"><b>住宿</b>｜THE BLOSSOM HIBIYA(日比谷花季飯店)(同 Day7) <span class="status lock">已鎖定</span><em style="display:block;font-size:.85rem;color:var(--muted);margin-top:4px">新橋駅日比谷口徒步約5分</em></div>
+  </div>
+</div>
+</section>
+
+<section class="panel" id="p-day9" role="tabpanel" aria-labelledby="tab-day9">
+<div class="day">
+  <div class="day-h">
+    <div class="daynum"><i>DAY</i><b>9</b></div>
+    <div class="t"><h3>築地早餐・銀座採買・離境</h3>
+    <div class="meta">1/16(六)｜新橋→築地→銀座→成田→桃園 &nbsp; <span class="status lock">已鎖定</span></div></div>
+  </div>
+  <div class="day-b">
+    <div class="badges"><span class="b sea">早餐</span><span class="b plum">購物</span><span class="b sun">離境</span></div>
+    <figure class="mapwrap daymap">
+<div class="gmap" id="gmap-day9"></div>
+<figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+</figure>
+    <div class="pgrid">
+<div class="pcard"><div class="pimg"><span class="pfallback">築地場外市場</span><a class="pimg-link" data-pq="築地場外市場" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="築地場外市場"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-food">早餐</span><b>築地場外市場</b><em>海鮮丼、玉子燒等</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E7%AF%89%E5%9C%B0%E5%A0%B4%E5%A4%96%E5%B8%82%E5%A0%B4">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">銀座</span><a class="pimg-link" data-pq="銀座" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="銀座"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">購物</span><b>銀座</b><em>百貨、藥妝、伴手禮</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E9%8A%80%E5%BA%A7">在Google Maps開啟 ↗</a></div></div>
+<div class="pcard"><div class="pimg"><span class="pfallback">成田機場</span><a class="pimg-link" data-pq="成田国際空港" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="成田機場"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-move">離境</span><b>成田機場</b><em>BR195 20:20起飛</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E6%88%90%E7%94%B0%E5%9B%BD%E9%9A%9B%E7%A9%BA%E6%B8%AF">在Google Maps開啟 ↗</a></div></div>
+</div>
+    <ul class="tl"><li><div class="time">08:00</div><div class="body"><strong>THE BLOSSOM HIBIYA退房</strong><em>行李寄放櫃檯(請電話03-3591-8702確認可寄到16:00);check-out 11:00,可延後</em></div></li><li><div class="time">08:40</div><div class="body"><strong>出飯店 → 築地</strong><em><span class="drive">🚌 都營巴士市01約16分,或日比谷線約22分</span></em></div></li><li><div class="time">09:00-10:00</div><div class="body"><strong>築地場外市場早餐</strong><em>海鮮丼、玉子燒等;1/16為開市日,08:30前多為業者時段</em></div></li><li><div class="time">10:00-10:30</div><div class="body"><strong>移動至銀座</strong><em>築地→銀座步行或轉乘一站,約15〜20分</em></div></li><li><div class="time">10:30-15:40</div><div class="body"><strong>銀座最後採買</strong><em>百貨(三越10:00、GINZA SIX 10:30、松屋11:00開)、藥妝、伴手禮</em></div></li><li><div class="time">15:40</div><div class="body"><strong>離開銀座 → 回飯店取行李</strong><em><span class="drive">🚶 步行約16分</span> 約16:00取行李</em></div></li><li><div class="time">16:10</div><div class="body"><strong>都營淺草線新橋駅(A2出口)→ 直通京成Access特快</strong><em><span class="drive">🚄 免轉乘,¥1,420</span> 飯店步行約8分到A2(飯店官網)</em></div></li><li><div class="time">17:33</div><div class="body"><strong>抵達成田第1航廈南翼</strong><em>長榮櫃台(Counter I)17:50開放,截止起飛前40分</em></div></li><li><div class="time">20:20</div><div class="body"><strong>BR195 起飛</strong><em>時刻為冬季參考班表,請以電子機票為準</em></div></li><li><div class="time">23:25</div><div class="body"><strong>抵達桃園</strong></div></li></ul><div class="tip"><b>新橋→成田:16:10 Access特快直達</b>一車直達免轉乘,約83分,17:33抵第1航廈,櫃台17:50開放,等候最短;前一班15:29→16:52為備案(需14:40離開銀座)。Skyliner(日暮里轉乘)不採用。</div>
+    <div class="stay"><b>住宿</b>｜無需訂房(當日離境) <span class="status lock">已鎖定</span></div>
+  </div>
+</div>
+</section>
+
+<section class="panel" id="p-guide" role="tabpanel" aria-labelledby="tab-guide">
+
+<h2 id="fastpass">迪士尼快速通關系統 <small>FAST PASS</small></h2>
+<p>東京迪士尼樂園／海洋透過官方 App 操作(2026-10 官網資料,出發前再確認):</p>
+<div class="tblwrap"><table><thead><tr><th>名稱</th><th>費用</th><th>使用方式</th></tr></thead><tbody>
+<tr><td><b>DPA 迪士尼尊享卡</b><br><span style="color:var(--muted);font-size:.85rem">Disney Premier Access</span></td><td>付費,約¥1,000–2,500／項</td><td>入園後用App購買、指定時段走快速通道;購買後60分或使用開始時刻(取較早者)才能再買;售完為止、不可退改。1/12樂園遊樂設施只剩5項(Splash Mountain、幽靈公館休止)</td></tr>
+<tr><td><b>Standby Pass</b></td><td>免費</td><td>僅商店與角色見面,不含設施與餐廳;夢幻泉鄉設施已無 Standby Pass</td></tr>
+<tr><td><b>Entry Request</b></td><td>免費抽選</td><td>適用表演與明星迎賓會</td></tr>
+<tr><td><b>Happy Entry</b></td><td>住客禮遇</td><td>迪士尼樂園大飯店住客:<b>僅樂園</b>早15分入園(Day5可用),海洋不適用</td></tr>
+</tbody></table></div>
+<div class="note"><b>都需下載官方App</b>「東京迪士尼度假區」App,並在入園前註冊 MyDisney 帳號才能操作。Priority Pass 已停止服務。</div>
+
+<h2 id="hotels">東京迪士尼官方飯店比較 <small>DISNEY HOTELS</small></h2>
+<p>以下是部落格／評論彙整的主觀排序,<b>非官方評分</b>,價格區間會隨旺季與匯率波動。</p>
+<div class="tblwrap"><table><thead><tr><th>梯隊</th><th>飯店</th><th>特色</th><th>備註</th></tr></thead><tbody>
+<tr><td>第一</td><td><b>海洋觀海景大飯店(MiraCosta)</b></td><td>多篇評比「毫無爭議排名第一」;唯一蓋在海洋園區內、地中海港景、房內可看煙火</td><td>最貴、最搶手</td></tr>
+<tr><td>第一</td><td><b>海洋夢幻泉鄉大飯店</b></td><td>2024新開幕,主題房精緻;獨家專用入口可直接進新園區夢幻泉鄉</td><td>外觀普通,無泳池/健身房/SPA,評價不如MiraCosta的氛圍感</td></tr>
+<tr><td>第二</td><td><b>迪士尼樂園大飯店</b></td><td>正門旁,步行到園區最快;維多利亞風格優雅,服務評價高</td><td>價格僅次於前兩間</td></tr>
+<tr><td>第三</td><td><b>迪士尼大使飯店</b></td><td>1930年代好萊塢復古風,鄰近舞浜購物區</td><td>沒有直通園區,房間評價不如前面幾間</td></tr>
+<tr><td>第三</td><td><b>玩具總動員飯店</b></td><td>主題活潑童趣,親子向較強;CP值不錯,有提早入園禮遇</td><td>房間偏小</td></tr>
+<tr><td>第四</td><td><b>樂祥飯店</b></td><td>6間裡最便宜;北歐風、機能實用</td><td>迪士尼氛圍最弱</td></tr>
+</tbody></table></div>
+<div class="tip"><b>已訂定</b>迪士尼樂園大飯店(Tokyo Disneyland Hotel)・Standard Superior Room(Park Grand View,5-7樓,非吸菸)×1間,1/11-1/14共3晚。(舊建議:預算夠 → MiraCosta或夢幻泉鄉;控制預算 → 大使飯店或樂祥飯店;官方客房只訂房方案是入住日4個月前同日11:00開放,套裝方案約5個月前,MiraCosta/夢幻泉鄉很搶手需提早卡點。)</div>
+
+<h2 id="kawaguchiko-hotels">河口湖住宿:星のや富士 <small>KAWAGUCHIKO STAY</small></h2>
+<p>已訂:星のや富士(HOSHINOYA Fuji),連住2晚,位於河口湖北岸大石地區(緊鄰大石公園);與Day3安排的産屋ヶ崎・天空鳥居同岸,動線順。</p>
+<div class="tblwrap"><table><tbody>
+<tr><th style="width:160px">交通</th><td>河口湖駅無免費接駁,計程車約20分;本次行程改採自駕(2天租車),自駕經新富士IC前往</td></tr>
+<tr><th>餐食</th><td>官網方案預設僅含早餐,晚餐需另外向飯店預約;本行程暫按兩晚都在飯店晚餐排入</td></tr>
+</tbody></table></div>
+
+<h2 id="todo">待確認事項 <small>TO CONFIRM</small></h2>
+<ul class="chk">
+<li>BR198 抵達時刻:參考班表12:55,第三方航班資料為13:25 — 以電子機票為準(影響Day1 N&#39;EX 14:20/14:45)</li>
+<li>Toyota Rent a Car 富士河口湖店:預約時指定無釘雪胎(¥2,200/24h),保留確認書;富士回遊15號/32號車票約1個月前10:00開賣</li>
+<li>迪士尼門票:1/12樂園票 2026/11/12、1/13海洋票 11/13,日本時間14:00開賣;餐廳 Priority Seating 12/12、12/13 10:00</li>
+<li>Day5/6 晚餐:飯店內(Sherwood Garden/Canna)、Oceano 或 Ikspiari — 12/12前決定</li>
+<li>天上山纜車上行末班(0555-72-0363)、星のや晚餐時段、IDATEN TableCheck 預約</li>
+<li>THE BLOSSOM HIBIYA:1/14 check-in 前、1/16 退房後寄放行李(03-3591-8702);表參道Hills 1/14 是否休館</li>
+<li>Day1晚間先在JR新宿站綠色窗口或指定席售票機領取隔天富士回遊車票</li>
+<li>是否需要 JR Pass / 東京地鐵周遊券等交通票券</li>
+</ul>
+
+<h2 id="sources">參考來源 <small>SOURCES</small></h2>
+<ul class="clean">
+<li>Klook《東京景點2026》33個人氣/新景點</li>
+<li>input/河口湖推薦景點與停留時間 - Google Gemini.pdf(使用者提供)、output/河口湖景點清單_v4.md</li>
+<li>星のや富士 交通・方案資訊(JTB、joshi-tabi.info)</li>
+<li>台灣駕照日文譯本(監理服務網) — 日本自駕非用國際駕照</li>
+<li>Tokyo Disney Resort Hotel Rankings — Wandering In Disney</li>
+<li>2026東京迪士尼住宿 — Mimi韓の旅遊指南</li>
+<li>2026東京迪士尼快速通關攻略 — 遊迪士尼 Your Disney</li>
+<li>flightmapper.net — BR198 / BR195 航班時刻參考</li>
+<li>鎌倉一日遊景點彙整 — tokyo.letsgojp.com、kkday.com,output/鎌倉景點清單_v1.md</li>
+<li>鎌倉勾選工具線上版 — <a href="https://claude.ai/code/artifact/ec5bf9ad-336d-4b78-bf41-997e98132eff" target="_blank" rel="noopener">claude.ai/code/artifact/ec5bf9ad…</a>(手機可開)</li>
+<li>各日交通班次 — 2026-10-01 經 coord 查證(ekitan/NAVITIME/富士急/東京迪士尼官網)並以 Google Maps+Gemini 交叉確認(使用現行土休日時刻表;2027/1 前若時刻改正請再確認)</li>
+</ul>
+
+</section>
+
+<div class="pagenav"><button id="pv"><span>&larr; 上一頁</span><u style="text-decoration:none;font-weight:700"></u></button><button id="nx" class="nx"><span>下一頁 &rarr;</span><u style="text-decoration:none;font-weight:700"></u></button></div>
+<footer>
+東京・河口湖・迪士尼 9日行程｜製作日 2026-08-25，2026-08-31更新Day2-4河口湖段落(星のや富士住宿・租車・富士回遊車次)，2026-09-03更新Day7-9(原宿表參道・鎌倉一日遊・築地銀座)，2026-09-05更新Day7澀谷SKY改晚餐後夜景場，2026-09-21取消Day7澀谷SKY(改晚餐後19:30直接check-in)，2026-10-01依Day1–9交通/營業時間查證更新，2026-10-02第三輪全日查核(Day2看日落、Day3みうらうどん、Toyota租車、Day9改16:10 Access特快、迪士尼休止設施等)｜行程日期 2027年1月8–16日<br>
+部分資訊(航班時刻、飯店評比、快速通關規則、市區轉乘時間)為查詢彙整，出發前請再次核對官方資訊。
+</footer>
+</div>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var ids=tabs.map(function(t){return t.dataset.tab});
+  function show(id,push){
+    if(ids.indexOf(id)<0) id=ids[0];
+    tabs.forEach(function(t){
+      var on=t.dataset.tab===id;
+      t.setAttribute('aria-selected',on?'true':'false');
+      if(on){t.scrollIntoView({block:'nearest',inline:'nearest'});}
+    });
+    document.querySelectorAll('.panel').forEach(function(p){
+      p.classList.toggle('on',p.id==='p-'+id);
+    });
+    var i=ids.indexOf(id);
+    var pv=document.getElementById('pv'),nx=document.getElementById('nx');
+    pv.disabled=i<=0; nx.disabled=i>=ids.length-1;
+    pv.querySelector('u').textContent=i>0?tabs[i-1].querySelector('b').textContent:'';
+    nx.querySelector('u').textContent=i<ids.length-1?tabs[i+1].querySelector('b').textContent:'';
+    pv.dataset.go=i>0?ids[i-1]:''; nx.dataset.go=i<ids.length-1?ids[i+1]:'';
+    if(push&&location.hash!=='#'+id){history.replaceState(null,'','#'+id);}
+    window.scrollTo({top:0,behavior:'auto'});
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){show(t.dataset.tab,true)})});
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('#pv,#nx'); if(b&&!b.disabled&&b.dataset.go) show(b.dataset.go,true);
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.target.tagName==='INPUT'||e.metaKey||e.ctrlKey||e.altKey) return;
+    var i=ids.indexOf((location.hash||'#'+ids[0]).slice(1));
+    if(i<0)i=0;
+    if(e.key==='ArrowRight'&&i<ids.length-1){show(ids[i+1],true);e.preventDefault();}
+    if(e.key==='ArrowLeft'&&i>0){show(ids[i-1],true);e.preventDefault();}
+  });
+  window.addEventListener('hashchange',function(){show(location.hash.slice(1),false)});
+  show((location.hash||'').slice(1)||ids[0],false);
+})();
+</script>
+
+<script>
+/* ===== Google Maps(Retro樣式)- 僅電腦本機開啟此HTML檔案時可載入,線上/手機版因CSP會是空白 =====
+   座標為依公開地理資訊估算的近似值,非逐點測繪/地理編碼結果,出發前如需精確位置請另外核實。 */
+window.__RETRO_STYLE = [
+  {"elementType":"geometry","stylers":[{"color":"#ebe3cd"}]},
+  {"elementType":"labels.text.fill","stylers":[{"color":"#523735"}]},
+  {"elementType":"labels.text.stroke","stylers":[{"color":"#f5f1e6"}]},
+  {"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#c9b2a6"}]},
+  {"featureType":"administrative.land_parcel","elementType":"geometry.stroke","stylers":[{"color":"#dcd2be"}]},
+  {"featureType":"administrative.land_parcel","elementType":"labels.text.fill","stylers":[{"color":"#ae9e90"}]},
+  {"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#dfd2ae"}]},
+  {"featureType":"poi","elementType":"geometry","stylers":[{"color":"#dfd2ae"}]},
+  {"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#93817c"}]},
+  {"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#a5b076"}]},
+  {"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"color":"#447530"}]},
+  {"featureType":"road","elementType":"geometry","stylers":[{"color":"#f5f1e6"}]},
+  {"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#fdfcf8"}]},
+  {"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#f8c967"}]},
+  {"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#e9bc62"}]},
+  {"featureType":"road.highway.controlled_access","elementType":"geometry","stylers":[{"color":"#e98d58"}]},
+  {"featureType":"road.highway.controlled_access","elementType":"geometry.stroke","stylers":[{"color":"#db8555"}]},
+  {"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#806b63"}]},
+  {"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#dfd2ae"}]},
+  {"featureType":"transit.line","elementType":"labels.text.fill","stylers":[{"color":"#8f7d77"}]},
+  {"featureType":"transit.line","elementType":"labels.text.stroke","stylers":[{"color":"#ebe3cd"}]},
+  {"featureType":"transit.station","elementType":"geometry","stylers":[{"color":"#dfd2ae"}]},
+  {"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#b9d3c2"}]},
+  {"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#92998d"}]}
+];
+
+window.__TRIP_MAPS = {
+  "gmap-overview": {color:"#1A2836", points:[
+    {name:"成田機場", lat:35.7702, lng:140.3843, label:"1"},
+    {name:"新宿", lat:35.6896, lng:139.7006, label:"2"},
+    {name:"河口湖", lat:35.4982, lng:138.7688, label:"3"},
+    {name:"東京迪士尼", lat:35.6329, lng:139.8804, label:"4"},
+    {name:"新橋", lat:35.6664, lng:139.7580, label:"5"}
+  ], spur:{name:"鎌倉(當天來回)", lat:35.3190, lng:139.5507, color:"#9a5c1c"}},
+
+  "gmap-day1": {color:"#1A2836", points:[
+    {name:"成田機場", lat:35.7702, lng:140.3843, label:"1"},
+    {name:"JR九州飯店Blossom新宿", lat:35.6878, lng:139.6985, label:"2"},
+    {name:"AFURI新宿ルミネ店", lat:35.6892, lng:139.6992, label:"3"}
+  ]},
+
+  "gmap-day2": {color:"#2d8a4e", points:[
+    {name:"河口湖駅", lat:35.4982, lng:138.7688, label:"1"},
+    {name:"天上山公園纜車", lat:35.5036, lng:138.7770, label:"2"},
+    {name:"大石公園", lat:35.5229, lng:138.7458, label:"3"},
+    {name:"星のや富士", lat:35.5253, lng:138.7451, label:"4"}
+  ]},
+
+  "gmap-day3": {color:"#c9781f", points:[
+    {name:"産屋ヶ崎", lat:35.5127, lng:138.7659, label:"1"},
+    {name:"河口淺間神社(天空鳥居)", lat:35.5347, lng:138.7778, label:"2"},
+    {name:"新倉山淺間公園・忠靈塔", lat:35.5014, lng:138.8016, label:"3"},
+    {name:"西裏通り", lat:35.4920, lng:138.8020, label:"4"},
+    {name:"忍野八海", lat:35.4601, lng:138.8325, label:"5"}
+  ]},
+
+  "gmap-day4": {color:"#7d5ba6", points:[
+    {name:"羅森 河口湖船津登山道店", lat:35.4856, lng:138.7616, label:"1"},
+    {name:"河口湖車站土產店", lat:35.4982, lng:138.7688, label:"2"},
+    {name:"Fuji Tempura IDATEN", lat:35.4987, lng:138.7663, label:"3"},
+    {name:"東京迪士尼度假區", lat:35.6329, lng:139.8804, label:"4"}
+  ]},
+
+  "gmap-day5": {color:"#e0457b", single:true, points:[
+    {name:"東京迪士尼樂園", lat:35.6329, lng:139.8804, label:"1"}
+  ]},
+
+  "gmap-day6": {color:"#0f9b8e", single:true, points:[
+    {name:"東京迪士尼海洋", lat:35.6267, lng:139.8853, label:"1"}
+  ]},
+
+  "gmap-day7": {color:"#3b6fd6", points:[
+    {name:"新橋", lat:35.6664, lng:139.7580, label:"1"},
+    {name:"竹下通り", lat:35.6710, lng:139.7052, label:"2"},
+    {name:"表參道Hills", lat:35.6673, lng:139.7086, label:"3"}
+  ]},
+
+  "gmap-day8": {color:"#FB7459", points:[
+    {name:"鶴岡八幡宮", lat:35.3260, lng:139.5563, label:"1"},
+    {name:"小町通商店街", lat:35.3211, lng:139.5518, label:"2"},
+    {name:"錢洗弁財天宇賀福神社", lat:35.3257, lng:139.5422, label:"3"},
+    {name:"鎌倉高校前平交道", lat:35.3067, lng:139.5006, label:"4"}
+  ]},
+
+  "gmap-day9": {color:"#6b7f2e", points:[
+    {name:"築地場外市場", lat:35.6654, lng:139.7707, label:"1"},
+    {name:"銀座", lat:35.6717, lng:139.7650, label:"2"},
+    {name:"成田機場", lat:35.7702, lng:140.3843, label:"3"}
+  ]}
+};
+
+window.__mapInstances = {};
+
+function __buildTripMap(elId, cfg){
+  var el = document.getElementById(elId);
+  if (!el || !window.google) return;
+  var map = new google.maps.Map(el, {
+    styles: window.__RETRO_STYLE,
+    mapTypeControl:false, streetViewControl:false, fullscreenControl:false,
+    gestureHandling:'cooperative'
+  });
+  var bounds = new google.maps.LatLngBounds();
+  var path = [];
+  cfg.points.forEach(function(pt){
+    var pos = {lat:pt.lat, lng:pt.lng};
+    new google.maps.Marker({
+      position: pos, map: map, title: pt.name,
+      label: {text: pt.label, color:'#fff', fontWeight:'700', fontSize:'12px'},
+      icon: {path: google.maps.SymbolPath.CIRCLE, fillColor: cfg.color, fillOpacity:1,
+        strokeColor:'#fff', strokeWeight:2.5, scale:13}
+    });
+    bounds.extend(pos);
+    path.push(pos);
+  });
+  if (!cfg.single && path.length > 1){
+    new google.maps.Polyline({path:path, map:map, strokeColor:cfg.color, strokeWeight:3.5, strokeOpacity:0.85});
+  }
+  if (cfg.spur){
+    var spurPos = {lat:cfg.spur.lat, lng:cfg.spur.lng};
+    new google.maps.Marker({
+      position: spurPos, map: map, title: cfg.spur.name,
+      icon: {path: google.maps.SymbolPath.CIRCLE, fillColor: cfg.spur.color, fillOpacity:1,
+        strokeColor:'#fff', strokeWeight:2.5, scale:9}
+    });
+    bounds.extend(spurPos);
+    if (path.length){
+      new google.maps.Polyline({
+        path:[path[path.length-1], spurPos], map:map, strokeOpacity:0,
+        icons:[{icon:{path:'M 0,-1 0,1', strokeOpacity:1, strokeColor:cfg.spur.color, scale:3}, offset:'0', repeat:'10px'}]
+      });
+    }
+  }
+  window.__mapInstances[elId] = {map:map, bounds:bounds, single: !!cfg.single, center: path[0]};
+  if (cfg.single){ map.setCenter(path[0]); map.setZoom(15); }
+  else { map.fitBounds(bounds, 40); }
+}
+
+window.__initTripMaps = function(){
+  Object.keys(window.__TRIP_MAPS).forEach(function(id){
+    __buildTripMap(id, window.__TRIP_MAPS[id]);
+  });
+  window.__initTripPhotos();
+};
+
+/* ===== 景點小卡照片:即時透過 Google Places API (New) 讀取該地點在 Google Maps 上的第一張照片 =====
+   這是即時讀取(live fetch),不是重製/下載他人照片;圖片直接來自 Google 的伺服器,並依規定附上
+   Google Maps 貢獻者的照片來源標註。同樣僅電腦本機開啟此HTML檔案時可載入,線上/手機版因CSP會顯示
+   原本的名稱色塊(pfallback)。每次開啟頁面都會即時呼叫 Places API(Enterprise SKU計費),費用請自行
+   留意 Google Cloud Console 的用量/預算設定。 */
+window.__PLACE_PHOTO_CACHE = {};
+function __fetchPlacePhoto(placesLib, query, photoIndex){
+  var idx = photoIndex || 0;
+  var cacheKey = query + '#' + idx;
+  if (window.__PLACE_PHOTO_CACHE[cacheKey]) return window.__PLACE_PHOTO_CACHE[cacheKey];
+  var p = (async function(){
+    try{
+      var res = await placesLib.Place.searchByText({
+        textQuery: query + ' 日本',
+        fields: ['photos'],
+        /* idx>0(如餐廳指定要食物照)時,Google第一張常是店面/招牌而非餐點,
+           需多要幾張讓程式取第idx張(仍是該地點的真實照片,只是換一張) */
+        maxResultCount: 1
+      });
+      var place = res.places && res.places[0];
+      if (!place || !place.photos || !place.photos.length) return null;
+      var photo = place.photos[Math.min(idx, place.photos.length - 1)];
+      var attribution = (photo.authorAttributions && photo.authorAttributions[0]) ? photo.authorAttributions[0].displayName : '';
+      return { url: photo.getURI({maxWidth:640}), attribution: attribution };
+    }catch(e){ return null; }
+  })();
+  window.__PLACE_PHOTO_CACHE[cacheKey] = p;
+  return p;
+}
+
+window.__initTripPhotos = async function(){
+  try{
+    var placesLib = await google.maps.importLibrary('places');
+  }catch(e){ return; }
+  var links = [].slice.call(document.querySelectorAll('.pimg-link[data-pq]'));
+  await Promise.all(links.map(async function(linkEl){
+    var query = linkEl.dataset.pq;
+    var photoIndex = linkEl.dataset.pidx ? parseInt(linkEl.dataset.pidx, 10) : 0;
+    var info = await __fetchPlacePhoto(placesLib, query, photoIndex);
+    if (!info || !info.url) return;
+    var img = linkEl.querySelector('.ppic');
+    var attribEl = linkEl.querySelector('.pattrib');
+    img.src = info.url;
+    attribEl.textContent = info.attribution ? ('照片來源:Google Maps · ' + info.attribution) : '照片來源:Google Maps';
+    linkEl.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(query);
+    linkEl.style.display = 'block';
+  }));
+};
+
+function __resizeVisibleTripMap(){
+  if (!window.google) return;
+  var panel = document.querySelector('.panel.on');
+  if (!panel) return;
+  var gmapEl = panel.querySelector('.gmap');
+  if (!gmapEl) return;
+  var inst = window.__mapInstances[gmapEl.id];
+  if (!inst) return;
+  google.maps.event.trigger(inst.map, 'resize');
+  if (inst.single){ inst.map.setCenter(inst.center); }
+  else { inst.map.fitBounds(inst.bounds, 40); }
+}
+document.querySelectorAll('.tab,#pv,#nx').forEach(function(el){
+  el.addEventListener('click', function(){ setTimeout(__resizeVisibleTripMap, 30); });
+});
+window.addEventListener('hashchange', function(){ setTimeout(__resizeVisibleTripMap, 30); });
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCABXtblyDlmRdLXAuNmWYfGMtfT1kdFoM&callback=__initTripMaps&loading=async" async></script>
+
+</html>
