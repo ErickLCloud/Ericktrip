@@ -195,6 +195,27 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
   *{transition:none!important}
   html{scroll-behavior:auto}
 }
+.chk2{list-style:none;padding:0;margin:8px 0 6px}
+.chk2 li{border-bottom:1px solid #e8edf1}
+.chk2 li:last-child{border-bottom:none}
+.chk2 label{display:flex;gap:11px;align-items:flex-start;padding:11px 2px;cursor:pointer;font-size:.92rem;line-height:1.55}
+.chk2 input{appearance:none;-webkit-appearance:none;flex:0 0 auto;width:16px;height:16px;margin:3px 0 0;border:1.5px solid var(--orange);border-radius:50%;cursor:pointer;position:relative;transition:background .25s var(--ease),border-color .25s}
+.chk2 input:checked{background:var(--orange)}
+.chk2 input:checked:after{content:"";position:absolute;left:4px;top:2px;width:4px;height:7px;border:solid #fff;border-width:0 1.6px 1.6px 0;transform:rotate(40deg)}
+.chk2 span{display:block;color:var(--ink2);transition:opacity .25s}
+.chk2 b{display:block;margin-bottom:2px;color:var(--ink);font-weight:600}
+.chk2 input:checked ~ span{opacity:.45}
+.chk2 input:checked ~ span b{text-decoration:line-through}
+.optg{display:flex;align-items:center;gap:12px;margin:26px 0 0;font-size:.98rem;font-weight:700;color:var(--navy)}
+.optg s{flex:1;height:1px;background:var(--line);text-decoration:none}
+.optg u{text-decoration:none;font-size:.78rem;font-weight:500;color:var(--muted);white-space:nowrap}
+.pri{font-style:normal;font-size:.67rem;font-weight:700;letter-spacing:.04em;padding:2px 7px;border-radius:999px;background:var(--plum-l);color:var(--plum);margin-left:7px;white-space:nowrap}
+.pri.lo{background:var(--blue);color:var(--muted)}
+.optbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:var(--sun-l);border:1px solid #f7d3c9;border-radius:12px;padding:11px 16px;margin:16px 0 4px;font-size:.88rem}
+.optbar b{color:var(--orange-t)}
+.optbar button{background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 13px;font:inherit;font-size:.82rem;color:var(--ink2);cursor:pointer;transition:border-color .25s,color .25s}
+.optbar button:hover{border-color:var(--orange);color:var(--orange-t)}
+@media(max-width:560px){.chk2 label{font-size:.9rem}}
 </style>
 
 <header>
@@ -221,7 +242,7 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
 <button class="tab" role="tab" data-tab="day7" id="tab-day7" aria-controls="p-day7"><b>Day 7</b><i>1/14 四 原宿表參道</i></button>
 <button class="tab" role="tab" data-tab="day8" id="tab-day8" aria-controls="p-day8"><b>Day 8</b><i>1/15 五 鎌倉一日遊</i></button>
 <button class="tab" role="tab" data-tab="day9" id="tab-day9" aria-controls="p-day9"><b>Day 9</b><i>1/16 六 離境</i></button>
-<button class="tab" role="tab" data-tab="guide" id="tab-guide" aria-controls="p-guide"><b>實用指南</b><i>航班・迪士尼・待確認</i></button>
+<button class="tab" role="tab" data-tab="guide" id="tab-guide" aria-controls="p-guide"><b>實用指南</b><i>待辦清單・航班・迪士尼</i></button>
 </div></nav>
 <div class="wrap">
 
@@ -520,6 +541,55 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
 <tr><th>餐食</th><td>官網方案預設僅含早餐,晚餐需另外向飯店預約;本行程暫按兩晚都在飯店晚餐排入</td></tr>
 </tbody></table></div>
 
+<h2 id="opt">優化待辦清單 <small>OPTIMIZATION TO-DO</small></h2>
+<p>2026-10-06 重新盤點 Day1–9 後,行程骨架已定案,但<b>動線仍有 3 處風險點、餐食有 9 個時段未定、預約有 6 個開賣時刻</b>。以下按「路線 / 餐食 / 預約時程」分組,勾選狀態會存在這台裝置的瀏覽器中。</p>
+<div class="optbar"><span>完成度 <b id="optn">0 / 27</b></span><button id="optrst" type="button">清除勾選</button></div>
+
+<div class="optg">A ・ 路線與動線<s></s><u>10 項</u></div>
+<ul class="chk2">
+<li><label><input type="checkbox" data-k="a1"><span><b>A1　Day2 取車只有 31 分鐘緩衝,需要降級方案<i class="pri">優先</i></b>12:24 抵河口湖駅 → 步行 6–7 分 → 取車手續 15–20 分 → 12:55 開車,而 15:50 大石公園日落(約 16:50)是固定錨點。富士回遊誤點或取車排隊時,要先決定犧牲哪一段:捨天上山纜車、或午餐縮短為 35 分。</span></label></li>
+<li><label><input type="checkbox" data-k="a2"><span><b>A2　天上山公園纜車「上行末班」仍未查得<i class="pri">優先</i></b>冬季營業 9:30–16:30,但上行末班通常早於收班。電話 0555-72-0363 確認;若末班早於 15:00,Day2 的纜車與大石公園順序必須重排。</span></label></li>
+<li><label><input type="checkbox" data-k="a3"><span><b>A3　Day3 天空鳥居停車位只有 5–6 台(週日)<i class="pri">優先</i></b>滿位就要停山下神社、步行約 30 分上山,會整天延遲。設一個判斷點:08:15 前沒停到車就跳過,直接去新倉山淺間公園,回程再看時間補。</span></label></li>
+<li><label><input type="checkbox" data-k="a4"><span><b>A4　Day7 原宿/表參道 11:30–17:00 是 5.5 小時單一區塊</b>澀谷SKY取消後留下的空檔尚未補。可評估插入明治神宮(原宿駅徒步可達、符合文化/歷史偏好),或把時間移去新宿/銀座購物。決定後需重算該段移動時間。</span></label></li>
+<li><label><input type="checkbox" data-k="a5"><span><b>A5　Day7 新橋飯店 check-in 前能否寄放行李,官方未明文<i class="pri">優先</i></b>整天動線都壓在「10:30 先放行李」上。先 email 或電話 03-3591-8702 確認;不行就要改走新橋/原宿駅投幣置物櫃(1 月旺季大型櫃常滿)。</span></label></li>
+<li><label><input type="checkbox" data-k="a6"><span><b>A6　Day9 行李要寄放到 15:40 之後</b>08:00 退房、約 16:00 回飯店取。同一通電話(03-3591-8702)一起問清可寄放到幾點、是否收費。</span></label></li>
+<li><label><input type="checkbox" data-k="a7"><span><b>A7　Day6 迪士尼海洋沒有 Happy Entry,出門時刻尚未定</b>樂園大飯店住客只有樂園(Day5)享早 15 分入園;海洋需提早 60–90 分排隊。要定下 Day6 起床/出門時刻與 Resort Line 班次(首班 6:05,TDL站→TDS站約 7 分)。</span></label></li>
+<li><label><input type="checkbox" data-k="a8"><span><b>A8　Day5/Day6 樂園↔海洋對調:建議維持現狀<i class="pri lo">可結案</i></b>Happy Entry 只對樂園有效,且樂園休止設施期間(1/7–2/4)橫跨兩天,對調不會減少休止、反而浪費 Day5 的早入園禮遇。建議保留 Day5 樂園 / Day6 海洋,此項可直接結掉。</span></label></li>
+<li><label><input type="checkbox" data-k="a9"><span><b>A9　Day8 鎌倉 15:30 後就返程,江之電沿線尚有餘裕</b>長谷寺、高德院大佛都在江之電線上但未排入(當初只勾了 4 個景點)。若要加 1 點,需重算江之電與 JR 橫須賀線班次;不加則維持現狀,此項結掉。</span></label></li>
+<li><label><input type="checkbox" data-k="a10"><span><b>A10　雨雪備案尚未準備</b>Day2–3 河口湖(自駕+戶外為主,逆富士/日出/日落全看天氣)與 Day8 鎌倉(幾乎全戶外)目前沒有壞天氣替代方案。各備 1 個室內選項(例:河口湖音樂盒之森/美術館、鎌倉改江之島水族館或直接提早回東京)。</span></label></li>
+</ul>
+
+<div class="optg">B ・ 餐食未定時段<s></s><u>9 項</u></div>
+<ul class="chk2">
+<li><label><input type="checkbox" data-k="b1"><span><b>B1　Day1 午餐:無安排</b>12:55 落地、15:41 才到新宿,中間沒有用餐點。建議成田 T1 航廈內用餐,或在機場/車站買便當在 N'EX 上吃(晚餐 AFURI 已定)。</span></label></li>
+<li><label><input type="checkbox" data-k="b2"><span><b>B2　Day2 早餐:無安排</b>10:30 新宿發車,JR九州飯店 Blossom 新宿的訂房方案是否含早餐未記錄。含早餐就排 08:30;不含則買車站早餐帶上車。</span></label></li>
+<li><label><input type="checkbox" data-k="b3"><span><b>B3　Day4 晚餐:無安排<i class="pri">優先</i></b>17:20 迪士尼樂園大飯店 check-in 之後整晚空著。候選:Ikspiari(一風堂拉麵評價最高)、飯店內 Sherwood Garden/Canna、Bon Voyage 周邊。這是唯一一天「有空檔卻完全沒排」的晚餐。</span></label></li>
+<li><label><input type="checkbox" data-k="b4"><span><b>B4　Day5 樂園午餐 + 晚餐:未定<i class="pri">優先</i></b>Priority Seating 2026/12/12 10:00 開放,要在那之前決定要不要訂、訂哪家。1 月跨年檔期競爭激烈,不訂就得現場排。</span></label></li>
+<li><label><input type="checkbox" data-k="b5"><span><b>B5　Day6 海洋午餐 + 晚餐:未定<i class="pri">優先</i></b>12/13 10:00 開放。Oceano(MiraCosta)不限住客、走一般 Priority Seating;Fantasy Springs Restaurant 僅限住該飯店或買套裝,我們訂不到——先把它排除,省時間。</span></label></li>
+<li><label><input type="checkbox" data-k="b6"><span><b>B6　Day7 午餐(原宿/表參道)+ 晚餐(澀谷):只有區域,沒有店家</b>5.5 小時逛街中間要吃一餐;晚餐 17:30–19:00 在澀谷周邊,店家未指定。冬季熱門店要考慮排隊時間。</span></label></li>
+<li><label><input type="checkbox" data-k="b7"><span><b>B7　Day8 晚餐(新橋周邊):只有區域,沒有店家</b>17:05 回到新橋,逛完鎌倉一整天會累,建議選飯店徒步 5 分內、不需預約的店。</span></label></li>
+<li><label><input type="checkbox" data-k="b8"><span><b>B8　Day9 午餐(銀座)未定;晚餐在成田</b>10:30–15:40 共 5 小時銀座採買,中間要吃一餐。晚餐落在 17:33 抵成田 → 20:20 起飛之間,注意 T1 多數餐廳的打烊時間,過安檢前後各有不同選擇。</span></label></li>
+<li><label><input type="checkbox" data-k="b9"><span><b>B9　FB Reel 5 家順動線美食還沒分派進空檔<i class="pri">優先</i></b>19 家候選中有 5 家與現行動線重疊:銀座三よし(和牛天婦羅)、銀座オリオンズ(焦糖布丁)、Unitora Nakadori うに虎(海鮮飯)、篩網燒 小林養雞、nezu Café(需提前訂票,離動線較遠)。前兩家正好可填 Day9 銀座的午餐與下午茶——直接指派即可消掉 B8 一半。</span></label></li>
+</ul>
+
+<div class="optg">C ・ 預約與開賣時程<s></s><u>8 項</u></div>
+<ul class="chk2">
+<li><label><input type="checkbox" data-k="c1"><span><b>C1　2026/11/12 14:00 JST — 迪士尼樂園 1/12 門票開賣</b>1-Day Passport 成人 ¥9,900。開賣即搶,1 月檔期熱門。</span></label></li>
+<li><label><input type="checkbox" data-k="c2"><span><b>C2　2026/11/13 14:00 JST — 迪士尼海洋 1/13 門票開賣</b>同上,門票=入場日 2 個月前同日 14:00 開賣。</span></label></li>
+<li><label><input type="checkbox" data-k="c3"><span><b>C3　約 2026/12/9 10:00 — 富士回遊 15 號(1/9 新宿→河口湖)指定席</b>JR 指定席為乘車日 1 個月前 10:00 開賣(日期為推算,開賣前再核對 JR 東日本官網)。此車次是 Day2 整天的起點,訂不到要立刻改計畫。</span></label></li>
+<li><label><input type="checkbox" data-k="c4"><span><b>C4　約 2026/12/11 10:00 — 富士回遊 32 號(1/11 河口湖→新宿)指定席</b>¥4,200。Day4 轉車到舞浜的時間全接在這班車上。</span></label></li>
+<li><label><input type="checkbox" data-k="c5"><span><b>C5　2026/12/12 10:00 JST — Day5 樂園餐廳 Priority Seating</b>對應 B4 的決定。</span></label></li>
+<li><label><input type="checkbox" data-k="c6"><span><b>C6　2026/12/13 10:00 JST — Day6 海洋餐廳 Priority Seating</b>對應 B5 的決定。</span></label></li>
+<li><label><input type="checkbox" data-k="c7"><span><b>C7　無開賣時刻、但越早越好</b>Toyota 富士河口湖店租車(<b style="display:inline">預約時務必指定無釘雪胎 ¥2,200/24h 並保留確認書</b>)、星のや富士 1/9 與 1/10 晚餐時段、Fuji Tempura IDATEN 的 TableCheck 預約(1/11 午餐,假日會排隊)。</span></label></li>
+<li><label><input type="checkbox" data-k="c8"><span><b>C8　出發前 1 個月再確認一輪</b>表參道Hills 1/14 是否休館、迪士尼休止設施清單(現為 2026-10-01 版)、星のや富士計程車/接駁現況、2027/1 時刻改正是否影響已查的班次。</span></label></li>
+</ul>
+
+<div class="optg">D ・ 其他待試算<s></s><u>0 項(參考)</u></div>
+<ul class="clean">
+<li>交通票券:JR Pass 對本行程效益低(9 天只有富士回遊往返與鎌倉 2 段 JR 長途,且富士回遊指定席另計)。較值得試算的是東京地鐵 24/48/72 小時券用於 Day7/Day9,但這兩天多為 JR 山手線與都營淺草線,實際能省多少需逐段算過才知道。</li>
+<li>Google Maps/Places API 金鑰:上線版照片與地圖每次開頁都即時計費,請確認 Cloud Console 已設 HTTP 參照網址限制(<code>https://ErickLCloud.github.io/*</code>)、API 限制與預算警示。</li>
+</ul>
+
 <h2 id="todo">待確認事項 <small>TO CONFIRM</small></h2>
 <ul class="chk">
 <li>BR198 抵達時刻:參考班表12:55,第三方航班資料為13:25 — 以電子機票為準(影響Day1 N&#39;EX 14:20/14:45)</li>
@@ -551,7 +621,7 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
 
 <div class="pagenav"><button id="pv"><span>&larr; 上一頁</span><u style="text-decoration:none;font-weight:700"></u></button><button id="nx" class="nx"><span>下一頁 &rarr;</span><u style="text-decoration:none;font-weight:700"></u></button></div>
 <footer>
-東京・河口湖・迪士尼 9日行程｜製作日 2026-08-25，2026-08-31更新Day2-4河口湖段落(星のや富士住宿・租車・富士回遊車次)，2026-09-03更新Day7-9(原宿表參道・鎌倉一日遊・築地銀座)，2026-09-05更新Day7澀谷SKY改晚餐後夜景場，2026-09-21取消Day7澀谷SKY(改晚餐後19:30直接check-in)，2026-10-01依Day1–9交通/營業時間查證更新，2026-10-02第三輪全日查核(Day2看日落、Day3みうらうどん、Toyota租車、Day9改16:10 Access特快、迪士尼休止設施等)｜行程日期 2027年1月8–16日<br>
+東京・河口湖・迪士尼 9日行程｜製作日 2026-08-25，2026-08-31更新Day2-4河口湖段落(星のや富士住宿・租車・富士回遊車次)，2026-09-03更新Day7-9(原宿表參道・鎌倉一日遊・築地銀座)，2026-09-05更新Day7澀谷SKY改晚餐後夜景場，2026-09-21取消Day7澀谷SKY(改晚餐後19:30直接check-in)，2026-10-01依Day1–9交通/營業時間查證更新，2026-10-02第三輪全日查核(Day2看日落、Day3みうらうどん、Toyota租車、Day9改16:10 Access特快、迪士尼休止設施等)，2026-10-06新增「優化待辦清單」(路線3處風險・餐食9個未定時段・預約6個開賣時刻)｜行程日期 2027年1月8–16日<br>
 部分資訊(航班時刻、飯店評比、快速通關規則、市區轉乘時間)為查詢彙整，出發前請再次核對官方資訊。
 </footer>
 </div>
@@ -807,6 +877,33 @@ document.querySelectorAll('.tab,#pv,#nx').forEach(function(el){
   el.addEventListener('click', function(){ setTimeout(__resizeVisibleTripMap, 30); });
 });
 window.addEventListener('hashchange', function(){ setTimeout(__resizeVisibleTripMap, 30); });
+</script>
+<script>
+(function(){
+  var K='tokyo2027.opt.v1', box=document.querySelectorAll('.chk2 input[type=checkbox]');
+  if(!box.length) return;
+  var out=document.getElementById('optn'), rst=document.getElementById('optrst');
+  function load(){ try{ return JSON.parse(localStorage.getItem(K)||'{}')||{}; }catch(e){ return {}; } }
+  function save(s){ try{ localStorage.setItem(K, JSON.stringify(s)); }catch(e){} }
+  function count(){
+    var n=0; box.forEach(function(b){ if(b.checked) n++; });
+    if(out) out.textContent = n + ' / ' + box.length;
+  }
+  var st=load();
+  box.forEach(function(b){
+    if(st[b.dataset.k]) b.checked=true;
+    b.addEventListener('change', function(){
+      var s=load();
+      if(b.checked) s[b.dataset.k]=1; else delete s[b.dataset.k];
+      save(s); count();
+    });
+  });
+  if(rst) rst.addEventListener('click', function(){
+    box.forEach(function(b){ b.checked=false; });
+    save({}); count();
+  });
+  count();
+})();
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCABXtblyDlmRdLXAuNmWYfGMtfT1kdFoM&callback=__initTripMaps&loading=async" async></script>
 
