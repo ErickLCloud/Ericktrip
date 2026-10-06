@@ -253,6 +253,7 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
 .rslide.rev.on img{animation-name:kb2}
 @keyframes kb{from{transform:scale(1.04) translate(0,0)}to{transform:scale(1.19) translate(-1.6%,-1.2%)}}
 @keyframes kb2{from{transform:scale(1.19) translate(1.6%,1%)}to{transform:scale(1.04) translate(0,0)}}
+.rslide.hasimg .rfb{display:none}
 .rfb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;
   padding:0 24px;color:#9fb0bf;font-size:1.05rem;letter-spacing:.06em;
   background:repeating-linear-gradient(135deg,#16222d 0 12px,#132029 12px 24px)}
@@ -1169,7 +1170,9 @@ window.addEventListener('hashchange', function(){ setTimeout(__resizeVisibleTrip
       var info=await __fetchPlacePhoto(lib,s.q,s.i);
       if(!info||!info.url) return;
       var img=new Image(); img.alt=s.n; img.src=info.url;
+      img.onload=function(){ s.el.classList.add('hasimg'); };
       s.el.insertBefore(img,s.el.firstChild);
+      if(img.complete&&img.naturalWidth){ s.el.classList.add('hasimg'); }
       s.attr = info.attribution ? ('照片來源:Google Maps · '+info.attribution) : '照片來源:Google Maps';
       if(S[cur]===s){ attr.textContent=s.attr; }
     }));
