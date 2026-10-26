@@ -10,7 +10,7 @@
 >   完整歷史 journal 在 東京遊/.context/on-demand/journal.md。
 
 ## Inbox
-- [ ] Day5/Day6 迪士尼排程:與使用者的 Google Gemini 共同討論出最佳版(Vacation Package 版)。待使用者提供:Attraction Ticket 選了哪些設施、1/12/1/13 各去哪個園;Chrome 需用 `claude --continue --chrome` 重啟才接得上
+- [ ] Day5/Day6 迪士尼排程(Package 版):設施/園區已知(reference.md「Vacation Package 已選內容」),待排時間表
 - [ ] 1/13(Day6)晚上住宿空缺,使用者自己找(見 reference.md Day6 晚上住宿)
 - [ ] Day4 晚餐:使用者晚點自己訂;Canna 是否保留未定(住宿已改 Fantasy Chateau)
 - [ ] 查 Fantasy Chateau 的 TDL Happy Entry 2027/1 是否有對象外日
@@ -34,7 +34,8 @@
 - [ ] Day7 原宿/表參道 5.5 小時單一區塊:是否補明治神宮(補了要重算交通)
 - [ ] Day2–3 河口湖與 Day8 鎌倉的雨雪備案(目前無壞天氣替代方案)
 - [ ] 交通票券試算:JR Pass 效益低,改算東京地鐵 24/48/72 小時券用於 Day7/Day9 是否划算
-- [ ] Day6 海洋無 Happy Entry:定下出門時刻與 Resort Line 班次(首班 6:05)
+- [ ] Day5(1/12 TDL)沒有 Happy Entry:06:40 早餐後定好出門時刻、Resort Line 班次(首班 6:05),以及 10:30 前要玩的設施
+- [ ] Day5/6 排程待查:1/12 TDL 晚上的秀;1/13 退房行李＋去下一間住宿的交通(需 Google Maps＋Gemini 交叉查證)
 - [ ] 行程表_v1.xlsx 尚未同步 2026-10-06 的餐食決定(Canna/三よし/ORIONS 等),要不要補
 
 ## Archive

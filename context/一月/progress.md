@@ -13,14 +13,14 @@
 
 ## Now
 - 行程 2027/1/8–1/16 共9天,骨架與每日時間軸全部定案;細節見 reference.md「行程決定」。
-- 住宿:2026-10-26 迪士尼段改成 Vacation Package(Fantasy Chateau,1/11–1/13 住 2 晚),**1/13 晚上空缺**;其餘已訂(見 reference.md)。
+- 住宿:2026-10-26 迪士尼段改成 Vacation Package(Fantasy Chateau,1/11–1/13 住 2 晚),**1/13 晚上空缺**;其餘已訂(見 reference.md)。Package 設施/餐廳/各日園區已從 Gemini 對話取得:1/12 樂園、1/13 海洋(見 reference.md「Vacation Package 已選內容」)。
 - 餐食:Day1–Day6 與 Day9 全部定案;**僅剩 Day7 午餐+晚餐、Day8 晚餐、Day9 成田晚餐未定**(使用者考慮中)。
 - 行程網頁現行版 = output/行程網頁_v9.html(13 個分頁,含「待辦清單」28 項與「行程影像」31 畫面)。
 - 線上版 GitHub Pages 含真實地圖/照片、手機可用;已發 v1.0 Release 標記 commit 360d794。
-- 最近一次變更:2026-10-06 單一 session 內 v3→v9 共 7 個 commit,逐項見 journal.md 2026-10-06(續1)〜(續11)。
+- 最近一次變更:2026-10-26 迪士尼段改成 Vacation Package,並從 Gemini 對話取得已選內容(見一月 journal.md 2026-10-26 續2〜續3)。行程網頁 v9 還沒反映這次變更。
 
 ## Next (1–3)
-- **Day5/Day6 迪士尼排程(Package 版)與 Gemini 共同討論**:等使用者提供 Attraction Ticket 設施與各日園區,並用 `claude --continue --chrome` 重啟接上 Chrome(見 todo.md)。
+- **Day5/Day6 迪士尼排程(Package 版)**:設施與園區已知,可開始排。注意 1/12 樂園無 Happy Entry(對象外日);兩天早餐都是 06:40;Day5/6 晚餐已由 Package 包含(北齋、麥哲倫),reference.md「Day5/Day6 餐食」需改寫。
 - Day7 午餐+晚餐、Day8 晚餐、Day9 成田晚餐:待使用者決定(可請 Claude 先出候選比較表)。
 - 四處優先路線風險:A1 Day2 取車緩衝降級方案、A2 天上山纜車上行末班、A3 天空鳥居停車判斷點、
   A5 新橋飯店寄放行李(多數需電話/email 確認,見 todo.md 電話清單)。

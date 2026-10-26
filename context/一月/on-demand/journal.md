@@ -43,3 +43,9 @@ Entry format:
 - 卡關：① claude.ai 的「Gemini」連接器其實是加密貨幣交易所 api.gemini.com，不是 Google Gemini，沒有使用。② 使用者在對話中途接上 Claude in Chrome，但這個對話一直沒出現 Chrome 工具；建議用 `claude --continue --chrome` 重啟。③ Attraction Ticket 選了哪些設施、兩天各去哪個園，使用者還沒提供。
 - 使用者決定：1/13 晚上的住宿自己找；Day4 晚餐晚點自己訂。
 - Next：接上 Chrome 後，到 gemini.google.com 讓 Gemini 先獨立排一版，再交叉比對。
+
+## 2026-10-26（續3）— 從 Gemini 對話取得 Vacation Package 內容
+- What：用 Claude in Chrome 打開 gemini.google.com，在對話「東京迪士尼假期套票優勢」(be574da0e2886538) 找到使用者上傳的兩張 Package 預約畫面截圖。內容：1/12 去 TDL（美女與野獸 10:30、杯麵 14:00、東街咖啡館 12:10、北齋 17:40、TDL 適用設施 ×1），1/13 去 TDS（冰雪奇緣 09:30、小飛俠 11:00、卡納雷托 12:30、麥哲倫 17:00、TDS 適用設施 ×1），兩天早餐都在 Fantasy Springs Restaurant，合計 ¥443,600。使用者確認已把 1/12 早餐從 07:40 改成 06:40。已寫進 reference.md「Vacation Package 已選內容」，「Day5/Day6 園區」改成 1/12 TDL、1/13 TDS（LOCKED）。
+- Why：Package 的設施和餐廳已經綁定園區，所以先前建議的 1/12 TDS、1/13 TDL 不能再用。
+- 注意：1/12 是 Fantasy Chateau 住客在 TDL 的 Happy Entry 對象外日，所以 Day5 在樂園沒有提早入園。Gemini 在那則對話裡以為有，這部分不採用。
+- notes 清空：Gemini 第 1 輪（迪士尼夢幻泉鄉攻略 f2a7b4c4d07a8e4e）排的是 1/12 TDS、1/13 TDL，園區對調後那版作廢；當時用官方頁核對出的錯誤：Believe 和飛濺山 1 月休止、40 週年 Priority Pass 已停止、「神奇的夢幻泉鄉護照」停售沒有來源、TDL 入園時間寫錯。
