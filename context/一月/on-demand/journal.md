@@ -49,3 +49,10 @@ Entry format:
 - Why：Package 的設施和餐廳已經綁定園區，所以先前建議的 1/12 TDS、1/13 TDL 不能再用。
 - 注意：1/12 是 Fantasy Chateau 住客在 TDL 的 Happy Entry 對象外日，所以 Day5 在樂園沒有提早入園。Gemini 在那則對話裡以為有，這部分不採用。
 - notes 清空：Gemini 第 1 輪（迪士尼夢幻泉鄉攻略 f2a7b4c4d07a8e4e）排的是 1/12 TDS、1/13 TDL，園區對調後那版作廢；當時用官方頁核對出的錯誤：Believe 和飛濺山 1 月休止、40 週年 Priority Pass 已停止、「神奇的夢幻泉鄉護照」停售沒有來源、TDL 入園時間寫錯。
+
+## 2026-10-26（續4）— Day5/6 與 Gemini 協作、My Booking 核對、時間表 v1→v2
+- What：① 用 Chrome 把全程行程打字給 Gemini（不上傳檔案），用 Argon/3.1 Pro 多輪追問 Day5/6。② 讀使用者已登入的 My Booking（526411274，只看不改）：設施/餐廳時段與記錄一致；Itinerary 頁 1/12 早餐仍顯示 07:40，使用者確認已改 06:40；套票另含爆米花桶券、商品券、飲料券。③ 產出 output/迪士尼Day5-6時間表_v1.md，再依使用者決定（1/13 晚餐麥哲倫→Canaletto、午餐→アレンデール・ロイヤルバンケット）出 v2：1/13 改成由北往南單向動線。
+- Why：Package 已把園區綁死（1/12 TDL、1/13 TDS），只能排空檔；1 月電氣化鐵路休止，海洋全程步行，所以要避免回頭路。
+- 查證：官方 park-restaurant 頁確認皇家宴會廳自 2025/6/1 起是 VP 餐券對象（櫃檯式、自己找位）；FAQ 00067 確認申込期間內可改、費用會變動。我曾誤說皇家宴會廳可預約且是套餐，查官方頁後更正。Gemini 錯誤：40 週年 PP（已停止）、印第安納瓊斯休止（1 月有開）、Standby Pass 可用於設施、海洋 Happy Entry 08:30（實際 8:45 前後）、把 Sky Full of Colors 的休演日套到 Sparkling Jubilee Night、「改便宜餐廳退差額」（它承認原文沒寫）。我也講錯過度假區線站序，Gemini 沒查就附和。
+- 新發現：Station Delivery 在 Welcome Center 領取只到 21:00，與 21:00 FS 出園衝突 → 行李方案等 1/13 晚住宿決定。
+- Outcome：Day5/6 時間表 v2 為現行草稿；待使用者在 My Booking 送出餐廳變更（約 2027/1/1 前，期限是 Gemini 引用、未親自核對）。

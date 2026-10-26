@@ -17,10 +17,10 @@
 - 餐食:Day1–Day6 與 Day9 全部定案;**僅剩 Day7 午餐+晚餐、Day8 晚餐、Day9 成田晚餐未定**(使用者考慮中)。
 - 行程網頁現行版 = output/行程網頁_v9.html(13 個分頁,含「待辦清單」28 項與「行程影像」31 畫面)。
 - 線上版 GitHub Pages 含真實地圖/照片、手機可用;已發 v1.0 Release 標記 commit 360d794。
-- 最近一次變更:2026-10-26 迪士尼段改成 Vacation Package,並從 Gemini 對話取得已選內容(見一月 journal.md 2026-10-26 續2〜續3)。行程網頁 v9 還沒反映這次變更。
+- 最近一次變更:2026-10-26 Day5/6 時間表 v2(與 Gemini 討論＋My Booking 核對,見一月 journal.md 2026-10-26 續4)。行程網頁 v9 還沒反映 Vacation Package 變更。
 
 ## Next (1–3)
-- **Day5/Day6 迪士尼排程(Package 版)**:設施與園區已知,可開始排。注意 1/12 樂園無 Happy Entry(對象外日);兩天早餐都是 06:40;Day5/6 晚餐已由 Package 包含(北齋、麥哲倫),reference.md「Day5/Day6 餐食」需改寫。
+- **Day5/6 迪士尼**:時間表草稿 = output/迪士尼Day5-6時間表_v2.md。使用者要自己在 My Booking 改 1/13 餐廳(午餐→皇家宴會廳、晚餐→Canaletto,約 2027/1/1 前);待查項目與行李衝突見 todo.md。
 - Day7 午餐+晚餐、Day8 晚餐、Day9 成田晚餐:待使用者決定(可請 Claude 先出候選比較表)。
 - 四處優先路線風險:A1 Day2 取車緩衝降級方案、A2 天上山纜車上行末班、A3 天空鳥居停車判斷點、
   A5 新橋飯店寄放行李(多數需電話/email 確認,見 todo.md 電話清單)。

@@ -10,10 +10,8 @@
 >   完整歷史 journal 在 東京遊/.context/on-demand/journal.md。
 
 ## Inbox
-- [ ] Day5/Day6 迪士尼排程(Package 版):設施/園區已知(reference.md「Vacation Package 已選內容」),待排時間表
 - [ ] 1/13(Day6)晚上住宿空缺,使用者自己找(見 reference.md Day6 晚上住宿)
 - [ ] Day4 晚餐:使用者晚點自己訂;Canna 是否保留未定(住宿已改 Fantasy Chateau)
-- [ ] 查 Fantasy Chateau 的 TDL Happy Entry 2027/1 是否有對象外日
 - [ ] Day4 舞浜駅→Fantasy Springs Hotel 的走法與 check-in 時間要重查(原本是走到樂園大飯店)
 - [ ] 餐食待定(剩 4 餐):Day7 午餐(原宿/表參道)+晚餐(澀谷)、Day8 晚餐(新橋)、Day9 成田機場晚餐。
   Day8 可考慮 FB Reel 的篩網燒 小林養鶏(新橋,Tabelog 3.46);其餘無候選。詳見網頁「待辦清單」B6–B8
@@ -34,11 +32,13 @@
 - [ ] Day7 原宿/表參道 5.5 小時單一區塊:是否補明治神宮(補了要重算交通)
 - [ ] Day2–3 河口湖與 Day8 鎌倉的雨雪備案(目前無壞天氣替代方案)
 - [ ] 交通票券試算:JR Pass 效益低,改算東京地鐵 24/48/72 小時券用於 Day7/Day9 是否划算
-- [ ] Day5(1/12 TDL)沒有 Happy Entry:06:40 早餐後定好出門時刻、Resort Line 班次(首班 6:05),以及 10:30 前要玩的設施
-- [ ] Day5/6 排程待查:1/12 TDL 晚上的秀;1/13 退房行李＋去下一間住宿的交通(需 Google Maps＋Gemini 交叉查證)
+- [ ] Day5/6 時間表(output/迪士尼Day5-6時間表_v2.md)待查:度假區線各段分鐘數、1 月遊行/煙火(約 12/8 公布)、適用設施券可用清單、TDS Premier Access 價格;1/13 退房行李＋去下一間住宿的交通(需 Google Maps＋Gemini 交叉查證)
 - [ ] 行程表_v1.xlsx 尚未同步 2026-10-06 的餐食決定(Canna/三よし/ORIONS 等),要不要補
+- [ ] 1/13 餐廳變更(使用者 2026-10-26 選方案 a):晚餐 麥哲倫→Ristorante di Canaletto,午餐 Canaletto→アレンデール・ロイヤルバンケット(官方對象店,建議 11:40–11:50 時段;截止約 2027/1/1),由使用者自己在 My Booking 送出。時間表見 output/迪士尼Day5-6時間表_v2.md
+- [ ] 1/13 行李:Station Delivery 領取只到 21:00,與 21:00 FS 出園衝突 → 等住宿決定後選方案
 
 ## Archive
+- Day5/6 排程 v2 已產出;Happy Entry 對象外日已查到(1/12 TDL 對象外)(2026-10-26,journal.md)
 - Toyota 租車已訂(預約號 99938680500,無釘雪胎 Required 已載於預約)、BR198 抵達 12:55 已由電子機票確認
   (2026-10-17,Gmail 查證,journal.md)
 - Day1–6 與 Day9 餐食全部定案(Day1機上/Day2飯店早餐/Day4 Canna/Day5-6園內/Day9 三よし+ORIONS)
