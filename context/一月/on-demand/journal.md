@@ -37,3 +37,9 @@ Entry format:
 - What：① 東京遊 claude.md 的交通查證規則（Google Maps＋Gemini 交叉查證）加進 一月/CLAUDE.md（放在 managed 區塊外）。② project-init refresh：managed 區塊與範本相同，未改動。③ 新增 wrap 步驟 6：把 一月/.context 與 東京遊/.context 同步到 ErickLCloud/Ericktrip 的 context/一月/、context/東京遊/。④ 這台 Mac 用 Homebrew 安裝 gh 2.103.2，使用者自己登入 ErickLCloud；repo clone 在 ~/Documents/GitHub/Ericktrip。
 - Why：使用者要在不同電腦之間同步進度。
 - 取捨：曾建議另開 Private repo（.context 裡有訂位代號、租車預約號）。使用者知道內容會公開後，仍選定 Public 的 Ericktrip。
+
+## 2026-10-26（續2）— Vacation Package 查證＋Day5/6 與 Gemini 共同排程（還沒開始）
+- What：使用者說買了迪士尼 Vacation Package，要我和他的 Google Gemini 一起排 Day5/6。在 Gmail 查到確認信 526411274：Enjoy Attractions and More 3DAYS，住 Fantasy Chateau，1/11 入住、住 2 晚、1/13 退房，門票 1/12、1/13，¥443,600；原樂園大飯店 506346459 已取消，**1/13 晚上沒有住宿**。查官方頁得知 Fantasy Chateau 住客兩園都有 Happy Entry（TDL 15 分、TDS 5–15 分），可隨時進 Fantasy Springs。已把這些寫進 reference.md，舊的 Canna／園內餐／Happy Entry 三條加了 ⚠️ 註記。
+- 卡關：① claude.ai 的「Gemini」連接器其實是加密貨幣交易所 api.gemini.com，不是 Google Gemini，沒有使用。② 使用者在對話中途接上 Claude in Chrome，但這個對話一直沒出現 Chrome 工具；建議用 `claude --continue --chrome` 重啟。③ Attraction Ticket 選了哪些設施、兩天各去哪個園，使用者還沒提供。
+- 使用者決定：1/13 晚上的住宿自己找；Day4 晚餐晚點自己訂。
+- Next：接上 Chrome 後，到 gemini.google.com 讓 Gemini 先獨立排一版，再交叉比對。

@@ -10,6 +10,11 @@
 >   完整歷史 journal 在 東京遊/.context/on-demand/journal.md。
 
 ## Inbox
+- [ ] Day5/Day6 迪士尼排程:與使用者的 Google Gemini 共同討論出最佳版(Vacation Package 版)。待使用者提供:Attraction Ticket 選了哪些設施、1/12/1/13 各去哪個園;Chrome 需用 `claude --continue --chrome` 重啟才接得上
+- [ ] 1/13(Day6)晚上住宿空缺,使用者自己找(見 reference.md Day6 晚上住宿)
+- [ ] Day4 晚餐:使用者晚點自己訂;Canna 是否保留未定(住宿已改 Fantasy Chateau)
+- [ ] 查 Fantasy Chateau 的 TDL Happy Entry 2027/1 是否有對象外日
+- [ ] Day4 舞浜駅→Fantasy Springs Hotel 的走法與 check-in 時間要重查(原本是走到樂園大飯店)
 - [ ] 餐食待定(剩 4 餐):Day7 午餐(原宿/表參道)+晚餐(澀谷)、Day8 晚餐(新橋)、Day9 成田機場晚餐。
   Day8 可考慮 FB Reel 的篩網燒 小林養鶏(新橋,Tabelog 3.46);其餘無候選。詳見網頁「待辦清單」B6–B8
 - [ ] Day4 晚餐カンナ(Canna)要搶 Priority Seating:2026/12/11 10:00 JST,用東京迪士尼度假區 App
