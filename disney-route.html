@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>迪士尼路線圖 1/12 樂園・1/13 海洋</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#1c2230;--mute:#667085;--line:#e3e6ec;--vp:#e8590c;--std:#1971c2;--base:#2f9e44;--warn:#fff4e6}
+@media (prefers-color-scheme:dark){:root{--bg:#12151c;--card:#1b2029;--ink:#e8ebf2;--mute:#9aa3b5;--line:#2c3340;--warn:#3a2a14}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,"Noto Sans TC","Microsoft JhengHei",sans-serif}
+header{padding:14px 16px 6px}
+h1{margin:0;font-size:20px}
+.sub{color:var(--mute);font-size:13px}
+.tabs{display:flex;gap:8px;padding:8px 16px}
+.tabs button{flex:1;padding:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;font:inherit;font-weight:600;cursor:pointer}
+.tabs button.on{background:var(--std);color:#fff;border-color:var(--std)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;padding:2px 16px 8px;font-size:13px}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:50%;vertical-align:-2px;margin-right:5px}
+main{display:grid;grid-template-columns:380px 1fr;gap:12px;padding:0 16px 16px}
+#list{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:auto;max-height:78vh}
+#map{height:78vh;border-radius:12px;border:1px solid var(--line)}
+.note{margin:8px;padding:8px 10px;background:var(--warn);border-radius:8px;font-size:13px}
+.note ul{margin:4px 0 0;padding-left:18px}
+.step{display:flex;gap:10px;padding:9px 12px;border-top:1px solid var(--line);cursor:pointer}
+.step:hover{background:var(--bg)}
+.num{flex:none;width:26px;height:26px;border-radius:50%;color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.t{font-weight:700;font-size:13px;color:var(--mute)}
+.nm{font-weight:600}
+.d{font-size:13px;color:var(--mute)}
+.walk{font-size:12px;color:var(--mute);padding:0 12px 0 48px}
+.tag{font-size:11px;padding:1px 6px;border-radius:6px;color:#fff;margin-left:4px;vertical-align:1px}
+.pin{width:28px;height:28px;border-radius:50%;color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.45)}
+footer{padding:0 16px 20px;color:var(--mute);font-size:12px}
+footer a{color:var(--std)}
+@media(max-width:820px){main{grid-template-columns:1fr}#map{height:60vh;order:-1}#list{max-height:none}}
+</style>
+</head>
+<body>
+<header>
+  <h1>迪士尼路線圖</h1>
+  <div class="sub">住 Fantasy Chateau(夢幻泉鄉大飯店)・Vacation Package・2027/1/12 樂園、1/13 海洋</div>
+</header>
+<div class="tabs">
+  <button id="b-tdl" class="on">1/12(二) 東京迪士尼樂園</button>
+  <button id="b-tds">1/13(三) 東京迪士尼海洋</button>
+</div>
+<div class="legend">
+  <span><i style="background:var(--vp)"></i>VP 內含(套票已綁定時段/餐廳)</span>
+  <span><i style="background:var(--std)"></i>自排建議(可換)</span>
+  <span><i style="background:var(--base)"></i>飯店/入口/出口</span>
+  <span>橘線 = 前往 VP 的路段</span>
+</div>
+<main>
+  <div id="list"></div>
+  <div id="map"></div>
+</main>
+<footer>
+  底圖 © OpenStreetMap contributors;設施座標取自 OSM,餐廳/入口標「概略」者為估計位置。線條為直線連結的示意動線,不是實際步道,分鐘數 = 直線距離 ×1.3 ÷ 步行 4.5km/h 的粗估。
+  官方園區地圖:<a href="https://www.tokyodisneyresort.jp/tdl/map/" target="_blank" rel="noopener">TDL</a>・<a href="https://www.tokyodisneyresort.jp/tds/map/" target="_blank" rel="noopener">TDS</a>。
+  VP 時段/餐廳來自 My Booking 與 Gemini 對話截圖(reference.md),1/13 午晚餐變更尚未在 My Booking 送出。
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+// k: vp = Vacation Package 內含, std = 自排建議, base = 飯店/入口/出口; ap = 位置概略
+const DAYS = {
+tdl: {
+  center:[35.6325,139.8805], zoom:17,
+  notes:[
+    '1/12 是 Fantasy Chateau 住客在 TDL 的 <b>Happy Entry 對象外日</b>,沒有提早入園,9:00 開園。',
+    '1/12 休止:ピーターパン空の旅、ジャングルクルーズ、スプラッシュ・マウンテン、ホーンテッドマンション、ツリーハウス → 路線已避開。',
+    '飯店→TDL 搭度假區線(ベイサイド站→TDL 站要繞大半圈,約 10 分 ¥300,Google Maps＋Gemini 時刻表對得上;反向 TDL→Bayside 1 站約 3 分)。',
+    'VP 的「TDL 適用設施體驗券」可用清單還沒查,大雷山只是暫排。'
+  ],
+  stops:[
+    {k:'base',t:'06:40',n:'Fantasy Springs Restaurant 早餐',d:'VP 早餐(已從 07:40 改 06:40)',ll:[35.62927,139.87648],tag:'VP'},
+    {k:'base',t:'~08:30',n:'TDL 入口(世界市集)',d:'搭度假區線到 TDL 站,排隊等 9:00 開園',ll:[35.63499,139.88],ap:1},
+    {k:'std',t:'09:05',n:'怪獸電力公司 Ride & Go Seek',d:'明日樂園,開園先搭',ll:[35.63393,139.87832]},
+    {k:'std',t:'09:50',n:'星際大戰星際旅行',d:'離上一站很近',ll:[35.63354,139.87801]},
+    {k:'vp',t:'10:30',n:'美女與野獸「魔法的故事」',d:'VP 時段 10:30〜,新幻想樂園',ll:[35.63061,139.87785]},
+    {k:'std',t:'11:10',n:'小熊維尼獵蜜記',d:'幻想樂園',ll:[35.63023,139.88047]},
+    {k:'std',t:'11:50',n:'米奇魔幻交響樂 3D',d:'時間短,順路在城堡旁',ll:[35.6315,139.88064]},
+    {k:'vp',t:'12:10',n:'東街咖啡館(Eastside Cafe)午餐',d:'VP 午餐 12:10〜,世界市集',ll:[35.63456,139.88015]},
+    {k:'std',t:'13:20',n:'加勒比海盜',d:'探險樂園,離午餐店近',ll:[35.63476,139.88111]},
+    {k:'vp',t:'14:00',n:'杯麵的快樂之旅 Baymax',d:'VP 時段 14:00〜,明日樂園',ll:[35.6317,139.87884]},
+    {k:'std',t:'14:40',n:'大雷山(暫排的適用設施券)',d:'西部樂園;券可用清單待確認',ll:[35.63262,139.88346]},
+    {k:'std',t:'15:40',n:'小小世界',d:'幻想樂園',ll:[35.63036,139.88129]},
+    {k:'std',t:'16:30',n:'加傑特的過山車',d:'卡通城,順路往世界市集',ll:[35.63056,139.8787]},
+    {k:'vp',t:'17:40',n:'北齋(Restaurant Hokusai)晚餐',d:'VP 晚餐 17:40〜,世界市集;餐廳位置為概略',ll:[35.6343,139.8796],ap:1},
+    {k:'base',t:'19:00後',n:'夜間表演/回飯店',d:'1 月班表約 12/8 公布;度假區線回 Bayside 站',ll:[35.63499,139.88],ap:1}
+  ]
+},
+tds: {
+  center:[35.6268,139.8833], zoom:17,
+  notes:[
+    '1/13 是 <b>退房日(12:00)</b>:早餐後先辦 Express Checkout。<b>行李怎麼處理待 1/13 晚住宿決定</b>:官方只列免費寄到後泊迪士尼飯店、付費 Station Delivery(Welcome Center 只到 21:00 領)、付費寄回家;退房後寄 Bell Desk 到當晚沒有官方依據。',
+    '走飯店專用的 <b>ファンタジースプリングス・エントランス</b>(出示宿泊証明書＋門票),可用 Happy Entry(TDS 約早 5–15 分)。',
+    '1/13 休止:地心探險、電氣鐵路、Believe!、人魚礁劇場 → 全程步行,路線由西北(夢幻泉鄉)往東南單向。',
+    '午餐皇家宴會廳、晚餐卡納雷托是你選的方案,<b>尚未在 My Booking 送出</b>(約 2027/1/1 前);原訂為午餐 Canaletto 12:30、晚餐 Magellan\'s 17:00。晚餐時段 17:00 為暫定。',
+    '從 Fantasy Springs 專用入口出園的話,21:00 前要回到 Fantasy Springs。'
+  ],
+  stops:[
+    {k:'base',t:'06:40',n:'Fantasy Springs Restaurant 早餐',d:'VP 早餐;吃完退房(行李方式待住宿決定)',ll:[35.62927,139.87648],tag:'VP'},
+    {k:'base',t:'~08:45',n:'Fantasy Springs 專用入口',d:'Happy Entry 早 5–15 分;位置為概略',ll:[35.6291,139.8769],ap:1},
+    {k:'vp',t:'09:30',n:'冰雪奇緣冒險旅程',d:'VP 時段 09:30〜,冰雪王國;入園後到 9:30 前先在 Arendelle 拍照',ll:[35.62991,139.87725]},
+    {k:'std',t:'10:00',n:'樂佩的燈籠節',d:'排隊太長就跳過,11:00 小飛俠優先',ll:[35.62899,139.87945]},
+    {k:'vp',t:'11:00',n:'小飛俠的奇幻島冒險',d:'VP 時段 11:00〜,小飛俠區',ll:[35.62789,139.87895]},
+    {k:'vp',t:'11:40',n:'阿倫戴爾皇家宴會廳 午餐(待送出變更)',d:'VP 餐券對象店,櫃檯式、自己找位',ll:[35.62941,139.87806]},
+    {k:'std',t:'13:00',n:'印第安納瓊斯冒險',d:'走出 Fantasy Springs 進失落河三角洲',ll:[35.62671,139.88061]},
+    {k:'std',t:'14:00',n:'Raging Spirits 怒火狂靈',d:'就在隔壁',ll:[35.62771,139.88082]},
+    {k:'std',t:'14:40',n:'茉莉公主魔毯',d:'阿拉伯海岸',ll:[35.62835,139.88109]},
+    {k:'std',t:'15:30',n:'人魚礁(Mermaid Lagoon)',d:'劇場休止,可玩小翻跟斗魚/水母等',ll:[35.62699,139.88248]},
+    {k:'vp',t:'16:20',n:'翱翔:幻想飛行(暫排的適用設施券)',d:'地中海港灣;券可用清單待確認',ll:[35.62769,139.8854]},
+    {k:'vp',t:'17:00',n:'卡納雷托 晚餐(待送出變更,時段暫定)',d:'VP 晚餐店(原訂 Magellan\'s 17:00)',ll:[35.62569,139.88777]},
+    {k:'std',t:'19:30',n:'MiraCosta 投影 / 夜間',d:'Sparkling Jubilee Night 20:15/20:55;煙火 Sky Full of Colors 看班表',ll:[35.62685,139.88775]},
+    {k:'base',t:'~21:00',n:'出園/回飯店取行李',d:'行李方式待住宿決定(Station Delivery 21:00 前領);1/13 晚住宿尚未訂',ll:[35.6289,139.87637]}
+  ]
+}};
+const COL={vp:'#e8590c',std:'#1971c2',base:'#2f9e44'};
+const map=L.map('map');
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'}).addTo(map);
+let layer=L.layerGroup().addTo(map), markers=[];
+function dist(a,b){const R=6371000,r=Math.PI/180,dLa=(b[0]-a[0])*r,dLo=(b[1]-a[1])*r;
+  const h=Math.sin(dLa/2)**2+Math.cos(a[0]*r)*Math.cos(b[0]*r)*Math.sin(dLo/2)**2;return 2*R*Math.asin(Math.sqrt(h));}
+function show(key){
+  const D=DAYS[key]; layer.clearLayers(); markers=[];
+  const list=document.getElementById('list');
+  list.innerHTML='<div class="note"><b>注意</b><ul>'+D.notes.map(x=>'<li>'+x+'</li>').join('')+'</ul></div>';
+  const pts=[];
+  D.stops.forEach((s,i)=>{
+    const c=COL[s.k];
+    const m=L.marker(s.ll,{icon:L.divIcon({className:'',html:'<div class="pin" style="background:'+c+'">'+(i+1)+'</div>',iconSize:[28,28],iconAnchor:[14,14]})})
+      .bindPopup('<b>'+(i+1)+'. '+s.n+'</b><br>'+s.t+'<br>'+s.d+(s.ap?'<br><i>位置概略</i>':'')).addTo(layer);
+    markers.push(m); pts.push(s.ll);
+    if(i>0){
+      const prev=D.stops[i-1], dm=dist(prev.ll,s.ll), min=Math.max(1,Math.round(dm*1.3/75));
+      L.polyline([prev.ll,s.ll],{color:s.k==='vp'?COL.vp:'#5c7cfa',weight:s.k==='vp'?5:3,opacity:.85,dashArray:(prev.ap||s.ap)?'6 6':null}).addTo(layer);
+      list.insertAdjacentHTML('beforeend','<div class="walk">↓ 約 '+Math.round(dm)+' m・步行約 '+min+' 分</div>');
+    }
+    const el=document.createElement('div'); el.className='step';
+    el.innerHTML='<div class="num" style="background:'+c+'">'+(i+1)+'</div><div><div class="t">'+s.t+(s.tag?'<span class="tag" style="background:var(--vp)">'+s.tag+'</span>':'')+'</div><div class="nm">'+s.n+'</div><div class="d">'+s.d+'</div></div>';
+    el.onclick=()=>{map.setView(s.ll,18);m.openPopup();if(innerWidth<=820)window.scrollTo({top:0,behavior:'smooth'})};
+    list.appendChild(el);
+  });
+  map.fitBounds(L.latLngBounds(pts).pad(0.15));
+  document.getElementById('b-tdl').classList.toggle('on',key==='tdl');
+  document.getElementById('b-tds').classList.toggle('on',key==='tds');
+}
+document.getElementById('b-tdl').onclick=()=>show('tdl');
+document.getElementById('b-tds').onclick=()=>show('tds');
+show('tdl');
+</script>
+</body>
+</html>
