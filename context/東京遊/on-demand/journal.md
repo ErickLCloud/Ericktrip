@@ -902,3 +902,61 @@ DFKai-SB(標楷體)13號、置中+自動換行、四邊細黑框線;多數活動
 - What: 使用者已訂 Toyota 租車,要求查 Gmail 並列未處理待辦。Gmail 連接器重新授權後讀取確認信。
 - Found: Toyota 預約 99938680500(1/9 12:30 取、1/11 12:00 還、Corolla Touring HV、無釘雪胎 Required、¥38,588);BR198/BR195 訂位 EEH7DA 時刻 08:50→12:55 / 20:20→23:25;星のや 1/9 房餐 ID 5598313(18:30,山のしゃぶしゃぶ豬肉×2,¥29,040 現場付款),1/10 原訂 5576129 於 9/14 取消且未見新單;星のや回覆 Gastronomic Wild 不能去牛肉,過敏無法處理,建議單點;迪士尼飯店 506346459(9/21 兩次變更);Agoda 只有 Blossom 新宿,未找到 THE BLOSSOM HIBIYA。
 - Outcome: todo/reference 已更新;BR198 時刻結案;租車費用由推算 ¥25–27k 改為實際 ¥38,588。
+
+> 以下 2026-10-26 五則在 Mac「一月」工作區完成(東京遊放在 一月/東京遊/),原文自 GitHub ErickLCloud/Ericktrip context/一月/on-demand/journal.md(commit d9a2c15)照錄。文中「一月」的 .context 即當時的東京遊進度。
+
+## 2026-10-26 — 套用「東京遊」最新進度到「一月」工作區
+- What：使用者把「東京遊」專案資料夾搬進 一月/東京遊/，要求以東京遊進度為最新並套用。舊的一月 progress/todo/reference 備份到 .context/on-demand/archive-2026-10-26_一月舊版/，再以 東京遊/.context 三檔覆蓋；三檔表頭加註路徑約定（output/input/coord 指 東京遊/ 底下）；reference.md 末尾加「一月自身產出已 SUPERSEDED」區塊，並註明本機是 Mac、沒有 gh。
+- Why：一月的內容停在 2026-08-23（河口湖 2天1夜、Day1–4/7–9 未定），東京遊已推進到 2026-10-17（全程時間軸定案、住宿與租車已訂）。
+- Outcome：一月工作區現行狀態＝東京遊 2026-10-17 狀態。東京遊 journal（93KB）沒有複製，原地保留作為完整歷史。另外發現 claude-skills-md-mods_v1/workspace/projects/東京遊 有一份不完整的副本（缺 input、多數 output），沒有使用。
+
+## 2026-10-26（續）— 交通查證規則＋wrap 同步 GitHub
+- What：① 東京遊 claude.md 的交通查證規則（Google Maps＋Gemini 交叉查證）加進 一月/CLAUDE.md（放在 managed 區塊外）。② project-init refresh：managed 區塊與範本相同，未改動。③ 新增 wrap 步驟 6：把 一月/.context 與 東京遊/.context 同步到 ErickLCloud/Ericktrip 的 context/一月/、context/東京遊/。④ 這台 Mac 用 Homebrew 安裝 gh 2.103.2，使用者自己登入 ErickLCloud；repo clone 在 ~/Documents/GitHub/Ericktrip。
+- Why：使用者要在不同電腦之間同步進度。
+- 取捨：曾建議另開 Private repo（.context 裡有訂位代號、租車預約號）。使用者知道內容會公開後，仍選定 Public 的 Ericktrip。
+
+## 2026-10-26（續2）— Vacation Package 查證＋Day5/6 與 Gemini 共同排程（還沒開始）
+- What：使用者說買了迪士尼 Vacation Package，要我和他的 Google Gemini 一起排 Day5/6。在 Gmail 查到確認信 526411274：Enjoy Attractions and More 3DAYS，住 Fantasy Chateau，1/11 入住、住 2 晚、1/13 退房，門票 1/12、1/13，¥443,600；原樂園大飯店 506346459 已取消，**1/13 晚上沒有住宿**。查官方頁得知 Fantasy Chateau 住客兩園都有 Happy Entry（TDL 15 分、TDS 5–15 分），可隨時進 Fantasy Springs。已把這些寫進 reference.md，舊的 Canna／園內餐／Happy Entry 三條加了 ⚠️ 註記。
+- 卡關：① claude.ai 的「Gemini」連接器其實是加密貨幣交易所 api.gemini.com，不是 Google Gemini，沒有使用。② 使用者在對話中途接上 Claude in Chrome，但這個對話一直沒出現 Chrome 工具；建議用 `claude --continue --chrome` 重啟。③ Attraction Ticket 選了哪些設施、兩天各去哪個園，使用者還沒提供。
+- 使用者決定：1/13 晚上的住宿自己找；Day4 晚餐晚點自己訂。
+- Next：接上 Chrome 後，到 gemini.google.com 讓 Gemini 先獨立排一版，再交叉比對。
+
+## 2026-10-26（續3）— 從 Gemini 對話取得 Vacation Package 內容
+- What：用 Claude in Chrome 打開 gemini.google.com，在對話「東京迪士尼假期套票優勢」(be574da0e2886538) 找到使用者上傳的兩張 Package 預約畫面截圖。內容：1/12 去 TDL（美女與野獸 10:30、杯麵 14:00、東街咖啡館 12:10、北齋 17:40、TDL 適用設施 ×1），1/13 去 TDS（冰雪奇緣 09:30、小飛俠 11:00、卡納雷托 12:30、麥哲倫 17:00、TDS 適用設施 ×1），兩天早餐都在 Fantasy Springs Restaurant，合計 ¥443,600。使用者確認已把 1/12 早餐從 07:40 改成 06:40。已寫進 reference.md「Vacation Package 已選內容」，「Day5/Day6 園區」改成 1/12 TDL、1/13 TDS（LOCKED）。
+- Why：Package 的設施和餐廳已經綁定園區，所以先前建議的 1/12 TDS、1/13 TDL 不能再用。
+- 注意：1/12 是 Fantasy Chateau 住客在 TDL 的 Happy Entry 對象外日，所以 Day5 在樂園沒有提早入園。Gemini 在那則對話裡以為有，這部分不採用。
+- notes 清空：Gemini 第 1 輪（迪士尼夢幻泉鄉攻略 f2a7b4c4d07a8e4e）排的是 1/12 TDS、1/13 TDL，園區對調後那版作廢；當時用官方頁核對出的錯誤：Believe 和飛濺山 1 月休止、40 週年 Priority Pass 已停止、「神奇的夢幻泉鄉護照」停售沒有來源、TDL 入園時間寫錯。
+
+## 2026-10-26（續4）— Day5/6 與 Gemini 協作、My Booking 核對、時間表 v1→v2
+- What：① 用 Chrome 把全程行程打字給 Gemini（不上傳檔案），用 Argon/3.1 Pro 多輪追問 Day5/6。② 讀使用者已登入的 My Booking（526411274，只看不改）：設施/餐廳時段與記錄一致；Itinerary 頁 1/12 早餐仍顯示 07:40，使用者確認已改 06:40；套票另含爆米花桶券、商品券、飲料券。③ 產出 output/迪士尼Day5-6時間表_v1.md，再依使用者決定（1/13 晚餐麥哲倫→Canaletto、午餐→アレンデール・ロイヤルバンケット）出 v2：1/13 改成由北往南單向動線。
+- Why：Package 已把園區綁死（1/12 TDL、1/13 TDS），只能排空檔；1 月電氣化鐵路休止，海洋全程步行，所以要避免回頭路。
+- 查證：官方 park-restaurant 頁確認皇家宴會廳自 2025/6/1 起是 VP 餐券對象（櫃檯式、自己找位）；FAQ 00067 確認申込期間內可改、費用會變動。我曾誤說皇家宴會廳可預約且是套餐，查官方頁後更正。Gemini 錯誤：40 週年 PP（已停止）、印第安納瓊斯休止（1 月有開）、Standby Pass 可用於設施、海洋 Happy Entry 08:30（實際 8:45 前後）、把 Sky Full of Colors 的休演日套到 Sparkling Jubilee Night、「改便宜餐廳退差額」（它承認原文沒寫）。我也講錯過度假區線站序，Gemini 沒查就附和。
+- 新發現：Station Delivery 在 Welcome Center 領取只到 21:00，與 21:00 FS 出園衝突 → 行李方案等 1/13 晚住宿決定。
+- Outcome：Day5/6 時間表 v2 為現行草稿；待使用者在 My Booking 送出餐廳變更（約 2027/1/1 前，期限是 Gemini 引用、未親自核對）。
+
+## 2026-10-26（續5）— Windows 這台併入 Mac 的 10/26 進度
+- What：從 GitHub ErickLCloud/Ericktrip（commit d9a2c15）抓 context/一月/，把 progress/todo/reference 換成那三份（拿掉「路徑約定」表頭、journal 指標改回本檔），reference 末尾「一月資料夾自身產出」改成「跨電腦同步」一節，新加的迪士尼查證放在「Disney Vacation Package 相關查證」一節；本則之前的五則 10/26 journal 照錄。
+- Why：使用者在 Mac 上推進了 Vacation Package 與 Day5/6 排程，要在 Windows 這台接續。
+- Outcome：本機 .context = Mac 10/26 最新進度。output/迪士尼Day5-6時間表_v1/_v2.md 只在 Mac 上，GitHub 沒有，本機也還沒有。另外先輸出了整個專案的 zip：output/東京遊_專案匯出_v1.zip（併入前的版本）。
+
+## 2026-10-26(續6)— 核對迪士尼路線圖、Gemini 交叉查證、部署 GitHub
+- What:核對 output/迪士尼路線圖_v1.html 對 reference.md,VP 時段/休止設施/Happy Entry 一致。用 Chrome 問 Gemini(Argon 兩分多鐘無回應,改 3.8 Flash 才回)+ Google Maps 交叉查度假區線:Bayside→TDL Google Maps 10 分 ¥300,Gemini 結論「5 分」與自己時刻表矛盾,採 10 分。
+- 更正:度假區線站序先前寫反(tabi-mag),正確為 總站→TDL→Bayside→TDS→總站;reference.md 第 101 行與路線圖備註已改。Bayside→TDL 約 10 分、TDL→Bayside 約 3 分。
+- Gemini 單一來源:Fantasy Springs 入口→冰雪奇緣步行 2~3 分(來源 Klook/Reddit,非官方)。行李題(退房後可否寄 Bell Desk 到晚上)Gemini 約 3 分鐘仍無回應,未得結論;官方只列三種方式,故路線圖 1/13 三處「Bell Desk」改為「行李方式待住宿決定」。
+- 誤點:先前停止/選模型時誤點到 Gemini 建議追問「是」,多送一則首末班時刻表查詢,無害。
+- Deploy:路線圖(拿掉預約號)以 disney-route.html 推到 ErickLCloud/Ericktrip main,commit 7abf644,https://ErickLCloud.github.io/Ericktrip/disney-route.html(200)。尚未在行程網頁 index.html 加連結。
+- 續:行程網頁 v10 = v9 + Day5/Day6 徽章列加「🗺 迪士尼路線圖 ↗」連結(指向 Pages 的 disney-route.html);repo index.html 同步,commit 1d3e6d9,線上已確認 2 處連結。v10 內容其餘仍是 v9(住宿仍寫樂園大飯店,尚未同步 Vacation Package)。
+- 續2:行程網頁 v10 同步 Vacation Package(原地改,未升 v11):首頁 facts/總覽表、Day4 住宿卡與 check-in、Day5/6 住宿列、Happy Entry(1/12 TDL 對象外日無提早、1/13 TDS 專用入口早 5–15 分)、實用指南表/tip、待辦清單 A7/A8/B3–B5/C4b、地圖 JSON 都已改成 Fantasy Chateau。Canna 標「待定」。Day4 舞浜→Fantasy Chateau 走法/時間仍待重查。Pages commit 4062235。未動:Day5/6 完整時間軸(仍是舊的 DPA/快餐版,與路線圖不同)。
+- 續3:行程網頁 v10 Day5/Day6 時間軸換成路線圖版(15/14 站,Package 內含標【Package】),補 1/12、1/13 休止提醒;Pages 已推。路線圖 v1 是資料來源,日後改路線圖要記得同步 v10。
+- 續4:路線圖逐段用 Google Maps(步行)查證。座標:兩園 25 個站點跟 Google 解析位置相差都在約 90 m 內(最大:TDL 入口 ~90 m、Peter Pan 75 m)。步行分鐘(Google):TDL 12 段 1–7 分(最長 北齋←加傑特 7 分、大雷山←杯麵 7 分);TDS 9 段 1–5 分。已寫進路線圖每段並改標「估」於未查段(TDS 入口→冰雪奇緣未查到)。注意:用日文/中文名稱查會被 Google 吸附到錯誤點,大雷山那段曾顯示 15 分(繞出園外、含私人道路警告),改用座標才得 7 分;名稱查法對園區內部不可靠,以座標為準。發現:11:50 米奇魔幻交響樂→12:10 東街咖啡館時間不夠(步行 6 分+演出 20 分),已在路線圖 TDL 備註標警。Gemini 未參與本輪(Google Maps 為主);Pages commit a8c29ac。未同步:v10 Day5/6 時間軸仍是 11:50 米奇魔幻交響樂。
+
+## 2026-10-27 — 1/13 晚住宿候選整理、Gemini 查證卡在 Chrome 連線
+- What：依 reference.md 10/26 快照整理 1/13 晚候選（迪士尼官方飯店 4 級、舞浜非迪士尼 10 間，附價格/評分/限制）。使用者要求用 Gemini Pro 查評價優缺點、且只看含早餐房型。
+- Why 沒完成：本 session 沒有瀏覽器工具（內建瀏覽器、claude-in-chrome 都找不到；`/chrome` 輸出 no content，重搜仍無）。「claude.ai Gemini」連接器連的是 api.gemini.com（加密貨幣交易所，非 Google Gemini），未授權。
+- Outcome：未改任何檔案、未查任何新資料。已備好 5 間的 Gemini 問句（Disney Ambassador、Celebration、東京灣大倉、Grand Nikko、Dream Gate；句型：2027/1/13 入住、2 大人、1 晚，含早餐房型、價格、優缺點、附來源連結）。下一步：用 `claude --chrome --continue` 重開，確認 Chrome 工具載入且 Gemini 已登入後逐題貼，結果對照 Google Maps/Booking 寫回 reference.md。
+
+## 2026-10-27(續) — 總覽頁內嵌迪士尼路線圖、修好路線圖空白
+- What:行程網頁 v11 = v10 + 總覽頁「路線總覽」下方新增「迪士尼地圖與路線圖」區塊(iframe 內嵌 disney-route.html + 全螢幕連結),Pages index.html 同步,commit 275d925。
+- Bug:使用者開啟後內嵌區是空白。根因:disney-route.html 內 21 處 `gm:'… m'}` 後面有多餘的 \x01 控制字元(本應是逗號),JS 語法錯誤 → 清單與地圖都沒畫(獨立開也空白,從 10/26 就壞)。\x01 全換成逗號,Edge 無頭渲染確認清單+地圖正常,commit 43ce217,線上已確認無 \x01。
+- 教訓:推上線的頁面要實際渲染一次(Edge headless 截圖可行:--headless=new --no-sandbox --user-data-dir=<temp>),不能只看檔案/HTTP 200。
+- 同步:progress.md 已推到 repo context/東京遊/(commit 339bddf);本次收工再推一次。手機版面未實測。

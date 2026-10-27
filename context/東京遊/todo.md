@@ -6,6 +6,11 @@
 > Resolved -> ONE line + a journal date pointer, moved to Archive. Decisions live in journal.md.
 
 ## Inbox
+- [x] 1/13(Day6)晚上住宿:已訂 Grand Nikko(Agoda 1790790241,2026-10-27 Outlook 核實,見 reference.md);下方 Gemini 查證不再需要,1/13 行李方案要重選(見 Day5/6 行李項)
+  - Gemini 已問完 5 間含早餐(結果見 reference.md「含早餐房型+優缺點」);待做:用 Booking/Agoda 驗證含早實價(大倉、Grand Nikko、Dream Gate)
+  - 2026-10-27:要用 Gemini Pro 查 5 間(Ambassador/Celebration/大倉/Grand Nikko/Dream Gate)含早餐房型+評價優缺點,待 Chrome 連線(journal 2026-10-27)
+- [ ] Day4 晚餐:使用者晚點自己訂;Canna 是否保留未定(住宿已改 Fantasy Chateau)
+- [ ] Day4 舞浜駅→Fantasy Springs Hotel 的走法與 check-in 時間要重查(原本是走到樂園大飯店)
 - [ ] 餐食待定(剩 4 餐):Day7 午餐(原宿/表參道)+晚餐(澀谷)、Day8 晚餐(新橋)、Day9 成田機場晚餐。
   Day8 可考慮 FB Reel 的篩網燒 小林養鶏(新橋,Tabelog 3.46);其餘無候選。詳見網頁「待辦清單」B6–B8
 - [ ] Day4 晚餐カンナ(Canna)要搶 Priority Seating:2026/12/11 10:00 JST,用東京迪士尼度假區 App
@@ -25,10 +30,15 @@
 - [ ] Day7 原宿/表參道 5.5 小時單一區塊:是否補明治神宮(補了要重算交通)
 - [ ] Day2–3 河口湖與 Day8 鎌倉的雨雪備案(目前無壞天氣替代方案)
 - [ ] 交通票券試算:JR Pass 效益低,改算東京地鐵 24/48/72 小時券用於 Day7/Day9 是否划算
-- [ ] Day6 海洋無 Happy Entry:定下出門時刻與 Resort Line 班次(首班 6:05)
+- [ ] Day5/6 時間表(output/迪士尼Day5-6時間表_v2.md)待查:度假區線各段分鐘數、1 月遊行/煙火(約 12/8 公布)、適用設施券可用清單、TDS Premier Access 價格;1/13 退房行李＋去下一間住宿的交通(需 Google Maps＋Gemini 交叉查證)
 - [ ] 行程表_v1.xlsx 尚未同步 2026-10-06 的餐食決定(Canna/三よし/ORIONS 等),要不要補
+- [ ] 1/13 餐廳變更(使用者 2026-10-26 選方案 a):晚餐 麥哲倫→Ristorante di Canaletto,午餐 Canaletto→アレンデール・ロイヤルバンケット(官方對象店,建議 11:40–11:50 時段;截止約 2027/1/1),由使用者自己在 My Booking 送出。時間表見 output/迪士尼Day5-6時間表_v2.md
+- [ ] 1/13 行李:Station Delivery 領取只到 21:00,與 21:00 FS 出園衝突 → 等住宿決定後選方案
+
+- [x] Outlook(cc0712cc@hotmail.com):Agoda 1/13 訂單已查到(見 reference.md);廣告信 12 個寄件者(含星展/中信/富邦)由使用者 2026-10-27 改用網頁版 Claude 執行,結果我未驗證(本 session Chrome 擴充斷線)
 
 ## Archive
+- Day5/6 排程 v2 已產出;Happy Entry 對象外日已查到(1/12 TDL 對象外)(2026-10-26,journal.md)
 - Toyota 租車已訂(預約號 99938680500,無釘雪胎 Required 已載於預約)、BR198 抵達 12:55 已由電子機票確認
   (2026-10-17,Gmail 查證,journal.md)
 - Day1–6 與 Day9 餐食全部定案(Day1機上/Day2飯店早餐/Day4 Canna/Day5-6園內/Day9 三よし+ORIONS)
