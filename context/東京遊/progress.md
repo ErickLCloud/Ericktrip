@@ -9,7 +9,7 @@
 
 ## Now
 - 行程 2027/1/8–1/16 共9天,骨架與每日時間軸全部定案;細節見 reference.md「行程決定」。
-- 住宿:2026-10-26 迪士尼段改成 Vacation Package(Fantasy Chateau,1/11–1/13 住 2 晚),**1/13 晚上空缺**;其餘已訂(見 reference.md)。Package 設施/餐廳/各日園區已從 Gemini 對話取得:1/12 樂園、1/13 海洋(見 reference.md「Vacation Package 已選內容」)。
+- 住宿:2026-10-26 迪士尼段改成 Vacation Package(Fantasy Chateau,1/11–1/13 住 2 晚),**1/13 晚已訂 Grand Nikko Tokyo Bay Maihama(含早,1 晚)**;其餘已訂(見 reference.md)。Package 設施/餐廳/各日園區已從 Gemini 對話取得:1/12 樂園、1/13 海洋(見 reference.md「Vacation Package 已選內容」)。
 - 餐食:Day1–Day6 與 Day9 全部定案;**僅剩 Day7 午餐+晚餐、Day8 晚餐、Day9 成田晚餐未定**(使用者考慮中)。
 - 行程網頁現行版 = output/行程網頁_v11.html(v10+總覽頁內嵌迪士尼路線圖,線上 commit 43ce217)(13 個分頁,含「待辦清單」28 項與「行程影像」31 畫面)。
 - 線上版 GitHub Pages 含真實地圖/照片、手機可用;已發 v1.0 Release 標記 commit 360d794。
@@ -17,7 +17,7 @@
 
 ## Next (1–3)
 - **Day5/6 迪士尼**:時間表草稿 = output/迪士尼Day5-6時間表_v2.md。使用者要自己在 My Booking 改 1/13 餐廳(午餐→皇家宴會廳、晚餐→Canaletto,約 2027/1/1 前);待查項目與行李衝突見 todo.md。
-- 1/13 晚住宿:5 間候選的 Gemini Pro 查證(含早餐房型)待做,需 `claude --chrome --continue` 重開(見 todo.md、journal 2026-10-27)。
+- 1/13 行李:Grand Nikko 非迪士尼飯店,不能用 Fantasy Chateau 免費寄送;需重選方案(見 todo.md、reference.md Grand Nikko 行)。
 - Day7 午餐+晚餐、Day8 晚餐、Day9 成田晚餐:待使用者決定(可請 Claude 先出候選比較表)。
 - 四處優先路線風險:A1 Day2 取車緩衝降級方案、A2 天上山纜車上行末班、A3 天空鳥居停車判斷點、
   A5 新橋飯店寄放行李(多數需電話/email 確認,見 todo.md 電話清單)。

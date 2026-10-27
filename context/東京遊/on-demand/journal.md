@@ -960,3 +960,9 @@ DFKai-SB(標楷體)13號、置中+自動換行、四邊細黑框線;多數活動
 - Bug:使用者開啟後內嵌區是空白。根因:disney-route.html 內 21 處 `gm:'… m'}` 後面有多餘的 \x01 控制字元(本應是逗號),JS 語法錯誤 → 清單與地圖都沒畫(獨立開也空白,從 10/26 就壞)。\x01 全換成逗號,Edge 無頭渲染確認清單+地圖正常,commit 43ce217,線上已確認無 \x01。
 - 教訓:推上線的頁面要實際渲染一次(Edge headless 截圖可行:--headless=new --no-sandbox --user-data-dir=<temp>),不能只看檔案/HTTP 200。
 - 同步:progress.md 已推到 repo context/東京遊/(commit 339bddf);本次收工再推一次。手機版面未實測。
+
+## 2026-10-27(續2) — Gemini Pro 查證 1/13 候選飯店(含早餐)、希爾頓 vs Grand Nikko
+- What:Chrome 擴充接上後,用 Gemini 3.1 Pro(模型選單:3.5 Flash-Lite/3.8 Flash/3.1 Pro/4 Argon,先前 Argon 久無回應故用 Pro)逐間新對話問 5 間 1/13 含早餐房型、房價、優缺點:Disney Ambassador、Celebration、東京灣大倉、Grand Nikko、Dream Gate;使用者追問後再問東京灣希爾頓並與 Grand Nikko 比較。每題約 60–90 秒。結果摘要寫進 reference.md(「含早餐房型+優缺點」與希爾頓比較),均為 Gemini 單一來源,連結未開、含早實價未用 Booking/Agoda 驗證。
+- Gemini 可疑處:Dream Gate 答案籠統、自稱檔期未開放且與 10/26「有電車聲」相反;希爾頓「含早 NT$7,000」≈ Google Hotels 一般價;兩次都說公認飯店可用迎賓中心免費寄行李,與官方 Fantasy Chateau 規則不符,不採;回答夾帶它記得的個人資料(Toyota 四驅、不吃牛肉)。
+- 發現:Outlook 查到使用者 10/26 22:23 已訂 Grand Nikko(Agoda 1790790241,含早、¥38,938),故本輪查證成為事後對照;Grand Nikko 在 Gemini 說法下有退房後免費行李置物櫃(放不下特大箱),可作 1/13 行李方案候選。
+- 操作教訓:Chrome 視窗大小會變(886→698 高),點輸入框要先截圖確認座標,否則文字沒送出、空等數分鐘;頁面卡住(截圖逾時)時重新 navigate 即可。
