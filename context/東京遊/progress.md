@@ -9,13 +9,14 @@
 
 ## Now
 - 行程 2027/1/8–1/16 共9天,骨架與每日時間軸全部定案;細節見 reference.md「行程決定」。
-- 住宿全數已訂(4 間,見 reference.md)。
+- 住宿:2026-10-26 迪士尼段改成 Vacation Package(Fantasy Chateau,1/11–1/13 住 2 晚),**1/13 晚上空缺**;其餘已訂(見 reference.md)。Package 設施/餐廳/各日園區已從 Gemini 對話取得:1/12 樂園、1/13 海洋(見 reference.md「Vacation Package 已選內容」)。
 - 餐食:Day1–Day6 與 Day9 全部定案;**僅剩 Day7 午餐+晚餐、Day8 晚餐、Day9 成田晚餐未定**(使用者考慮中)。
-- 行程網頁現行版 = output/行程網頁_v9.html(13 個分頁,含「待辦清單」28 項與「行程影像」31 畫面)。
+- 行程網頁現行版 = output/行程網頁_v10.html(v9+Day5/6 路線圖連結)(13 個分頁,含「待辦清單」28 項與「行程影像」31 畫面)。
 - 線上版 GitHub Pages 含真實地圖/照片、手機可用;已發 v1.0 Release 標記 commit 360d794。
-- 最近一次變更:2026-10-06 單一 session 內 v3→v9 共 7 個 commit,逐項見 journal.md 2026-10-06(續1)〜(續11)。
+- 最近一次變更:2026-10-26 Day5/6 時間表 v2(與 Gemini 討論＋My Booking 核對,見 journal.md 2026-10-26(續4))。線上版已是 v10(2026-10-27 核對與本機 _pages/index.html 相同),已反映 Vacation Package 住宿/Happy Entry、Day5/6 時間軸,並連到 repo 的 disney-route.html 迪士尼路線圖。
 
 ## Next (1–3)
+- **Day5/6 迪士尼**:時間表草稿 = output/迪士尼Day5-6時間表_v2.md。使用者要自己在 My Booking 改 1/13 餐廳(午餐→皇家宴會廳、晚餐→Canaletto,約 2027/1/1 前);待查項目與行李衝突見 todo.md。
 - Day7 午餐+晚餐、Day8 晚餐、Day9 成田晚餐:待使用者決定(可請 Claude 先出候選比較表)。
 - 四處優先路線風險:A1 Day2 取車緩衝降級方案、A2 天上山纜車上行末班、A3 天空鳥居停車判斷點、
   A5 新橋飯店寄放行李(多數需電話/email 確認,見 todo.md 電話清單)。
@@ -27,10 +28,10 @@
   (見 output/multi-work/東京遊_plan_v1.md §0)。
 
 ## Pointers
-- 歷史紀錄 -> journal.md(2026-08-17 ~ 2026-10-06,每次變更一則)
+- 歷史紀錄 -> journal.md(2026-08-17 ~ 2026-10-26;10/26 各則在 Mac「一月」工作區完成,經 GitHub 併入)
 - coord/ -> 第一〜三輪協調區(已封存;retro 見 coord/retro_v1.md)
 - output/multi-work/東京遊_plan_v1.md -> 第四輪分工計畫(T17–T19 已備妥);prompts 見 _prompts_v1.md
-- output/行程網頁_v9.html + output/行程表_v1.xlsx(分頁「2027 Jan」) -> 現行行程最新版
+- output/行程網頁_v10.html + output/行程表_v1.xlsx(分頁「2027 Jan」) -> 現行行程最新版
   (xlsx 尚未同步 2026-10-06 的餐食決定)
 - 行程網頁手機完整版(含地圖/照片) -> https://ErickLCloud.github.io/Ericktrip/
   (repo ErickLCloud/Ericktrip;更新流程與 gh CLI 設定見 reference.md)
