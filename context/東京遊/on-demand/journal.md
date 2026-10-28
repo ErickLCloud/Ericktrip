@@ -966,3 +966,8 @@ DFKai-SB(標楷體)13號、置中+自動換行、四邊細黑框線;多數活動
 - Gemini 可疑處:Dream Gate 答案籠統、自稱檔期未開放且與 10/26「有電車聲」相反;希爾頓「含早 NT$7,000」≈ Google Hotels 一般價;兩次都說公認飯店可用迎賓中心免費寄行李,與官方 Fantasy Chateau 規則不符,不採;回答夾帶它記得的個人資料(Toyota 四驅、不吃牛肉)。
 - 發現:Outlook 查到使用者 10/26 22:23 已訂 Grand Nikko(Agoda 1790790241,含早、¥38,938),故本輪查證成為事後對照;Grand Nikko 在 Gemini 說法下有退房後免費行李置物櫃(放不下特大箱),可作 1/13 行李方案候選。
 - 操作教訓:Chrome 視窗大小會變(886→698 高),點輸入框要先截圖確認座標,否則文字沒送出、空等數分鐘;頁面卡住(截圖逾時)時重新 navigate 即可。
+
+## 2026-10-28 — 1/13 排程核對、晚餐時間規劃、同步 Grand Nikko 到路線圖/行程網頁
+- What:核對 1/13 海洋時間軸(來源 output/迪士尼路線圖_v1.html TDS 分頁);晚餐規劃 = 卡納雷托 17:00 入席、備案 17:30/18:00,寫入 reference.md;卡納雷托官方頁(Chrome 直讀)無固定營業時段,晚餐可選時間要在 My Booking 變更時看。使用者確認 1/13 住 Grand Nikko。
+- Google Maps:Fantasy Springs Hotel(座標)→Grand Nikko、→Bayside 站,步行都算 1 小時以上(5.0–5.5 km、含私人道路警告),因路徑繞園區外圍,不具參考性;故不採任何步行分鐘,行李寄放走法改問 Fantasy Chateau 櫃檯,Grand Nikko 可否提早寄放待電話。
+- 同步:路線圖(repo disney-route.html、本機 output/迪士尼路線圖_v1.html 與 行程網頁_pages/)與行程網頁 v11(repo index.html、output/行程網頁_v11.html、_pages/index.html)的 1/13 住宿/行李文字改為 Grand Nikko(原地改,未升版);順手把本機路線圖檔 21 個 \x01 控制字元換成逗號(repo 版 10/27 已修)。Edge headless 渲染確認頁面腳本可執行(li 有產生)。

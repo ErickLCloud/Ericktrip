@@ -30,7 +30,7 @@
 - [ ] Day5/6 時間表(output/迪士尼Day5-6時間表_v2.md)待查:度假區線各段分鐘數、1 月遊行/煙火(約 12/8 公布)、適用設施券可用清單、TDS Premier Access 價格;1/13 退房行李＋去下一間住宿的交通(需 Google Maps＋Gemini 交叉查證)
 - [ ] 行程表_v1.xlsx 尚未同步 2026-10-06 的餐食決定(Canna/三よし/ORIONS 等),要不要補
 - [ ] 1/13 餐廳變更(使用者 2026-10-26 選方案 a):晚餐 麥哲倫→Ristorante di Canaletto,午餐 Canaletto→アレンデール・ロイヤルバンケット(官方對象店,建議 11:40–11:50 時段;截止約 2027/1/1),由使用者自己在 My Booking 送出。時間表見 output/迪士尼Day5-6時間表_v2.md
-- [ ] 1/13 行李:Station Delivery 領取只到 21:00,與 21:00 FS 出園衝突 → 等住宿決定後選方案
+- [ ] 1/13 行李(住宿已定 Grand Nikko,Station Delivery 領取只到 21:00 不適用):建議 Fantasy Chateau 早餐後退房→行李先拿到 Grand Nikko 寄放→再回 Fantasy Springs 入口進園(8:45 Happy Entry),晚上直接回 Grand Nikko。待確認:Grand Nikko 可否提早寄放(+81-47-350-3590);Google Maps(2026-10-28)查不出可用時間(步行繞園區外圍 1 小時以上、含私人道路警告,開車 15 分、大眾運輸 35 分不具參考性),走法改問 Fantasy Chateau 櫃檯
 
 ## Archive
 - 1/13 晚住宿:使用者已訂 Grand Nikko(Agoda 1790790241,含早);Gemini 5 間+希爾頓比較已做完、結果存 reference.md,不再需要(2026-10-27,journal.md);1/13 行李方案仍要重選(見上方行李項)
