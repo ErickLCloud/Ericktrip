@@ -394,7 +394,8 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
 
 <h2 id="disney-map">迪士尼地圖與路線圖 <small>DISNEY ROUTE</small></h2>
 <figure class="mapwrap schem">
-<iframe src="disney-route.html" title="迪士尼路線圖" loading="lazy" style="width:100%;height:760px;border:0;display:block;background:#fff"></iframe>
+<iframe id="disney-frame" src="disney-route.html?embed=1" title="迪士尼路線圖" loading="lazy" style="width:100%;height:1200px;border:0;display:block;background:#fff"></iframe>
+<script>window.addEventListener("message",function(e){var h=e.data&&e.data.disneyRouteHeight;if(h&&e.source===document.getElementById("disney-frame").contentWindow)document.getElementById("disney-frame").style.height=h+"px";});</script>
 <figcaption>Fantasy Chateau 出發・1/12(二)樂園、1/13(三)海洋逐站路線與步行時間;<a href="disney-route.html" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">全螢幕開啟</a></figcaption>
 </figure>
 
