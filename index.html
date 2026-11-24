@@ -1,5 +1,5 @@
 <title>東京・河口湖・迪士尼 9日行程</title>
-<meta charset="UTF-8">
+<meta charset="UTF-8"><meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -76,6 +76,7 @@ h2{font-size:clamp(1.4rem,calc(1.4rem + 1rem*var(--fp)),2.2rem);font-weight:500;
   display:flex;align-items:baseline;gap:14px;text-wrap:balance;letter-spacing:.03em;position:relative}
 h2:after{content:"";position:absolute;left:0;bottom:-1px;width:56px;height:3px;background:var(--orange)}
 h2 small{font-size:.76rem;font-weight:400;color:var(--muted);letter-spacing:.1em}
+.routeh{font-size:1.05rem;font-weight:700;margin:24px 0 10px}.routeh small{font-weight:400;color:var(--muted);margin-left:6px}
 h3{font-size:1.12rem;font-weight:700;margin:30px 0 10px}
 p{margin:.6em 0}
 a{color:var(--orange-t);text-underline-offset:3px;transition:color .3s}
@@ -376,6 +377,17 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
   </span>
 </a>
 
+<a class="optbn" href="disney-simulator.html" target="_blank" rel="noopener" style="margin-top:12px">
+  <span class="obl">
+    <span class="obeye">Day 5・Day 6 迪士尼</span>
+    <b>迪士尼行程模擬器</b>
+    <span class="obsub">樂園／海洋自己排行程・排隊時間・購物・餐廳・人流・活動</span>
+  </span>
+  <span class="obr">
+    <span class="obbtn">開啟模擬器 &#8599;</span>
+  </span>
+</a>
+
 <h2 id="legend">怎麼讀這份行程 <small>LEGEND</small></h2>
 <p>行程分兩種狀態:<span class="status lock">已鎖定</span> 來自你自己在 V1.xlsx 排定的交通/住宿/目的地骨架;<span class="status sugg">建議・未鎖定</span> 是我依你的偏好與 input/ 資料夾裡的參考資料補上的景點安排,尚未經你確認,歡迎直接調整。</p>
 
@@ -390,13 +402,6 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
   <span><i style="background:#FB7459"></i>入住地(圈選數字＝順序)</span>
 </div>
 <figcaption>真實 Google 地圖(Retro樣式),依各點實際位置標示;僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
-</figure>
-
-<h2 id="disney-map">迪士尼地圖與路線圖 <small>DISNEY ROUTE</small></h2>
-<figure class="mapwrap schem">
-<iframe id="disney-frame" src="disney-route.html?embed=1" title="迪士尼路線圖" loading="lazy" style="width:100%;height:1200px;border:0;display:block;background:#fff"></iframe>
-<script>window.addEventListener("message",function(e){var h=e.data&&e.data.disneyRouteHeight;if(h&&e.source===document.getElementById("disney-frame").contentWindow)document.getElementById("disney-frame").style.height=h+"px";});</script>
-<figcaption>Fantasy Chateau 出發・1/12(二)樂園、1/13(三)海洋逐站路線與步行時間;<a href="disney-route.html" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">全螢幕開啟</a></figcaption>
 </figure>
 
 <h2 id="highlights">行程特色要點 <small>HIGHLIGHTS</small></h2>
@@ -637,7 +642,7 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
     <div class="meta">1/12(二)｜舞浜 &nbsp; <span class="status lock">已鎖定</span></div></div>
   </div>
   <div class="day-b">
-    <div class="badges"><span class="b sea">迪士尼樂園</span><span class="b plum">快速通關</span><a class="b plum" href="https://ErickLCloud.github.io/Ericktrip/disney-route.html" target="_blank" rel="noopener">🗺 迪士尼路線圖 ↗</a></div>
+    <div class="badges"><span class="b sea">迪士尼樂園</span><span class="b plum">快速通關</span><a class="b plum" href="#day5" onclick="document.getElementById('route-tdl').scrollIntoView({behavior:'smooth'});return false;">🗺 園區路線圖 ↓</a><a class="b plum" href="disney-simulator.html#tdl" target="_blank" rel="noopener">🎢 樂園模擬器 ↗</a></div>
     <figure class="mapwrap daymap">
 <div class="gmap" id="gmap-day5" style="height:220px"></div>
 <figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
@@ -645,7 +650,12 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
     <div class="pgrid">
 <div class="pcard"><div class="pimg"><span class="pfallback">東京迪士尼樂園</span><a class="pimg-link" data-pq="東京ディズニーランド" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="東京迪士尼樂園"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">樂園</span><b>東京迪士尼樂園</b><em>全日遊園</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E3%83%87%E3%82%A3%E3%82%BA%E3%83%8B%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89">在Google Maps開啟 ↗</a></div></div>
 </div>
-    <ul class="tl"><li><div class="time">06:40</div><div class="body"><strong>Fantasy Springs Restaurant 早餐</strong><em>VP 早餐(已從 07:40 改 06:40)</em></div></li><li><div class="time">~08:30</div><div class="body"><strong>TDL 入口(世界市集)</strong><em>搭度假區線到 TDL 站,排隊等 9:00 開園</em></div></li><li><div class="time">09:05</div><div class="body"><strong>怪獸電力公司 Ride & Go Seek</strong><em>明日樂園,開園先搭</em></div></li><li><div class="time">09:50</div><div class="body"><strong>星際大戰星際旅行</strong><em>離上一站很近</em></div></li><li><div class="time">10:30</div><div class="body"><strong>【Package】美女與野獸「魔法的故事」</strong><em>VP 時段 10:30〜,新幻想樂園</em></div></li><li><div class="time">11:10</div><div class="body"><strong>小熊維尼獵蜜記</strong><em>幻想樂園</em></div></li><li><div class="time">11:50</div><div class="body"><strong>米奇魔幻交響樂 3D</strong><em>時間短,順路在城堡旁</em></div></li><li><div class="time">12:10</div><div class="body"><strong>【Package】東街咖啡館(Eastside Cafe)午餐</strong><em>VP 午餐 12:10〜,世界市集</em></div></li><li><div class="time">13:20</div><div class="body"><strong>加勒比海盜</strong><em>探險樂園,離午餐店近</em></div></li><li><div class="time">14:00</div><div class="body"><strong>【Package】杯麵的快樂之旅 Baymax</strong><em>VP 時段 14:00〜,明日樂園</em></div></li><li><div class="time">14:40</div><div class="body"><strong>【Package】大雷山(適用設施券)</strong><em>西部樂園;官方 VP 指南確認在 TDL 適用設施券清單內(2026-11-01),走 Priority Access 入口</em></div></li><li><div class="time">15:40</div><div class="body"><strong>小小世界</strong><em>幻想樂園</em></div></li><li><div class="time">16:30</div><div class="body"><strong>加傑特的過山車</strong><em>卡通城,順路往世界市集</em></div></li><li><div class="time">17:40</div><div class="body"><strong>【Package】北齋(Restaurant Hokusai)晚餐</strong><em>VP 晚餐 17:40〜,世界市集;餐廳位置為概略</em></div></li><li><div class="time">19:00後</div><div class="body"><strong>夜間表演/回飯店</strong><em>1 月班表約 12/8 公布;度假區線回 Bayside 站</em></div></li></ul><div class="warn"><b>1/12 樂園休止(官方 2026-10-26)</b>ピーターパン空の旅、ジャングルクルーズ、スプラッシュ・マウンテン、ホーンテッドマンション、ツリーハウス;路線已避開。門票成人 ¥9,900 已含在 Package。逐站路線與步行分鐘見上方「迪士尼路線圖」。</div><div class="tip"><b>快速通關(2026-10官網,出發前再確認)</b>DPA(付費¥1,000–2,500/項,入園後用App買,購買後60分或使用時刻較早者才能再買)、Standby Pass(免費,僅商店/角色見面)、Entry Request(免費抽選)。Priority Pass 已停止。詳見「實用指南」。</div>
+    <ul class="tl"><li><div class="time">06:40</div><div class="body"><strong>Fantasy Springs Restaurant 早餐</strong><em>VP 早餐(已從 07:40 改 06:40)</em></div></li><li><div class="time">~08:30</div><div class="body"><strong>TDL 入口(世界市集)</strong><em>搭度假區線到 TDL 站,排隊等 9:00 開園</em></div></li><li><div class="time">09:05</div><div class="body"><strong>怪獸電力公司 Ride & Go Seek</strong><em>明日樂園,開園先搭</em></div></li><li><div class="time">09:50</div><div class="body"><strong>星際大戰星際旅行</strong><em>離上一站很近</em></div></li><li><div class="time">10:30</div><div class="body"><strong>【Package】美女與野獸「魔法的故事」</strong><em>VP 時段 10:30〜,新幻想樂園</em></div></li><li><div class="time">11:10</div><div class="body"><strong>小熊維尼獵蜜記</strong><em>幻想樂園</em></div></li><li><div class="time">11:50</div><div class="body"><strong>米奇魔幻交響樂 3D</strong><em>時間短,順路在城堡旁</em></div></li><li><div class="time">12:10</div><div class="body"><strong>【Package】東街咖啡館(Eastside Cafe)午餐</strong><em>VP 午餐 12:10〜,世界市集</em></div></li><li><div class="time">13:20</div><div class="body"><strong>加勒比海盜</strong><em>探險樂園,離午餐店近</em></div></li><li><div class="time">14:00</div><div class="body"><strong>【Package】杯麵的快樂之旅 Baymax</strong><em>VP 時段 14:00〜,明日樂園</em></div></li><li><div class="time">14:40</div><div class="body"><strong>【Package】大雷山(適用設施券)</strong><em>西部樂園;官方 VP 指南確認在 TDL 適用設施券清單內(2026-11-01),走 Priority Access 入口</em></div></li><li><div class="time">15:40</div><div class="body"><strong>小小世界</strong><em>幻想樂園</em></div></li><li><div class="time">16:30</div><div class="body"><strong>加傑特的過山車</strong><em>卡通城,順路往世界市集</em></div></li><li><div class="time">17:40</div><div class="body"><strong>【Package】北齋(Restaurant Hokusai)晚餐</strong><em>VP 晚餐 17:40〜,世界市集;餐廳位置為概略</em></div></li><li><div class="time">19:00後</div><div class="body"><strong>夜間表演/回飯店</strong><em>1 月班表約 12/8 公布;度假區線回 Bayside 站</em></div></li></ul><div class="warn"><b>1/12 樂園休止(官方 2026-10-26)</b>ピーターパン空の旅、ジャングルクルーズ、スプラッシュ・マウンテン、ホーンテッドマンション、ツリーハウス;路線已避開。門票成人 ¥9,900 已含在 Package。逐站路線與步行分鐘見下方「園區逐站路線圖」。</div><div class="tip"><b>快速通關(2026-10官網,出發前再確認)</b>DPA(付費¥1,000–2,500/項,入園後用App買,購買後60分或使用時刻較早者才能再買)、Standby Pass(免費,僅商店/角色見面)、Entry Request(免費抽選)。Priority Pass 已停止。詳見「實用指南」。</div>
+    <h4 class="routeh" id="route-tdl">園區逐站路線圖 <small>1/12(二) 東京迪士尼樂園</small></h4>
+    <figure class="mapwrap schem">
+<iframe class="disney-frame" src="disney-route.html?embed=1&amp;park=tdl" title="迪士尼路線圖 1/12(二) 東京迪士尼樂園" loading="lazy" style="width:100%;height:1100px;border:0;display:block;background:#fff"></iframe>
+<figcaption>Fantasy Chateau 出發・1/12(二) 東京迪士尼樂園 逐站路線與步行時間;<a href="disney-route.html?park=tdl" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">全螢幕開啟</a></figcaption>
+    </figure>
     <div class="stay"><b>住宿</b>｜Fantasy Springs Hotel <b>Fantasy Chateau</b>・Rose Court Side Superior Alcove Room(3–4F,非吸菸)・Vacation Package(同 Day4) <span class="status lock">已鎖定</span></div>
   </div>
 </div>
@@ -659,7 +669,7 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
     <div class="meta">1/13(三)｜舞浜 &nbsp; <span class="status lock">已鎖定</span></div></div>
   </div>
   <div class="day-b">
-    <div class="badges"><span class="b sea">迪士尼海洋</span><span class="b plum">夢幻泉鄉</span><a class="b plum" href="https://ErickLCloud.github.io/Ericktrip/disney-route.html" target="_blank" rel="noopener">🗺 迪士尼路線圖 ↗</a></div>
+    <div class="badges"><span class="b sea">迪士尼海洋</span><span class="b plum">夢幻泉鄉</span><a class="b plum" href="#day6" onclick="document.getElementById('route-tds').scrollIntoView({behavior:'smooth'});return false;">🗺 園區路線圖 ↓</a><a class="b plum" href="disney-simulator.html#tds" target="_blank" rel="noopener">🎢 海洋模擬器 ↗</a></div>
     <figure class="mapwrap daymap">
 <div class="gmap" id="gmap-day6" style="height:220px"></div>
 <figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
@@ -667,7 +677,12 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
     <div class="pgrid">
 <div class="pcard"><div class="pimg"><span class="pfallback">東京迪士尼海洋</span><a class="pimg-link" data-pq="東京ディズニーシー" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="東京迪士尼海洋"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">樂園</span><b>東京迪士尼海洋</b><em>含夢幻泉鄉園區</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E3%83%87%E3%82%A3%E3%82%BA%E3%83%8B%E3%83%BC%E3%82%B7%E3%83%BC">在Google Maps開啟 ↗</a></div></div>
 </div>
-    <ul class="tl"><li><div class="time">06:40</div><div class="body"><strong>Fantasy Springs Restaurant 早餐</strong><em>VP 早餐;吃完退房(行李先寄 Grand Nikko,待電話確認)</em></div></li><li><div class="time">~08:45</div><div class="body"><strong>Fantasy Springs 專用入口</strong><em>Happy Entry 早 5–15 分;位置為概略</em></div></li><li><div class="time">09:30</div><div class="body"><strong>【Package】冰雪奇緣冒險旅程</strong><em>VP 時段 09:30〜,冰雪王國;入園後到 9:30 前先在 Arendelle 拍照</em></div></li><li><div class="time">10:00</div><div class="body"><strong>樂佩的燈籠節</strong><em>排隊太長就跳過,11:00 小飛俠優先</em></div></li><li><div class="time">11:00</div><div class="body"><strong>【Package】小飛俠的奇幻島冒險</strong><em>VP 時段 11:00〜,小飛俠區</em></div></li><li><div class="time">11:40</div><div class="body"><strong>【Package】阿倫戴爾皇家宴會廳 午餐(待送出變更)</strong><em>VP 餐券對象店,櫃檯式、自己找位</em></div></li><li><div class="time">13:00</div><div class="body"><strong>【Package】印第安納瓊斯冒險(適用設施券)</strong><em>走出 Fantasy Springs 進失落河三角洲;官方確認在 TDS 適用設施券清單內(2026-11-01),走 Priority Access 入口</em></div></li><li><div class="time">14:00</div><div class="body"><strong>Raging Spirits 怒火狂靈</strong><em>就在隔壁</em></div></li><li><div class="time">14:40</div><div class="body"><strong>茉莉公主魔毯</strong><em>阿拉伯海岸</em></div></li><li><div class="time">15:30</div><div class="body"><strong>人魚礁(Mermaid Lagoon)</strong><em>劇場休止,可玩小翻跟斗魚/水母等</em></div></li><li><div class="time">16:20</div><div class="body"><strong>威尼斯貢多拉遊船</strong><em>地中海港灣,離晚餐近;1 月平日排隊約 15 分、搭乘約 12 分。翱翔不在適用設施券清單(官方 VP 指南 2026-11-01),一般排隊約 150 分,晚餐前排不進</em></div></li><li><div class="time">17:00</div><div class="body"><strong>【Package】卡納雷托 晚餐(待送出變更,時段暫定)</strong><em>VP 晚餐店(原訂 Magellan's 17:00)</em></div></li><li><div class="time">19:30</div><div class="body"><strong>MiraCosta 投影 / 夜間</strong><em>Sparkling Jubilee Night 20:15/20:55;煙火 Sky Full of Colors 看班表</em></div></li><li><div class="time">~21:00</div><div class="body"><strong>出園/回 Grand Nikko</strong><em>21:00 閉園;度假區線到 Bayside 站,Grand Nikko 步行約 4 分(Gemini 說法,未查證);行李已先寄 Grand Nikko 就不用回 Fantasy Chateau</em></div></li></ul><div class="warn"><b>1/13 海洋休止(官方 2026-10-26)</b>センター・オブ・ジ・アース、エレクトリックレールウェイ、ビリーヴ！、マーメイドラグーンシアター;全程步行,路線由西北往東南單向。午餐皇家宴會廳/晚餐卡納雷托尚未在 My Booking 送出,晚餐 17:00 為暫定。逐站路線見上方「迪士尼路線圖」。</div><div class="warn"><b>Day5/6 Happy Entry(2026-10-26 官方頁)</b>Fantasy Chateau 住客:TDL 早 15 分、TDS 早 5–15 分,入住當天不適用,續住日與退房日適用。但 <b>1/12 是 TDL 對象外日,沒有 Happy Entry</b>;TDS 2027/3 前沒有對象外日,1/13 可用。住宿期間持 TDS 門票可在營業時間內隨時進入 Fantasy Springs。出發前再確認。</div>
+    <ul class="tl"><li><div class="time">06:40</div><div class="body"><strong>Fantasy Springs Restaurant 早餐</strong><em>VP 早餐;吃完退房(行李先寄 Grand Nikko,待電話確認)</em></div></li><li><div class="time">~08:45</div><div class="body"><strong>Fantasy Springs 專用入口</strong><em>Happy Entry 早 5–15 分;位置為概略</em></div></li><li><div class="time">09:30</div><div class="body"><strong>【Package】冰雪奇緣冒險旅程</strong><em>VP 時段 09:30〜,冰雪王國;入園後到 9:30 前先在 Arendelle 拍照</em></div></li><li><div class="time">10:00</div><div class="body"><strong>樂佩的燈籠節</strong><em>排隊太長就跳過,11:00 小飛俠優先</em></div></li><li><div class="time">11:00</div><div class="body"><strong>【Package】小飛俠的奇幻島冒險</strong><em>VP 時段 11:00〜,小飛俠區</em></div></li><li><div class="time">11:40</div><div class="body"><strong>【Package】阿倫戴爾皇家宴會廳 午餐(待送出變更)</strong><em>VP 餐券對象店,櫃檯式、自己找位</em></div></li><li><div class="time">13:00</div><div class="body"><strong>【Package】印第安納瓊斯冒險(適用設施券)</strong><em>走出 Fantasy Springs 進失落河三角洲;官方確認在 TDS 適用設施券清單內(2026-11-01),走 Priority Access 入口</em></div></li><li><div class="time">14:00</div><div class="body"><strong>Raging Spirits 怒火狂靈</strong><em>就在隔壁</em></div></li><li><div class="time">14:40</div><div class="body"><strong>茉莉公主魔毯</strong><em>阿拉伯海岸</em></div></li><li><div class="time">15:30</div><div class="body"><strong>人魚礁(Mermaid Lagoon)</strong><em>劇場休止,可玩小翻跟斗魚/水母等</em></div></li><li><div class="time">16:20</div><div class="body"><strong>威尼斯貢多拉遊船</strong><em>地中海港灣,離晚餐近;1 月平日排隊約 15 分、搭乘約 12 分。翱翔不在適用設施券清單(官方 VP 指南 2026-11-01),一般排隊約 150 分,晚餐前排不進</em></div></li><li><div class="time">17:00</div><div class="body"><strong>【Package】卡納雷托 晚餐(待送出變更,時段暫定)</strong><em>VP 晚餐店(原訂 Magellan's 17:00)</em></div></li><li><div class="time">19:30</div><div class="body"><strong>MiraCosta 投影 / 夜間</strong><em>Sparkling Jubilee Night 20:15/20:55;煙火 Sky Full of Colors 看班表</em></div></li><li><div class="time">~21:00</div><div class="body"><strong>出園/回 Grand Nikko</strong><em>21:00 閉園;度假區線到 Bayside 站,Grand Nikko 步行約 4 分(Gemini 說法,未查證);行李已先寄 Grand Nikko 就不用回 Fantasy Chateau</em></div></li></ul><div class="warn"><b>1/13 海洋休止(官方 2026-10-26)</b>センター・オブ・ジ・アース、エレクトリックレールウェイ、ビリーヴ！、マーメイドラグーンシアター;全程步行,路線由西北往東南單向。午餐皇家宴會廳/晚餐卡納雷托尚未在 My Booking 送出,晚餐 17:00 為暫定。逐站路線見下方「園區逐站路線圖」。</div><div class="warn"><b>Day5/6 Happy Entry(2026-10-26 官方頁)</b>Fantasy Chateau 住客:TDL 早 15 分、TDS 早 5–15 分,入住當天不適用,續住日與退房日適用。但 <b>1/12 是 TDL 對象外日,沒有 Happy Entry</b>;TDS 2027/3 前沒有對象外日,1/13 可用。住宿期間持 TDS 門票可在營業時間內隨時進入 Fantasy Springs。出發前再確認。</div>
+    <h4 class="routeh" id="route-tds">園區逐站路線圖 <small>1/13(三) 東京迪士尼海洋</small></h4>
+    <figure class="mapwrap schem">
+<iframe class="disney-frame" src="disney-route.html?embed=1&amp;park=tds" title="迪士尼路線圖 1/13(三) 東京迪士尼海洋" loading="lazy" style="width:100%;height:1100px;border:0;display:block;background:#fff"></iframe>
+<figcaption>Fantasy Chateau 出發・1/13(三) 東京迪士尼海洋 逐站路線與步行時間;<a href="disney-route.html?park=tds" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline">全螢幕開啟</a></figcaption>
+    </figure>
     <div class="stay"><b>住宿</b>｜Fantasy Springs Hotel <b>Fantasy Chateau</b>・Rose Court Side Superior Alcove Room(3–4F,非吸菸)・Vacation Package(同 Day4) <span class="status sugg">1/13 退房;1/13 晚住 Grand Nikko(Agoda,含早)</span></div>
   </div>
 </div>
@@ -1232,3 +1247,5 @@ window.addEventListener('hashchange', function(){ setTimeout(__resizeVisibleTrip
 })();
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCABXtblyDlmRdLXAuNmWYfGMtfT1kdFoM&callback=__initTripMaps&loading=async" async></script>
+
+<script>window.addEventListener("message",function(e){var h=e.data&&e.data.disneyRouteHeight;if(!h)return;document.querySelectorAll("iframe.disney-frame").forEach(function(f){if(f.contentWindow===e.source)f.style.height=h+"px";});});</script>
