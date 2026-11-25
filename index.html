@@ -1,5 +1,6 @@
 <title>東京・河口湖・迪士尼 9日行程</title>
-<meta charset="UTF-8"><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -144,6 +145,14 @@ tbody tr:hover{background:var(--blue)}
 .mc-list em{display:block;font-style:normal;font-size:.8rem;color:var(--muted)}
 .mc-del{flex:none;border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:8px;font:inherit;font-size:.75rem;padding:2px 8px;cursor:pointer}
 .mc-del.arm{background:var(--orange);color:#fff;border-color:var(--orange)}
+.mc-act{flex:none;display:flex;gap:4px}
+.mc-list li.mc-editing{display:block}
+.mc-e{display:flex;flex-direction:column;gap:6px}
+.mc-e input{width:100%;min-width:0;font:inherit;font-size:.88rem;padding:7px 10px;border:1px solid var(--orange);border-radius:8px;background:#fff;color:var(--ink)}
+.mc-e .mc-eb{display:flex;gap:6px}
+.mc-e button{font:inherit;font-size:.85rem;font-weight:700;padding:6px 14px;border:0;border-radius:8px;background:var(--navy);color:#fff;cursor:pointer}
+.mc-e button.mc-cancel{background:transparent;color:var(--muted);border:1px solid var(--line)}
+.mc-e button:disabled{opacity:.5;cursor:default}
 .mc-f{display:flex;flex-direction:column;gap:6px}
 .mc-f input{width:100%;min-width:0;font:inherit;font-size:.88rem;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
 .mc-f button{align-self:flex-start;font:inherit;font-size:.85rem;font-weight:700;padding:6px 14px;border:0;border-radius:8px;background:var(--navy);color:#fff;cursor:pointer}
@@ -1329,16 +1338,21 @@ window.addEventListener('hashchange', function(){ setTimeout(__resizeVisibleTrip
 (function(){
   var URL_='https://ragektutcdvfgbtllxpk.supabase.co/rest/v1/trip_meal_candidates', KEY='sb_publishable_ZZRngWjc93wW6s9EHegC1Q_sgo34WkC';
   var H={apikey:KEY,'Content-Type':'application/json'};
-  var rows=[];
+  var rows=[],editId=null,draft=null;
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
   function stat(t){document.querySelectorAll('.mc-st').forEach(function(e){e.textContent=t})}
   function render(){
+    var ef=document.querySelector('form.mc-e');
+    if(ef&&ef.dataset.id===editId){var X=ef.elements;draft={name:X['name'].value,url:X['url'].value,note:X['note'].value}}
+    if(editId&&!rows.some(function(r){return r.id===editId})){editId=null;draft=null}
     document.querySelectorAll('.mc-col').forEach(function(c){
       var d=+c.dataset.day,m=c.dataset.meal,ul=c.querySelector('.mc-list');
       var list=rows.filter(function(r){return r.day===d&&r.meal===m});
       ul.innerHTML=list.length?list.map(function(r){
+        if(r.id===editId){var v=draft||r;
+          return '<li class="mc-editing"><form class="mc-e" autocomplete="off" data-id="'+esc(r.id)+'"><input name="name" maxlength="80" required placeholder="名稱" value="'+esc(v.name)+'"><input name="url" type="url" maxlength="500" placeholder="Google Maps 網址(https://…)" value="'+esc(v.url)+'"><input name="note" maxlength="200" placeholder="備註(選填)" value="'+esc(v.note)+'"><div class="mc-eb"><button type="submit">儲存</button><button type="button" class="mc-cancel">取消</button></div><div class="mc-err"></div></form></li>';}
         var nm=/^https:\/\//i.test(r.url||'')?'<a href="'+esc(r.url)+'" target="_blank" rel="noopener">'+esc(r.name)+' ↗</a>':'<b>'+esc(r.name)+'</b>';
-        return '<li><span>'+nm+(r.note?'<em>'+esc(r.note)+'</em>':'')+'</span><button type="button" class="mc-del" data-id="'+esc(r.id)+'">刪除</button></li>';
+        return '<li><span>'+nm+(r.note?'<em>'+esc(r.note)+'</em>':'')+'</span><span class="mc-act"><button type="button" class="mc-del mc-edit" data-id="'+esc(r.id)+'">修改</button><button type="button" class="mc-del" data-id="'+esc(r.id)+'">刪除</button></span></li>';
       }).join(''):'<li class="mc-empty">還沒有候選,在下面加一間</li>';
     });
   }
@@ -1349,7 +1363,8 @@ window.addEventListener('hashchange', function(){ setTimeout(__resizeVisibleTrip
       .catch(function(){stat('⚠ 讀取失敗,請檢查網路後重新整理');document.querySelectorAll('.mc-list').forEach(function(u){u.innerHTML='<li class="mc-empty">讀取失敗</li>'})});
   }
   document.addEventListener('submit',function(ev){
-    var f=ev.target; if(!f.classList||!f.classList.contains('mc-f'))return; ev.preventDefault();
+    var f=ev.target; if(f.classList&&f.classList.contains('mc-e')){ev.preventDefault();saveEdit(f);return}
+    if(!f.classList||!f.classList.contains('mc-f'))return; ev.preventDefault();
     var c=f.closest('.mc-col'),err=f.querySelector('.mc-err'),btn=f.querySelector('button');
     var E=f.elements,name=E['name'].value.trim(),url=E['url'].value.trim(),note=E['note'].value.trim();
     err.textContent='';
@@ -1362,7 +1377,22 @@ window.addEventListener('hashchange', function(){ setTimeout(__resizeVisibleTrip
       .catch(function(){err.textContent='加入失敗,請稍後再試'})
       .then(function(){btn.disabled=false});
   });
+  function saveEdit(f){
+    var err=f.querySelector('.mc-err'),btn=f.querySelector('button[type=submit]'),id=f.dataset.id;
+    var E=f.elements,name=E['name'].value.trim(),url=E['url'].value.trim(),note=E['note'].value.trim();
+    err.textContent='';
+    if(!name){err.textContent='名稱不能空白';return}
+    if(url&&!/^https:\/\//i.test(url)){err.textContent='網址要以 https:// 開頭(從 Google Maps 按「分享」→複製連結)';return}
+    btn.disabled=true;
+    fetch(URL_+'?id=eq.'+encodeURIComponent(id),{method:'PATCH',headers:Object.assign({Prefer:'return=representation'},H),body:JSON.stringify({name:name,url:url||null,note:note||null})})
+      .then(function(r){if(!r.ok)throw r.status;return r.json()})
+      .then(function(j){if(!j.length)throw 0;rows=rows.map(function(x){return x.id===id?j[0]:x});editId=null;draft=null;render()})
+      .catch(function(){err.textContent='儲存失敗,請稍後再試';btn.disabled=false});
+  }
   document.addEventListener('click',function(ev){
+    var t=ev.target.closest&&ev.target.closest('.mc-edit,.mc-cancel');
+    if(t){editId=t.classList.contains('mc-cancel')?null:t.dataset.id;draft=null;render();
+      var nf=editId&&document.querySelector('form.mc-e');if(nf)nf.elements['note'].focus();return}
     var b=ev.target.closest&&ev.target.closest('.mc-del'); if(!b)return;
     if(!b.classList.contains('arm')){b.classList.add('arm');b.textContent='確定刪除?';setTimeout(function(){b.classList.remove('arm');b.textContent='刪除'},3000);return}
     var id=b.dataset.id; b.disabled=true;
