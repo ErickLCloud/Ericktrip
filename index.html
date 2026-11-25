@@ -1050,7 +1050,20 @@ function __gPin(map, pos, name, num, color, small){
   ov.draw=function(){ var p=this.getProjection().fromLatLngToDivPixel(new google.maps.LatLng(pos)); if(p){ el.style.left=p.x+'px'; el.style.top=p.y+'px'; } };
   ov.onRemove=function(){ el.remove(); };
   ov.setMap(map);
+  (map.__pins=map.__pins||[]).push(el);
+  if(!map.__declutter){ map.__declutter=true; map.addListener('idle',function(){ __declutter(map); }); }
   return ov;
+}
+/* 名稱標籤互相重疊時,只留順序在前的(仿 Google Maps 自動隱藏重疊標籤);放大後會自動出現 */
+function __declutter(map){
+  var shown=[];
+  function hit(a,b){ return !(a.right<b.left||a.left>b.right||a.bottom<b.top||a.top>b.bottom); }
+  map.__pins.forEach(function(el){
+    var lab=el.querySelector('.gl'); lab.style.visibility='';
+    var r=el.getBoundingClientRect(), ri=el.firstChild.getBoundingClientRect();
+    var bad=shown.some(function(o){ return hit(r,o); });
+    if(bad){ lab.style.visibility='hidden'; shown.push(ri); } else { shown.push(r); }
+  });
 }
 
 function __buildTripMap(elId, cfg){
@@ -1060,7 +1073,7 @@ function __buildTripMap(elId, cfg){
     styles: window.__RETRO_STYLE,
     mapTypeControl:false, streetViewControl:false, fullscreenControl:false,
     zoomControl:true, zoomControlOptions:{position:google.maps.ControlPosition.RIGHT_BOTTOM},
-    clickableIcons:false, gestureHandling:'cooperative'
+    clickableIcons:false, cameraControl:false, gestureHandling:'cooperative'
   });
   var fit=document.createElement('button');
   fit.className='gmapfit'; fit.type='button'; fit.title='回到全部景點'; fit.setAttribute('aria-label','回到全部景點');
