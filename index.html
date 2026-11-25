@@ -185,6 +185,17 @@ ul.clean li{margin:.35em 0;font-size:.94rem}
 .rmap{display:block;width:100%;height:auto}
 .gmap{width:100%;height:300px;display:block;background:#e3e9ee}
 .gmap.overview{height:420px}
+.gmap{background:#f3f4f6}
+.gpin{position:absolute;transform:translate(-20px,-20px);display:flex;align-items:center;gap:6px;cursor:pointer;white-space:nowrap;font-family:"Zen Kaku Gothic New",system-ui,sans-serif;z-index:1}
+.gpin:hover,.gpin.hot{z-index:5}
+.gpin .gi{position:relative;width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:20px;line-height:1;box-shadow:0 1px 4px rgba(60,64,67,.35),0 0 0 2px var(--pc,#fff);transition:transform .15s}
+.gpin:hover .gi{transform:scale(1.1)}
+.gpin .gn{position:absolute;top:-5px;right:-6px;min-width:18px;height:18px;padding:0 4px;border-radius:9px;background:var(--pc,#1a73e8);color:#fff;font:700 11px/18px Jost,sans-serif;text-align:center;box-shadow:0 0 0 2px #fff}
+.gpin .gl{background:#fff;color:#202124;font-size:12.5px;font-weight:500;padding:4px 10px;border-radius:14px;box-shadow:0 1px 4px rgba(60,64,67,.3)}
+.gpin.small{transform:translate(-15px,-15px)}
+.gpin.small .gi{width:30px;height:30px;font-size:15px}
+.gmapfit{background:#fff;border:0;border-radius:8px;width:40px;height:40px;margin:0 10px 6px 0;box-shadow:0 1px 4px rgba(0,0,0,.3);cursor:pointer;display:grid;place-items:center;color:#5f6368}
+.gmapfit:hover{color:#202124}
 .mapwrap{margin:0 0 16px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
 .mapwrap figcaption{background:var(--navy);color:#fff;padding:10px 16px;font-size:.85rem;font-weight:500;letter-spacing:.04em}
 .rmleg{display:flex;flex-wrap:wrap;gap:10px 18px;padding:10px 16px;background:var(--blue);border-top:1px solid var(--line);font-size:.78rem;color:var(--ink2)}
@@ -419,7 +430,7 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
   <span><i style="background:#9a5c1c;border-radius:2px;width:16px;height:4px;"></i>當天來回(鎌倉一日遊)</span>
   <span><i style="background:#FB7459"></i>入住地(圈選數字＝順序)</span>
 </div>
-<figcaption>真實 Google 地圖(Retro樣式),依各點實際位置標示;僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+<figcaption>真實 Google 地圖(淺色樣式,點標記可開 Google Maps),依各點實際位置標示;僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
 </figure>
 
 <h2 id="highlights">行程特色要點 <small>HIGHLIGHTS</small></h2>
@@ -561,7 +572,7 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
     <div class="badges"><span class="b sea">抵達</span><span class="b plum">輕鬆</span><span class="b sun">逛街</span></div>
     <figure class="mapwrap daymap">
 <div class="gmap" id="gmap-day1"></div>
-<figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+<figcaption>真實 Google 地圖(淺色樣式,點標記可開 Google Maps);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
 </figure>
     <div class="pgrid">
 <div class="pcard"><div class="pimg"><span class="pfallback">成田機場</span><a class="pimg-link" data-pq="成田国際空港" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="成田機場"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-move">抵達</span><b>成田機場</b><em>入境、領行李,購買Suica/N&#39;EX車票</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E6%88%90%E7%94%B0%E5%9B%BD%E9%9A%9B%E7%A9%BA%E6%B8%AF">在Google Maps開啟 ↗</a></div></div>
@@ -586,7 +597,7 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
     <div class="badges"><span class="b sea">纜車</span><span class="b plum">租車</span><span class="b sun">度假村</span></div>
     <figure class="mapwrap daymap">
 <div class="gmap" id="gmap-day2"></div>
-<figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+<figcaption>真實 Google 地圖(淺色樣式,點標記可開 Google Maps);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
 </figure>
     <div class="pgrid">
 <div class="pcard"><div class="pimg"><span class="pfallback">河口湖駅</span><a class="pimg-link" data-pq="河口湖駅" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="河口湖駅"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-move">交通</span><b>河口湖駅</b><em>步行6〜7分到Toyota租車取車</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E6%B2%B3%E5%8F%A3%E6%B9%96%E9%A7%85">在Google Maps開啟 ↗</a></div></div>
@@ -613,7 +624,7 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
     <div class="badges"><span class="b sea">逆さ富士</span><span class="b plum">五重塔</span><span class="b sun">湧泉</span></div>
     <figure class="mapwrap daymap">
 <div class="gmap" id="gmap-day3"></div>
-<figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+<figcaption>真實 Google 地圖(淺色樣式,點標記可開 Google Maps);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
 </figure>
     <div class="pgrid">
 <div class="pcard"><div class="pimg"><span class="pfallback">産屋ヶ崎</span><a class="pimg-link" data-pq="産屋ヶ崎 河口湖" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="産屋ヶ崎"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">景點</span><b>産屋ヶ崎</b><em>拍逆さ富士,需晴天無風</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E7%94%A3%E5%B1%8B%E3%83%B6%E5%B4%8E%20%E6%B2%B3%E5%8F%A3%E6%B9%96">在Google Maps開啟 ↗</a></div></div>
@@ -640,7 +651,7 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
     <div class="badges"><span class="b sea">移動日</span><span class="b plum">迪士尼</span></div>
     <figure class="mapwrap daymap">
 <div class="gmap" id="gmap-day4"></div>
-<figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+<figcaption>真實 Google 地圖(淺色樣式,點標記可開 Google Maps);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
 </figure>
     <div class="pgrid">
 <div class="pcard"><div class="pimg"><span class="pfallback">羅森 河口湖船津登山道店</span><a class="pimg-link" data-pq="ローソン 河口湖船津登山道店" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="羅森 河口湖船津登山道店"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-food">小吃</span><b>羅森便利商店 河口湖船津登山道店</b><em>富士山打卡,還車前順路</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E3%83%AD%E3%83%BC%E3%82%BD%E3%83%B3%20%E6%B2%B3%E5%8F%A3%E6%B9%96%E8%88%B9%E6%B4%A5%E7%99%BB%E5%B1%B1%E9%81%93%E5%BA%97">在Google Maps開啟 ↗</a></div></div>
@@ -667,7 +678,7 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
     <div class="badges"><span class="b sea">迪士尼樂園</span><span class="b plum">快速通關</span><a class="b plum" href="#day5" onclick="document.getElementById('route-tdl').scrollIntoView({behavior:'smooth'});return false;">🗺 園區路線圖 ↓</a><a class="b plum" href="disney-simulator.html#tdl" target="_blank" rel="noopener">🎢 樂園模擬器 ↗</a></div>
     <figure class="mapwrap daymap">
 <div class="gmap" id="gmap-day5" style="height:220px"></div>
-<figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+<figcaption>真實 Google 地圖(淺色樣式,點標記可開 Google Maps);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
 </figure>
     <div class="pgrid">
 <div class="pcard"><div class="pimg"><span class="pfallback">東京迪士尼樂園</span><a class="pimg-link" data-pq="東京ディズニーランド" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="東京迪士尼樂園"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">樂園</span><b>東京迪士尼樂園</b><em>全日遊園</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E3%83%87%E3%82%A3%E3%82%BA%E3%83%8B%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89">在Google Maps開啟 ↗</a></div></div>
@@ -695,7 +706,7 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
     <div class="badges"><span class="b sea">迪士尼海洋</span><span class="b plum">夢幻泉鄉</span><a class="b plum" href="#day6" onclick="document.getElementById('route-tds').scrollIntoView({behavior:'smooth'});return false;">🗺 園區路線圖 ↓</a><a class="b plum" href="disney-simulator.html#tds" target="_blank" rel="noopener">🎢 海洋模擬器 ↗</a></div>
     <figure class="mapwrap daymap">
 <div class="gmap" id="gmap-day6" style="height:220px"></div>
-<figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+<figcaption>真實 Google 地圖(淺色樣式,點標記可開 Google Maps);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
 </figure>
     <div class="pgrid">
 <div class="pcard"><div class="pimg"><span class="pfallback">東京迪士尼海洋</span><a class="pimg-link" data-pq="東京ディズニーシー" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="東京迪士尼海洋"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">樂園</span><b>東京迪士尼海洋</b><em>含夢幻泉鄉園區</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E3%83%87%E3%82%A3%E3%82%BA%E3%83%8B%E3%83%BC%E3%82%B7%E3%83%BC">在Google Maps開啟 ↗</a></div></div>
@@ -723,7 +734,7 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
     <div class="badges"><span class="b sea">移動日</span><span class="b plum">逛街</span><span class="b sun">原宿</span></div>
     <figure class="mapwrap daymap">
 <div class="gmap" id="gmap-day7"></div>
-<figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+<figcaption>真實 Google 地圖(淺色樣式,點標記可開 Google Maps);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
 </figure>
     <div class="pgrid">
 <div class="pcard"><div class="pimg"><span class="pfallback">THE BLOSSOM HIBIYA</span><a class="pimg-link" data-pq="THE BLOSSOM HIBIYA 新橋" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="THE BLOSSOM HIBIYA(日比谷花季飯店)"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-stay">住宿</span><b>THE BLOSSOM HIBIYA(日比谷花季飯店)</b><em>先寄放行李,19:30 check-in</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=THE%20BLOSSOM%20HIBIYA">在Google Maps開啟 ↗</a></div></div>
@@ -748,7 +759,7 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
     <div class="badges"><span class="b sea">古都</span><span class="b plum">江之電</span><span class="b sun">神社寺院</span></div>
     <figure class="mapwrap daymap">
 <div class="gmap" id="gmap-day8"></div>
-<figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+<figcaption>真實 Google 地圖(淺色樣式,點標記可開 Google Maps);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
 </figure>
     <div class="pgrid">
 <div class="pcard"><div class="pimg"><span class="pfallback">鶴岡八幡宮</span><a class="pimg-link" data-pq="鶴岡八幡宮" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="鶴岡八幡宮"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-spot">景點</span><b>鶴岡八幡宮</b><em>鎌倉幕府守護神社</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E9%B6%B4%E5%B2%A1%E5%85%AB%E5%B9%A1%E5%AE%AE">在Google Maps開啟 ↗</a></div></div>
@@ -774,7 +785,7 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
     <div class="badges"><span class="b sea">早餐</span><span class="b plum">購物</span><span class="b sun">離境</span></div>
     <figure class="mapwrap daymap">
 <div class="gmap" id="gmap-day9"></div>
-<figcaption>真實 Google 地圖(Retro樣式);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
+<figcaption>真實 Google 地圖(淺色樣式,點標記可開 Google Maps);僅電腦本機開啟此檔案時可顯示地圖,線上／手機版因平台安全限制會是空白</figcaption>
 </figure>
     <div class="pgrid">
 <div class="pcard"><div class="pimg"><span class="pfallback">築地場外市場</span><a class="pimg-link" data-pq="築地場外市場" target="_blank" rel="noopener" style="display:none"><img class="ppic" loading="lazy" alt="築地場外市場"><span class="pattrib"></span></a></div><div class="pmeta"><span class="ptag t-food">早餐</span><b>築地場外市場</b><em>海鮮丼、玉子燒等</em><a class="pgmap" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E7%AF%89%E5%9C%B0%E5%A0%B4%E5%A4%96%E5%B8%82%E5%A0%B4">在Google Maps開啟 ↗</a></div></div>
@@ -918,34 +929,44 @@ html,body{max-width:100%;overflow-x:hidden}.day,.day-h .t,.tl .body,.pmeta,.card
 </script>
 
 <script>
-/* ===== Google Maps(Retro樣式)- 僅電腦本機開啟此HTML檔案時可載入,線上/手機版因CSP會是空白 =====
+/* ===== Google Maps(淺色樣式,仿 Google Maps App 外觀)- 僅電腦本機開啟此HTML檔案時可載入,線上/手機版因CSP會是空白 =====
    座標為依公開地理資訊估算的近似值,非逐點測繪/地理編碼結果,出發前如需精確位置請另外核實。 */
 window.__RETRO_STYLE = [
-  {"elementType":"geometry","stylers":[{"color":"#ebe3cd"}]},
-  {"elementType":"labels.text.fill","stylers":[{"color":"#523735"}]},
-  {"elementType":"labels.text.stroke","stylers":[{"color":"#f5f1e6"}]},
-  {"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#c9b2a6"}]},
-  {"featureType":"administrative.land_parcel","elementType":"geometry.stroke","stylers":[{"color":"#dcd2be"}]},
-  {"featureType":"administrative.land_parcel","elementType":"labels.text.fill","stylers":[{"color":"#ae9e90"}]},
-  {"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#dfd2ae"}]},
-  {"featureType":"poi","elementType":"geometry","stylers":[{"color":"#dfd2ae"}]},
-  {"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#93817c"}]},
-  {"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#a5b076"}]},
-  {"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"color":"#447530"}]},
-  {"featureType":"road","elementType":"geometry","stylers":[{"color":"#f5f1e6"}]},
-  {"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#fdfcf8"}]},
-  {"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#f8c967"}]},
-  {"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#e9bc62"}]},
-  {"featureType":"road.highway.controlled_access","elementType":"geometry","stylers":[{"color":"#e98d58"}]},
-  {"featureType":"road.highway.controlled_access","elementType":"geometry.stroke","stylers":[{"color":"#db8555"}]},
-  {"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#806b63"}]},
-  {"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#dfd2ae"}]},
-  {"featureType":"transit.line","elementType":"labels.text.fill","stylers":[{"color":"#8f7d77"}]},
-  {"featureType":"transit.line","elementType":"labels.text.stroke","stylers":[{"color":"#ebe3cd"}]},
-  {"featureType":"transit.station","elementType":"geometry","stylers":[{"color":"#dfd2ae"}]},
-  {"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#b9d3c2"}]},
-  {"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#92998d"}]}
+  {"elementType":"geometry","stylers":[{"color":"#f3f4f6"}]},
+  {"elementType":"labels.text.fill","stylers":[{"color":"#5f6368"}]},
+  {"elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"},{"weight":3}]},
+  {"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#d4d8de"}]},
+  {"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"color":"#eef0f3"}]},
+  {"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#eef1ec"}]},
+  {"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f6efdc"}]},
+  {"featureType":"poi.business","stylers":[{"visibility":"off"}]},
+  {"featureType":"poi","elementType":"labels.icon","stylers":[{"saturation":-60},{"lightness":15}]},
+  {"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dcefd9"}]},
+  {"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"color":"#4f7d4a"}]},
+  {"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},
+  {"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#dde1e6"}]},
+  {"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"simplified"}]},
+  {"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},
+  {"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#9fb3c8"}]},
+  {"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#8aa1b8"}]},
+  {"featureType":"road.highway","elementType":"labels.text.fill","stylers":[{"color":"#4a5a6b"}]},
+  {"featureType":"road.highway.controlled_access","elementType":"geometry.fill","stylers":[{"color":"#7f97b0"}]},
+  {"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#c3cad3"}]},
+  {"featureType":"transit.station","elementType":"labels.icon","stylers":[{"saturation":-30}]},
+  {"featureType":"water","elementType":"geometry","stylers":[{"color":"#a9d8f0"}]},
+  {"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#4b84a8"}]}
 ];
+
+/* 依景點名稱挑圖示(仿 Google Maps 的分類圓形圖示) */
+window.__PIN_ICON = function(n){
+  var R=[[/機場/,'✈️'],[/AFURI|拉麵/,'🍜'],[/餺飥/,'🍲'],[/Tempura|天丼|天ぷら/,'🍤'],[/築地/,'🍣'],
+    [/羅森|ローソン/,'🏪'],[/土產|小町通|竹下|Hills|銀座|商店街|西裏/,'🛍️'],[/纜車/,'🚡'],[/平交道/,'🚃'],
+    [/駅|車站/,'🚉'],[/神社|八幡宮|弁財天|鳥居/,'⛩️'],[/忠靈塔|新倉山/,'🏯'],[/忍野/,'💧'],[/産屋/,'📷'],
+    [/公園/,'🌳'],[/迪士尼/,'🏰'],[/飯店|Blossom|BLOSSOM|星のや|新橋|度假/,'🏨'],[/河口湖/,'🗻'],[/鎌倉/,'⛩️'],[/新宿/,'🏙️']];
+  for(var i=0;i<R.length;i++){ if(R[i][0].test(n)) return R[i][1]; }
+  return '📍';
+};
+
 
 window.__TRIP_MAPS = {
   "gmap-overview": {color:"#1A2836", points:[
@@ -1015,37 +1036,51 @@ window.__TRIP_MAPS = {
 
 window.__mapInstances = {};
 
+/* HTML 標記:白色圓形分類圖示 + 編號徽章 + 白色名稱膠囊(仿 Google Maps);點一下開 Google Maps */
+function __gPin(map, pos, name, num, color, small){
+  var ov=new google.maps.OverlayView(), el=document.createElement('div');
+  var nm=name.replace(/[((].*?[))]/g,'').trim();
+  el.className='gpin'+(small?' small':''); el.style.setProperty('--pc',color); el.title=name;
+  el.innerHTML='<span class="gi"></span><span class="gl"></span>';
+  el.firstChild.textContent=window.__PIN_ICON(name);
+  if(num){ var b=document.createElement('span'); b.className='gn'; b.textContent=num; el.firstChild.appendChild(b); }
+  el.lastChild.textContent=nm;
+  el.addEventListener('click',function(e){ e.stopPropagation(); window.open('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(nm),'_blank','noopener'); });
+  ov.onAdd=function(){ this.getPanes().overlayMouseTarget.appendChild(el); };
+  ov.draw=function(){ var p=this.getProjection().fromLatLngToDivPixel(new google.maps.LatLng(pos)); if(p){ el.style.left=p.x+'px'; el.style.top=p.y+'px'; } };
+  ov.onRemove=function(){ el.remove(); };
+  ov.setMap(map);
+  return ov;
+}
+
 function __buildTripMap(elId, cfg){
   var el = document.getElementById(elId);
   if (!el || !window.google) return;
   var map = new google.maps.Map(el, {
     styles: window.__RETRO_STYLE,
     mapTypeControl:false, streetViewControl:false, fullscreenControl:false,
-    gestureHandling:'cooperative'
+    zoomControl:true, zoomControlOptions:{position:google.maps.ControlPosition.RIGHT_BOTTOM},
+    clickableIcons:false, gestureHandling:'cooperative'
   });
+  var fit=document.createElement('button');
+  fit.className='gmapfit'; fit.type='button'; fit.title='回到全部景點'; fit.setAttribute('aria-label','回到全部景點');
+  fit.innerHTML='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>';
+  fit.addEventListener('click',function(){ var i=window.__mapInstances[elId]; if(!i) return; if(i.single){ map.setCenter(i.center); map.setZoom(15);} else { map.fitBounds(i.bounds,60);} });
+  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(fit);
   var bounds = new google.maps.LatLngBounds();
   var path = [];
   cfg.points.forEach(function(pt){
     var pos = {lat:pt.lat, lng:pt.lng};
-    new google.maps.Marker({
-      position: pos, map: map, title: pt.name,
-      label: {text: pt.label, color:'#fff', fontWeight:'700', fontSize:'12px'},
-      icon: {path: google.maps.SymbolPath.CIRCLE, fillColor: cfg.color, fillOpacity:1,
-        strokeColor:'#fff', strokeWeight:2.5, scale:13}
-    });
+    __gPin(map, pos, pt.name, pt.label, cfg.color, false);
     bounds.extend(pos);
     path.push(pos);
   });
   if (!cfg.single && path.length > 1){
-    new google.maps.Polyline({path:path, map:map, strokeColor:cfg.color, strokeWeight:3.5, strokeOpacity:0.85});
+    new google.maps.Polyline({path:path, map:map, strokeColor:cfg.color, strokeWeight:4, strokeOpacity:0.7});
   }
   if (cfg.spur){
     var spurPos = {lat:cfg.spur.lat, lng:cfg.spur.lng};
-    new google.maps.Marker({
-      position: spurPos, map: map, title: cfg.spur.name,
-      icon: {path: google.maps.SymbolPath.CIRCLE, fillColor: cfg.spur.color, fillOpacity:1,
-        strokeColor:'#fff', strokeWeight:2.5, scale:9}
-    });
+    __gPin(map, spurPos, cfg.spur.name, '', cfg.spur.color, true);
     bounds.extend(spurPos);
     if (path.length){
       new google.maps.Polyline({
@@ -1056,7 +1091,7 @@ function __buildTripMap(elId, cfg){
   }
   window.__mapInstances[elId] = {map:map, bounds:bounds, single: !!cfg.single, center: path[0]};
   if (cfg.single){ map.setCenter(path[0]); map.setZoom(15); }
-  else { map.fitBounds(bounds, 40); }
+  else { map.fitBounds(bounds, 60); }
 }
 
 window.__initTripMaps = function(){
@@ -1126,7 +1161,7 @@ function __resizeVisibleTripMap(){
   if (!inst) return;
   google.maps.event.trigger(inst.map, 'resize');
   if (inst.single){ inst.map.setCenter(inst.center); }
-  else { inst.map.fitBounds(inst.bounds, 40); }
+  else { inst.map.fitBounds(inst.bounds, 60); }
 }
 document.querySelectorAll('.tab,#pv,#nx').forEach(function(el){
   el.addEventListener('click', function(){ setTimeout(__resizeVisibleTripMap, 30); });
